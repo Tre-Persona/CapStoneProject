@@ -1,2 +1,32 @@
 class CommentsController < ApplicationController
-end
+  before_action :authenticate_user! only: [:create, :edit, :update, :destroy]
+
+  def index
+    comments = Comment.all
+    render json: comments
+  end
+  def show
+    comment = Comment.all
+    render json: comment
+  end
+  def create
+    comment = current_user.comments.create(comment_params)
+    if comment.valid?
+      render json: comment
+    else
+      render json: comment.errors, status:422
+    end
+  end
+  def destroy
+    comment = current_user.comments.find(params[:id])
+    if comment.destroy
+      render json: comment
+    else
+      render json: comment.errors, status:422
+    end
+
+    private
+    def comment_params
+      params.require(:comment).permit (:post)
+    end
+  end
