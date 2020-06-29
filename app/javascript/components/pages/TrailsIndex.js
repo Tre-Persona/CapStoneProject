@@ -9,8 +9,8 @@ const TrailsIndex = () => {
     latitude: "",
     longitude: ""
   })
-  useEffect(() => {
-    getTrails()},[])
+  // useEffect(() => {
+  //   getTrails()},[])
 
     const handleChange = (e) =>{
       setNewForm({
@@ -26,15 +26,14 @@ const TrailsIndex = () => {
     async function getTrails() {
       try {
         //GET data from the backend
-        let response = await fetch(`https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200805451-d58078a69001bb6f37cb92b68bbebae3`)
+        let response = await fetch(`https://www.hikingproject.com/data/get-trails?lat=${ newForm.latitude }&lon=${ newForm.longitude }&maxDistance=10&key=200805451-d58078a69001bb6f37cb92b68bbebae3`)
           let data = await response.json();
           //all good?
           if(response.status === 200) {
-            //check the console to make sure we have all the cats
-            console.log("data", data)
-            //populate the newCats state array with data
-            setNewTrails(data)
-
+            //check the console to make sure we have all the trails
+            console.log("data", data.trails)
+            //populate the newTrails state array with data
+            setNewTrails(data.trails)
           }
         } catch (err) {
           console.log(err)
@@ -43,35 +42,29 @@ const TrailsIndex = () => {
 
       return (
         <>
-        <h2>All of the fancy trails</h2>
+        <h2>All of the Fancy Trails</h2>
         <Container>
-
           <Form>
             <FormGroup>
               <Label htmlFor="latitude">Latitude</Label>
-
-              <Input type="text" name="latitude" value={ newForm.latitude } onChange={ handleChange } placeholder="" />
-
+                <Input type="text" name="latitude" value={ newForm.latitude } onChange={ handleChange } placeholder="" />
               <Label htmlFor="longitude">Longitude</Label>
-
-              <Input type="text" name="longitude" value={ newForm.longitude } onChange={ handleChange } placeholder="" />
+                <Input type="text" name="longitude" value={ newForm.longitude } onChange={ handleChange } placeholder="" />
             </FormGroup>
-            <Button onClick={handleSubmit}>Lets Go Hiking</Button>
+            <Button onClick={handleSubmit}>Let's Go Hiking</Button>
           </Form>
           <ListGroup>
-          { newTrails.map((trail, index) => {
-            return(
-
-              <ListGroupItem >
-                <ListGroupItemHeading>{trail.name}</ListGroupItemHeading>
-                <img src={trail.imgSqSmall} />
-                <ListGroupItemText>
-                {trail.summary}
-                </ListGroupItemText>
-              </ListGroupItem>
-            )
-          })}
-
+            { newTrails.map((trail, index) => {
+              return(
+                <ListGroupItem >
+                  <ListGroupItemHeading>{trail.name}</ListGroupItemHeading>
+                  <img src={trail.imgSmall} />
+                  <ListGroupItemText>
+                  {trail.summary}
+                  </ListGroupItemText>
+                </ListGroupItem>
+              )
+            })}
           </ListGroup>
         </Container>
 
