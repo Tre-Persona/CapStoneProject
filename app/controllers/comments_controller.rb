@@ -5,10 +5,12 @@ class CommentsController < ApplicationController
     comments = Comment.all
     render json: comments
   end
+
   def show
     comment = Comment.all
     render json: comment
   end
+
   def create
     comment = current_user.comments.create(comment_params)
     if comment.valid?
@@ -17,6 +19,7 @@ class CommentsController < ApplicationController
       render json: comment.errors, status:422
     end
   end
+
   def destroy
     comment = current_user.comments.find(params[:id])
     if comment.destroy
@@ -24,6 +27,7 @@ class CommentsController < ApplicationController
     else
       render json: comment.errors, status:422
     end
+  end
 
     private
     def comment_params
