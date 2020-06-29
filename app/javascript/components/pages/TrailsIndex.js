@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Button, Form, FormGroup, Label, Input, Container, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 
 const TrailsIndex = () => {
@@ -56,8 +57,10 @@ const TrailsIndex = () => {
           <ListGroup>
             { newTrails.map((trail, index) => {
               return(
-                <ListGroupItem >
-                  <ListGroupItemHeading>{trail.name}</ListGroupItemHeading>
+                <ListGroupItem>
+                  <NavLink to={`/trails/${ trail.id }`}>
+                    <ListGroupItemHeading>{trail.name}</ListGroupItemHeading>
+                  </NavLink>
                   <img src={trail.imgSmall} />
                   <ListGroupItemText>
                   {trail.summary}

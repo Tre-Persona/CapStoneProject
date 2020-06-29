@@ -30,8 +30,8 @@ const App = (props) => {
             <Route exact path="/" render = { () => < Home />}/>
             <Route exact path="/about" render = { () => < About />}/>
             <Route exact path="/contact" render = { () => < Contact />}/>
-            <Route exact path="/trails" render = { () => < TrailsIndex />}/>
-            <Route exact path="/trails/:id" render = { () => < TrailsProfile />}/>
+            <Route exact path="/trails" render = { (props) => < TrailsIndex {...props} />}/>
+            <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} />}/>
             <Route exact path="/trails/:id/comments"render = { () => < CommentIndex />}/>
             <Route exact path="/trails/:id/comment/edit" render = { () => < TrailCommentEdit />}/>
             <Route exact path="/trails/search" render = { () => < TrailsSearch />}/>
