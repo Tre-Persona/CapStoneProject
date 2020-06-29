@@ -188,3 +188,125 @@ Processing by MainController#index as HTML
 Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 4411)
 
 
+Started GET "/aboutus" for ::1 at 2020-06-29 12:19:04 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"aboutus"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 222)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 5163cadf33ff73a23a9f
+Version: webpack 4.43.0
+Time: 1512ms
+Built at: 06/29/2020 12:19:07 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a18c6dd7fd37b20d495a.js  1.45 MiB       application  [emitted] [immutable]  application
+     js/application-a18c6dd7fd37b20d495a.js.map  1.63 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-922115372b425355d448.js  1.33 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-922115372b425355d448.js.map   1.5 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a18c6dd7fd37b20d495a.js js/application-a18c6dd7fd37b20d495a.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-922115372b425355d448.js js/server_rendering-922115372b425355d448.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 459 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 51 hidden modules
+
+Completed 200 OK in 3260ms (Views: 3259.6ms | ActiveRecord: 0.0ms | Allocations: 5874)
+
+
+Started GET "/aboutus" for ::1 at 2020-06-29 12:19:07 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"aboutus"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4445)
+
+
+Started GET "/" for ::1 at 2020-06-29 12:19:10 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 4423)
+
+
+Started GET "/about" for ::1 at 2020-06-29 12:19:16 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"about"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 4429)
+
+
+Started GET "/cats" for ::1 at 2020-06-29 12:19:20 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"cats"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 4437)
+
+
+Started GET "/contact" for ::1 at 2020-06-29 12:19:23 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"contact"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 4435)
+
+
+Started GET "/trails" for ::1 at 2020-06-29 12:20:21 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4577)
+
+
+Started GET "/" for ::1 at 2020-06-29 12:20:25 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4433)
+
+
+Started GET "/cats" for ::1 at 2020-06-29 12:26:33 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"cats"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 4579)
+
+
+Started GET "/contact" for ::1 at 2020-06-29 12:26:35 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"contact"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 4432)
+
+
+Started GET "/" for ::1 at 2020-06-29 12:26:40 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 4416)
+
+
