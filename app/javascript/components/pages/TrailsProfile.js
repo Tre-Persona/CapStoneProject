@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react"
 
 const TrailsProfile = (props) => {
  const [currentTrail, setCurrentTrail] = useState({})
-//  const { id } = props.match.params
 
 useEffect(() => {
   console.log("get trail called")
@@ -32,6 +31,7 @@ useEffect(() => {
           <>
             <h3> { currentTrail.name }</h3>
             <img src={ currentTrail.imgSmall }/> 
+            <h6> { currentTrail.summary} </h6>
           </>
         }
       </>
