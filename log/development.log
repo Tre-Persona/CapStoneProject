@@ -5565,3 +5565,687 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (961.5ms)[0m  [1m[35mCREATE DATABASE "happy_trails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (401.8ms)[0m  [1m[35mCREATE DATABASE "happy_trails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (59.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7236519184996959060)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200629173026)
+  [1m[35m (23.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200629173026"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFavorites (20200629174322)
+  [1m[35m (21.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer, "fav_trail_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200629174322"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20200629174500)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "user_id" integer, "post" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200629174500"]]
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnsToUsers (20200629174701)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "user_name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200629174701"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-30 22:30:59.433925"], ["updated_at", "2020-06-30 22:30:59.433925"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7236519184996959060)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-06-30 15:34:23 -0700
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 563)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1530ms (Views: 1462.8ms | ActiveRecord: 0.0ms | Allocations: 25703)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-06-30 15:35:03 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 187ms (Views: 185.1ms | ActiveRecord: 0.0ms | Allocations: 8001)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 15:35:22 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>7022523, "favorite"=>{"fav_trail_id"=>7022523}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 215.5ms | Allocations: 493)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+devise (4.7.2) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2020-06-30 15:35:49 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 11.0ms | Allocations: 595)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 222.7ms | Allocations: 7570)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 622ms (Views: 347.0ms | ActiveRecord: 49.9ms | Allocations: 22916)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-06-30 15:35:54 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 197)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 119)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1883)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 322ms (Views: 318.4ms | ActiveRecord: 0.0ms | Allocations: 10564)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-06-30 15:35:56 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1040)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 85.9ms | ActiveRecord: 0.0ms | Allocations: 8984)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-06-30 15:36:15 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"6SVboW2p95h/cOLTMnixgSJuYVmK0S9LkvAAXzwlzpZGyigf3PXtho3aXMnGFPsqMqKLDiphhgAaomMBuDlJhw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (33.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 203ms (ActiveRecord: 177.5ms | Allocations: 2865)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"6SVboW2p95h/cOLTMnixgSJuYVmK0S9LkvAAXzwlzpZGyigf3PXtho3aXMnGFPsqMqKLDiphhgAaomMBuDlJhw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1033)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1016ms (Views: 90.7ms | ActiveRecord: 0.0ms | Allocations: 9693)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-06-30 15:36:31 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Bp3e/KgYYVok6uq/pdHCsxg+au9bTxvI0lwDvP/ovJOY9QCFVmtkyWHDLZzW5SMzvKlXNjFUdronv+v9cqwfkQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (63.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 106ms (ActiveRecord: 63.0ms | Allocations: 2116)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Bp3e/KgYYVok6uq/pdHCsxg+au9bTxvI0lwDvP/ovJOY9QCFVmtkyWHDLZzW5SMzvKlXNjFUdronv+v9cqwfkQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 131)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1032)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1297ms (Views: 105.0ms | ActiveRecord: 0.0ms | Allocations: 8663)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-06-30 15:36:40 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1040)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 362ms (Views: 356.3ms | ActiveRecord: 0.0ms | Allocations: 8910)
+
+
+Started POST "/users" for ::1 at 2020-06-30 15:36:53 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"1jJVBwbQh9hcDcrrAYHZi8UzrQ6jO3eQSXSiC3+T6MhbpdNmy05dw5DdBgG+315fThnNIp/WFgapQQvNlM7n7Q==", "user"=>{"email"=>"test2@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test2@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (34.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test2@test.com"], ["encrypted_password", "$2a$12$geOlwK6TnHS3tWuPOnj7COLRf7rSHl7kntAIC8rrdyN40fiy.QmOW"], ["created_at", "2020-06-30 22:36:54.480983"], ["updated_at", "2020-06-30 22:36:54.480983"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 702ms (ActiveRecord: 38.8ms | Allocations: 9109)
+
+
+Started GET "/" for ::1 at 2020-06-30 15:36:54 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 395ms (Views: 375.3ms | ActiveRecord: 1.5ms | Allocations: 9653)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-06-30 15:37:08 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 79.9ms | ActiveRecord: 8.4ms | Allocations: 9449)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 15:37:15 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>7022523, "favorite"=>{"fav_trail_id"=>7022523}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 467)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+devise (4.7.2) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:110:in `block in run_callbacks'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:139:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523" for ::1 at 2020-06-30 15:41:52 -0700
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 70.0ms | Allocations: 528)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 5e3a2cb71972b1e67b91
+Version: webpack 4.43.0
+Time: 15231ms
+Built at: 06/30/2020 3:42:16 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-51776a7ac736757af653.js   2.2 MiB       application  [emitted] [immutable]  application
+     js/application-51776a7ac736757af653.js.map  2.17 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-ca3ba1720b6aa9c3c184.js  2.08 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ca3ba1720b6aa9c3c184.js.map  2.04 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-51776a7ac736757af653.js js/application-51776a7ac736757af653.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-ca3ba1720b6aa9c3c184.js js/server_rendering-ca3ba1720b6aa9c3c184.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 816 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 209 hidden modules
+
+Completed 200 OK in 23540ms (Views: 23329.3ms | ActiveRecord: 78.2ms | Allocations: 26475)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 15:42:22 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7022523", "favorite"=>{"fav_trail_id"=>"7022523"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (79.2ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022523], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Create (37.1ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "fav_trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["fav_trail_id", 7022523], ["created_at", "2020-06-30 22:42:22.684328"], ["updated_at", "2020-06-30 22:42:22.684328"]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (176.5ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."id" != $2 AND "favorites"."user_id" = $3 LIMIT $4[0m  [["fav_trail_id", 7022523], ["id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 200 OK in 705ms (Views: 0.8ms | ActiveRecord: 329.7ms | Allocations: 15678)
+
+
+Started GET "/trails/favorites" for ::1 at 2020-06-30 15:42:31 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/favorites"}
+  [1m[36mUser Load (46.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (64.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 180ms (Views: 49.2ms | ActiveRecord: 110.1ms | Allocations: 9562)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 15:42:37 -0700
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (118.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 149ms (Views: 12.5ms | ActiveRecord: 119.1ms | Allocations: 3086)
+
+
+Started GET "/trails/7022524" for ::1 at 2020-06-30 15:44:11 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022524"}
+  [1m[36mUser Load (39.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 617ms (Views: 456.0ms | ActiveRecord: 64.9ms | Allocations: 9435)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 15:44:20 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7022524", "favorite"=>{"fav_trail_id"=>"7022524"}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (16.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (8.6ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Create (78.7ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "fav_trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["fav_trail_id", 7022524], ["created_at", "2020-06-30 22:44:20.480543"], ["updated_at", "2020-06-30 22:44:20.480543"]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (62.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (126.6ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."id" != $2 AND "favorites"."user_id" = $3 LIMIT $4[0m  [["fav_trail_id", 7022524], ["id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 200 OK in 367ms (Views: 9.6ms | ActiveRecord: 296.3ms | Allocations: 7183)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 15:44:32 -0700
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (44.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 75ms (Views: 11.7ms | ActiveRecord: 54.9ms | Allocations: 3139)
+
+
+Started GET "/trails/7022524" for ::1 at 2020-06-30 16:16:57 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022524"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (102.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 283)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 09c3eccba8e0ac4044f3
+Version: webpack 4.43.0
+Time: 43238ms
+Built at: 06/30/2020 4:17:53 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-7a02730aad2a516f92fa.js   2.2 MiB       application  [emitted] [immutable]  application
+     js/application-7a02730aad2a516f92fa.js.map  2.17 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-3246c9a6bae2e4687abd.js  2.08 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-3246c9a6bae2e4687abd.js.map  2.04 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-7a02730aad2a516f92fa.js js/application-7a02730aad2a516f92fa.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-3246c9a6bae2e4687abd.js js/server_rendering-3246c9a6bae2e4687abd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 816 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 209 hidden modules
+
+Completed 200 OK in 55848ms (Views: 55464.2ms | ActiveRecord: 117.5ms | Allocations: 16558)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:17:58 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (349.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 504ms (Views: 120.0ms | ActiveRecord: 350.7ms | Allocations: 7696)
+
+
+Started GET "/trails/7022524" for ::1 at 2020-06-30 16:18:12 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022524"}
+  [1m[36mUser Load (97.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (236.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 600ms (Views: 251.3ms | ActiveRecord: 334.4ms | Allocations: 9418)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:18:16 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 7.2ms | ActiveRecord: 2.7ms | Allocations: 3163)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 16:18:23 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7022524", "favorite"=>{"fav_trail_id"=>"7022524"}}
+  [1m[36mUser Load (123.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (35.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (80.4ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (13.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (26.2ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 415ms (Views: 1.0ms | ActiveRecord: 278.7ms | Allocations: 9297)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:18:23 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (342.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (69.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 447ms (Views: 11.9ms | ActiveRecord: 412.1ms | Allocations: 3142)
+
+
+Started GET "/trails/7022524" for ::1 at 2020-06-30 16:18:48 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022524"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 282)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 001aadadb4b4f4d5a905
+Version: webpack 4.43.0
+Time: 29196ms
+Built at: 06/30/2020 4:19:29 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-0e00c9328d790effffc7.js   2.2 MiB       application  [emitted] [immutable]  application
+     js/application-0e00c9328d790effffc7.js.map  2.17 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-e7691ceec6c1524299b0.js  2.08 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-e7691ceec6c1524299b0.js.map  2.04 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-0e00c9328d790effffc7.js js/application-0e00c9328d790effffc7.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-e7691ceec6c1524299b0.js js/server_rendering-e7691ceec6c1524299b0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 816 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 209 hidden modules
+
+Completed 200 OK in 41492ms (Views: 41238.2ms | ActiveRecord: 114.0ms | Allocations: 16659)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:19:37 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (23.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (3.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 370ms (Views: 46.2ms | ActiveRecord: 234.7ms | Allocations: 7790)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 16:19:54 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7022524", "favorite"=>{"fav_trail_id"=>"7022524"}}
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (68.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (31.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (36.5ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 282ms (Views: 14.5ms | ActiveRecord: 150.9ms | Allocations: 7597)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:19:55 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (58.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (25.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 104ms (Views: 6.4ms | ActiveRecord: 84.4ms | Allocations: 3145)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 16:20:11 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7022524", "favorite"=>{"fav_trail_id"=>"7022524"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (92.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (26.2ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 158ms (Views: 0.4ms | ActiveRecord: 123.6ms | Allocations: 7469)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:20:11 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (25.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 55ms (Views: 10.7ms | ActiveRecord: 34.0ms | Allocations: 3146)
+
+
+Started POST "/favorites" for ::1 at 2020-06-30 16:20:15 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7022524", "favorite"=>{"fav_trail_id"=>"7022524"}}
+  [1m[36mUser Load (41.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (39.6ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (77.7ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022524], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 191ms (Views: 0.3ms | ActiveRecord: 160.9ms | Allocations: 7452)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:20:15 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (76.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 143ms (Views: 45.1ms | ActiveRecord: 78.1ms | Allocations: 3134)
+
+
+Started GET "/trails/7022524" for ::1 at 2020-06-30 16:21:22 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022524"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 351ms (Views: 299.0ms | ActiveRecord: 31.1ms | Allocations: 9507)
+
+
+Started GET "/favorites" for ::1 at 2020-06-30 16:21:26 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (386.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (22.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 446ms (Views: 12.6ms | ActiveRecord: 409.0ms | Allocations: 3148)
+
+
