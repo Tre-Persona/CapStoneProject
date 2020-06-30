@@ -1,13 +1,39 @@
 import React, { useState, useEffect } from "react"
-import {  ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import {  Button, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
 
 
 const TrailsProfile = (props) => {
  const [currentTrail, setCurrentTrail] = useState({})
+ const [favorited, setFavorited] = useState(false)
+ const [trailID, setTrailID] = useState(props.match.params.id)
 
 useEffect(() => {
   console.log("get trail called")
   getTrail()},[])
+
+const handleFavorite = (e) =>{
+    e.preventDefault()
+    addToFavorites({fav_trail_id: 7022523})
+    console.log("id", props.match.params.id)
+}
+
+const addToFavorites = (id) => {
+  fetch('/favorites', {
+    body: JSON.stringify(id),
+    headers:{
+      "Content-Type": "application/json"
+    },
+    method: "POST"
+  })
+  .then(response => {
+    if (response.ok) {
+      setFavorited(true)
+    }
+  })
+  .then(() => {
+    getTrail()
+  })
+}
 
   async function getTrail() {
     try {
@@ -45,6 +71,8 @@ useEffect(() => {
                 </ListGroupItem>
             }
           </ListGroup>
+          <Button onClick={handleFavorite}>Favorite</Button>
+          
       </>
     );
 }
