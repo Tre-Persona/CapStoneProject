@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   BrowserRouter as Router,
   Route,
@@ -20,8 +20,11 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Header from "./Header.js"
 
+
 const App = (props) => {
- 
+
+ const [currentUserName, setCurrentUserName]= useState(props.user.user_name)
+ const [currentUserId, setCurrentUserId]= useState(props.user.id)
     return (
       <Router>
         <Header logged_in={props.logged_in} sign_in_route={props.sign_in_route} sign_out_route={props.sign_out_route}/>
@@ -35,9 +38,9 @@ const App = (props) => {
             <Route exact path="/trails/:id/comments"render = { () => < CommentIndex />}/>
             <Route exact path="/trails/:id/comment/edit" render = { () => < TrailCommentEdit />}/>
             <Route exact path="/trails/search" render = { () => < TrailsSearch />}/>
-            <Route exact path="/user/:id" render = { () => < UserProfile />}/>
+            <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} />}/>
             <Route exact path="/user/:id/favorites" render = { () => < UserFavorites />}/>
-            <Route exact path="/user/:id/settings" render = { () => < UserSettings />}/>
+            <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props}/>}/>
             <Route exact path="/user/:id/activity" render = { () => < UserActivity />}/>
           </Switch>
       </Router>
