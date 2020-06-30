@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import {  ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
 
 
 const TrailsProfile = (props) => {
@@ -26,14 +27,24 @@ useEffect(() => {
     }
     return (
       <>
-        <h2>What a fancy trail profile</h2>
-        { currentTrail &&
-          <>
-            <h3> { currentTrail.name }</h3>
-            <img src={ currentTrail.imgSmall }/> 
-            <h6> { currentTrail.summary} </h6>
-          </>
-        }
+            <ListGroup>
+            { currentTrail &&
+                <ListGroupItem>
+                  <ListGroupItemHeading>{currentTrail.name}</ListGroupItemHeading>
+
+                  <img src={currentTrail.imgSmall} />
+
+                  <ListGroupItemText>
+                    {currentTrail.summary}
+                  </ListGroupItemText>
+
+                  <ListGroupItemText>
+                    Current Trail Conditions for {currentTrail.conditionDate}:&nbsp;
+                    { currentTrail.conditionDetails} and {currentTrail.conditionStatus}
+                  </ListGroupItemText>
+                </ListGroupItem>
+            }
+          </ListGroup>
       </>
     );
 }
