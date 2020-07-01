@@ -1,12 +1,14 @@
-import React, { useState, useReducer } from "react"
+import React, { useState, useEffect } from "react"
 import { Media, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-const CommentIndex = () => {
+const CommentIndex = (props) => {
   const [commentEntry, setCommentEntry]= useState("")
   const [comments, setComments]=useState([])
   const [success, setSuccess ]=useState(false)
   const [error, setError ]=useState(false)
 
+  useEffect(() => {
+    getComments()},[])
 
   const handleChange = (e) =>{
     setCommentEntry(
@@ -20,7 +22,7 @@ const CommentIndex = () => {
 
   const addToComments = () => {
     fetch("/comments", {
-      body: JSON.stringify({post: commentEntry}),
+      body: JSON.stringify({post: commentEntry, trail_id: props.match.params.id}),
       headers:{
         "Content-Type": "application/json"
       },
@@ -29,7 +31,11 @@ const CommentIndex = () => {
     .then(response => {
       if (response.ok) setSuccess(true)
       else setError(true)
-    }).catch(error => {
+    })
+    .then(()=>{
+      getComments()
+    })
+    .catch(error => {
       console.log("error:",error)
     })
   }
@@ -43,9 +49,13 @@ const CommentIndex = () => {
         //all good?
         if(response.status === 200) {
           //check the console to make sure we have all the trails
-          console.log("data", data.comments)
+          console.log("data", data)
+          let sortedData = data.filter(trail => {
+            return trail.trail_id == props.match.params.id
+          })
           //populate the newTrails state array with data
-          setComments(data.comments)
+          setComments(sortedData)
+          console.log("sort", sortedData)
         }
       } catch (err) {
         console.log(err)
@@ -63,15 +73,16 @@ const CommentIndex = () => {
       </FormGroup>
       <Button onClick={ handleSubmit }>Submit</Button>
     { comments.map((comment, index)=> {
+      return(
         <Media>
           <Media left href="#">
-            <Media object data-src='#' alt="Generic placeholder image" />
+            <Media object data-src='#' alt="Beautiful Face Picture" />
           </Media>
           <Media body>
             { comment.post }
-            </Media>
           </Media>
-    
+        </Media>
+      )
     })}
   </>
   );
