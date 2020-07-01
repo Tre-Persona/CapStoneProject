@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -12,16 +13,30 @@ const Header = (props) => {
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
+            <NavItem>
+              <NavLink to ="/">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to ="/trails">Search Trails</NavLink>
+            </NavItem>
             { props.logged_in &&
-             <NavItem>
-             <NavLink href= { props.sign_out_route }>Sign Out</NavLink>
-           </NavItem>
-            }  
+              <>
+                <NavItem>
+                  <NavLink to={`/user/${props.user_id}`}>User Dashboard</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to={`/user/${props.user_id}/favorites`}>Favorite Trails</NavLink>
+                </NavItem>
+                <NavItem>
+                  <a href= { props.sign_out_route }>Sign Out</a>
+                </NavItem>
+              </>
+            }
              { !props.logged_in &&
              <NavItem>
-             <NavLink href= { props.sign_in_route }>Sign In</NavLink>
+             <a href= { props.sign_in_route }>Sign In</a>
            </NavItem>
-            }  
+            }
           </Nav>
         </Collapse>
       </Navbar>

@@ -27,8 +27,9 @@ const App = (props) => {
  const [currentUserId, setCurrentUserId]= useState(props.user.id)
     return (
       <Router>
-        <Header logged_in={props.logged_in} sign_in_route={props.sign_in_route} sign_out_route={props.sign_out_route}/>
-        <h1>Welcome to happytrails!</h1>
+        <Header logged_in={props.logged_in} sign_in_route={props.sign_in_route} sign_out_route={props.sign_out_route}
+        user_id={currentUserId}
+        />
           <Switch>
             <Route exact path="/" render = { () => < Home />}/>
             <Route exact path="/about" render = { () => < About />}/>
