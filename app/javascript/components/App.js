@@ -36,7 +36,7 @@ const App = (props) => {
             <Route exact path="/contact" render = { () => < Contact />}/>
             <Route exact path="/trails" render = { (props) => < TrailsIndex {...props} />}/>
             <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} />}/>
-            <Route exact path="/trails/:id/comments"render = { () => < CommentIndex />}/>
+            <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex{...props} />}/>
             <Route exact path="/trails/:id/comment/edit" render = { () => < TrailCommentEdit />}/>
             <Route exact path="/trails/search" render = { () => < TrailsSearch />}/>
             <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} />}/>

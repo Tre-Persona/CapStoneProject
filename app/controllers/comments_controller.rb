@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user! only: [:create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   def index
     comments = Comment.all
@@ -29,8 +29,8 @@ class CommentsController < ApplicationController
     end
   end
 
-    private
-    def comment_params
-      params.require(:comment).permit (:post)
-    end
+  private
+  def comment_params
+    params.require(:comment).permit(:post)
   end
+end
