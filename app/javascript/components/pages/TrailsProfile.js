@@ -127,9 +127,8 @@ const TrailsProfile = (props) => {
             {favorited && "Favorited"}
             {!favorited && "Favorite"}
           </Button>
-
       </>
     );
 }
 
-export default TrailsProfile
+export default TrailsProfile;

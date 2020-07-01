@@ -61,8 +61,27 @@ const CommentIndex = (props) => {
         console.log(err)
       }
     }
-  //map over comments for :id and display
-
+  const handleDelete = (e) => {
+    deleteComment(e)
+  }
+  const deleteComment = (id) => {
+    fetch(`/comments/${id}`, {
+      headers:{
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then(response => {
+      if (response.ok) {
+        // If favorite delete request is successful, set favorited to false
+        setSuccess(true)
+      }
+    })
+    .then(() => {
+      // Refresh the API call after delete action
+      getComments()
+    })
+  }
 
   return ( 
   
@@ -73,14 +92,25 @@ const CommentIndex = (props) => {
       </FormGroup>
       <Button onClick={ handleSubmit }>Submit</Button>
     { comments.map((comment, index)=> {
+      let editable = false
+        if(props.user_id === comment.user_id) {
+          editable = true
+        }
+        let date = comment.updated_at.substring(0,10)
       return(
-        <Media>
+        <Media key = { index }>
           <Media left href="#">
             <Media object data-src='#' alt="Beautiful Face Picture" />
           </Media>
           <Media body>
             { comment.post }
           </Media>
+          <Media body>
+            { date }
+          </Media>
+          { editable &&
+          <Button onClick={ () => handleDelete(comment.id) }>Delete</Button>
+          }
         </Media>
       )
     })}
