@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import CommentIndex from './CommentIndex'
 import {  Button, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
 
 

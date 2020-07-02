@@ -11,6 +11,21 @@ class CommentsController < ApplicationController
     render json: comment
   end
 
+  def edit
+    comment = current_user.comments.find(params[:id])
+    render json: comment
+  end
+
+  def update
+    comment = current_user.comments.find(params[:id])
+    comment.update(comment_params)
+    if comment.valid?
+      render json: comment
+    else
+      render json: comment.errors, status: 422
+    end
+  end
+
   def create
     comment = current_user.comments.create(comment_params)
     if comment.valid?
@@ -31,6 +46,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:post, :trail_id)
+    params.require(:comment).permit(:post, :trail_id, :user_name)
   end
 end
