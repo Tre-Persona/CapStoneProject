@@ -19,7 +19,7 @@ import UserActivity from "./pages/UserActivity"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Header from "./Header.js"
-// import MapBox from "./MapBox.js"
+import SimpleLeaflet from "./SimpleLeaflet.js"
 
 const App = (props) => {
 
@@ -30,7 +30,7 @@ const App = (props) => {
         <Header logged_in={props.logged_in} sign_in_route={props.sign_in_route} sign_out_route={props.sign_out_route}
         user_id={currentUserId}
         />
-        
+        <SimpleLeaflet/>
           <Switch>
             <Route exact path="/" render = { () => < Home />}/>
             <Route exact path="/about" render = { () => < About />}/>
