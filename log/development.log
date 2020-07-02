@@ -13037,3 +13037,214 @@ Processing by MainController#index as HTML
 Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.0ms | Allocations: 7703)
 
 
+Started GET "/" for ::1 at 2020-07-01 15:27:57 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 25c781e5f2b51a46a09e
+Version: webpack 4.43.0
+Time: 10636ms
+Built at: 07/01/2020 3:28:11 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-634b1dc7aae3d0c84ca3.js  3.54 MiB       application  [emitted] [immutable]  application
+     js/application-634b1dc7aae3d0c84ca3.js.map  3.66 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-3ee6309658b97137e741.js  3.42 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-3ee6309658b97137e741.js.map  3.52 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-634b1dc7aae3d0c84ca3.js js/application-634b1dc7aae3d0c84ca3.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-3ee6309658b97137e741.js js/server_rendering-3ee6309658b97137e741.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 845 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 247 hidden modules
+
+Completed 200 OK in 14837ms (Views: 14836.1ms | ActiveRecord: 0.0ms | Allocations: 9416)
+
+
+Started GET "/" for ::1 at 2020-07-01 15:49:38 -0700
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 449)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 39d08ccc6d2780887607
+Version: webpack 4.43.0
+Time: 3867ms
+Built at: 07/01/2020 3:49:44 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-e9d7f081f14affc8d3af.js  2.23 MiB       application  [emitted] [immutable]  application
+     js/application-e9d7f081f14affc8d3af.js.map  2.18 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-f7cb1fb8e1009d58983b.js  2.11 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-f7cb1fb8e1009d58983b.js.map  2.05 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-e9d7f081f14affc8d3af.js js/application-e9d7f081f14affc8d3af.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f7cb1fb8e1009d58983b.js js/server_rendering-f7cb1fb8e1009d58983b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 845 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 210 hidden modules
+
+WARNING in ./app/javascript/components/MapBox.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/MapBox.js: Unexpected token, expected "," (10:19)
+
+   8 |   mapRef = React.createRef();
+   9 | 
+> 10 |   constructor(props: Props) {
+     |                    ^
+  11 |     super(props);
+  12 |     this.state = {
+  13 |       lng: 5,
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:754:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:747:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8844:16)
+    at Object.expect (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8830:28)
+    at Object.parseBindingList (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9219:14)
+    at Object.parseFunctionParams (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11931:24)
+    at Object.parseMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10689:10)
+    at Object.pushClassMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12193:30)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12110:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12052:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11997:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11068:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11974:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11948:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11235:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11193:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11768:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11754:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11124:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12826:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12879:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transform.js:27:41)
+    at transform.next (<anonymous>)
+ @ ./app/javascript/components sync ^\.\/.*$ ./MapBox.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 6213ms (Views: 6202.6ms | ActiveRecord: 0.0ms | Allocations: 18405)
+
+
+Started GET "/" for ::1 at 2020-07-01 15:51:29 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 39d08ccc6d2780887607
+Version: webpack 4.43.0
+Time: 4407ms
+Built at: 07/01/2020 3:51:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-e9d7f081f14affc8d3af.js  2.23 MiB       application  [emitted] [immutable]  application
+     js/application-e9d7f081f14affc8d3af.js.map  2.18 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-f7cb1fb8e1009d58983b.js  2.11 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-f7cb1fb8e1009d58983b.js.map  2.05 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-e9d7f081f14affc8d3af.js js/application-e9d7f081f14affc8d3af.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f7cb1fb8e1009d58983b.js js/server_rendering-f7cb1fb8e1009d58983b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 845 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 210 hidden modules
+
+WARNING in ./app/javascript/components/MapBox.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/MapBox.js: Unexpected token, expected "," (10:19)
+
+   8 |   mapRef = React.createRef();
+   9 | 
+> 10 |   constructor(props: Props) {
+     |                    ^
+  11 |     super(props);
+  12 |     this.state = {
+  13 |       lng: 5,
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:754:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:747:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8844:16)
+    at Object.expect (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8830:28)
+    at Object.parseBindingList (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9219:14)
+    at Object.parseFunctionParams (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11931:24)
+    at Object.parseMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10689:10)
+    at Object.pushClassMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12193:30)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12110:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12052:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11997:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11068:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11974:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11948:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11235:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11193:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11768:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11754:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11124:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12826:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12879:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transform.js:27:41)
+    at transform.next (<anonymous>)
+ @ ./app/javascript/components sync ^\.\/.*$ ./MapBox.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 7127ms (Views: 7126.0ms | ActiveRecord: 0.0ms | Allocations: 9294)
+
+
+Started GET "/" for ::1 at 2020-07-01 16:10:47 -0700
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 449)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 227ms (Views: 193.2ms | ActiveRecord: 0.0ms | Allocations: 16989)
+
+
+Started GET "/" for ::1 at 2020-07-01 16:11:03 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 7723)
+
+

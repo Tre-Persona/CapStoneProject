@@ -1,44 +1,54 @@
-import React, { Component } from 'react'
-import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import mapboxgl from 'mapbox-gl'
 
+mapboxgl.accessToken = 'pk.eyJ1IjoidHJlcGVyc29uYSIsImEiOiJja2MwdWl2c3cxNGhyMnpxZTh5b3hvNW5vIn0.5zjWAJmgUwapX5oVekEOFQ';
 
-const Map = ReactMapboxGl({
-    accessToken:
-      'pk.eyJ1IjoidHJlcGVyc29uYSIsImEiOiJja2MwdXE4emQwbmFpMnpydWxscXB1eGN2In0.jvnJJL0dHCAi-iSSO1-WTw'
-  });
+class MapBox extends React.Component {
+  mapRef = React.createRef();
 
-
-class MapBox extends Component{
-constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
-    lng: -117.1611,
-    lat: 32.7157,
-    zoom: 5
+      lng: 5,
+      lat: 34,
+      zoom: 1.5
     };
-    }
-// componentDidMount() {
-    
-//     const map = new ReactMapboxGl.Map({
-//         container: this.mapContainer,
-//             style: 'mapbox://styles/mapbox/streets-v11',
-//             center: [this.state.lng, this.state.lat],
-//             zoom: this.state.zoom
-//     });
-//     }
-    render() {
-        return (
-            <Map
-            style="mapbox://styles/mapbox/streets-v9"
-            containerStyle={{
-              height: '100vh',
-              width: '100vw'
-            }}
-          >
-            <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
-              <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
-            </Layer>
-          </Map>
-          )}
+  }
+
+  componentDidMount() {
+    const { lng, lat, zoom } = this.state;
+
+    const map = new mapboxgl.Map({
+      container: this.mapRef.current,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [lng, lat],
+      zoom
+    });
+
+    map.on('move', () => {
+      const { lng, lat } = map.getCenter();
+
+      this.setState({
+        lng: lng.toFixed(4),
+        lat: lat.toFixed(4),
+        zoom: map.getZoom().toFixed(2)
+      });
+    });
+  }
+
+  render() {
+    const { lng, lat, zoom } = this.state;
+
+    return (
+      <div>
+        <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
+          <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
+        </div>
+        <div ref={this.mapRef} className="absolute top right left bottom" />
+      </div>
+    );
+  }
 }
+
 export default MapBox
