@@ -9,8 +9,7 @@ import {
 import Home from "./pages/Home"
 import TrailsIndex from "./pages/TrailsIndex"
 import TrailsProfile from "./pages/TrailsProfile"
-import Comments from "./pages/Comments"
-import TrailCommentEdit from "./pages/TrailCommentEdit"
+import CommentIndex from "./pages/CommentIndex"
 import TrailsSearch from "./pages/TrailsSearch"
 import UserProfile from "./pages/UserProfile"
 import UserFavorites from "./pages/UserFavorites"
@@ -35,8 +34,8 @@ const App = (props) => {
             <Route exact path="/about" render = { () => < About />}/>
             <Route exact path="/contact" render = { () => < Contact />}/>
             <Route exact path="/trails" render = { (props) => < TrailsIndex {...props} />}/>
-            <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId}/>}/>
-            <Route exact path="/trails/:id/comments"render = { (props) => < Comments user_id={currentUserId} user_name={currentUserName} {...props} />}/>
+            <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName}/>}/>
+            <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} user_name={currentUserName} {...props} />}/>
             <Route exact path="/trails/search" render = { () => < TrailsSearch />}/>
             <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} />}/>
             <Route exact path="/user/:id/favorites" render = { () => < UserFavorites />}/>

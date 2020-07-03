@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react"
 import CommentIndex from './CommentIndex'
-import {  Button, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import TrailDisplay from '../partials/trails/TrailDisplay.js'
+import { Container } from 'reactstrap'
 
 
 const TrailsProfile = (props) => {
   const [currentTrail, setCurrentTrail] = useState({})
   // Conditional rendering for the favorite button styling
   const [favorited, setFavorited] = useState(false)
-  // Array of just trail Ids favorited by the current user
-  const [favTrailIds, setFavTrailIds] = useState([])
   // Favorite model id of the current trail showing (if favorited)
   const [favId, setFavId] = useState()
 
   useEffect(() => {
     getTrail()},[])
 
-  const handleFavorite = (e) =>{
-    e.preventDefault()
+  const handleFavorite = () =>{
     if (favorited) {
       removeFromFavorites()
     } else {
@@ -36,11 +34,9 @@ const TrailsProfile = (props) => {
       if (response.ok) {
         // If favorite post request is successful, set favorited to true
         setFavorited(true)
+        // Refresh the API call after favoriting action
+        getTrail()
       }
-    })
-    .then(() => {
-      // Refresh the API call after favoriting action
-      getTrail()
     })
   }
 
@@ -55,11 +51,9 @@ const TrailsProfile = (props) => {
       if (response.ok) {
         // If favorite delete request is successful, set favorited to false
         setFavorited(false)
+        // Refresh the API call after delete action
+        getTrail()
       }
-    })
-    .then(() => {
-      // Refresh the API call after delete action
-      getTrail()
     })
   }
 
@@ -81,7 +75,6 @@ const TrailsProfile = (props) => {
         // Create array of just the ids of the trails favorited by current user
         trailsIdsArray = favData.map(value=>value.fav_trail_id)
         console.log("Fav trail Ids:", trailsIdsArray)
-        setFavTrailIds(trailsIdsArray)
       }
 
       //GET data from the API
@@ -105,29 +98,18 @@ const TrailsProfile = (props) => {
 
     return (
       <>
-            <ListGroup>
-            { currentTrail &&
-                <ListGroupItem>
-                  <ListGroupItemHeading>{currentTrail.name}</ListGroupItemHeading>
-
-                  <img src={currentTrail.imgSmall} />
-
-                  <ListGroupItemText>
-                    {currentTrail.summary}
-                  </ListGroupItemText>
-
-                  <ListGroupItemText>
-                    Current Trail Conditions for {currentTrail.conditionDate}:&nbsp;
-                    { currentTrail.conditionDetails} and {currentTrail.conditionStatus}
-                  </ListGroupItemText>
-                </ListGroupItem>
-            }
-          </ListGroup>
-          {/*Conditional render for how the favorite button looks between toggles*/}
-          <Button color={favorited? "success" : "secondary"} onClick={handleFavorite}>
-            {favorited && "Favorited"}
-            {!favorited && "Favorite"}
-          </Button>
+        <Container>
+          <TrailDisplay
+            currentTrail={currentTrail}
+            favorited={favorited}
+            handleFavorite={handleFavorite}
+          />
+          <CommentIndex 
+            trail_id={props.match.params.id}
+            user_name={props.user_name}
+            user_id={props.user_id}
+          />
+        </Container>
       </>
     );
 }
