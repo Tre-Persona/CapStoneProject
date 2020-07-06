@@ -28,22 +28,7 @@ const TrailsSearch = (props) => {
       console.log("newTrails", newTrails);
       console.log("newForm", newForm)
     }
-    async function getTrails() {
-      try {
-        //GET data from the backend
-        let response = await fetch(`https://www.hikingproject.com/data/get-trails?lat=${ newForm.latitude }&lon=${ newForm.longitude }&maxDistance=10&key=200805451-d58078a69001bb6f37cb92b68bbebae3`)
-          let data = await response.json();
-          //all good?
-          if(response.status === 200) {
-            //check the console to make sure we have all the trails
-            console.log("data", data.trails)
-            //populate the newTrails state array with data
-            setNewTrails(data.trails)
-          }
-        } catch (err) {
-          console.log(err)
-        }
-      }
+    
 
       return (
         <>
@@ -57,25 +42,9 @@ const TrailsSearch = (props) => {
                 <Input type="text" name="longitude" value={ newForm.longitude } onChange={ handleChange } placeholder="" />
             </FormGroup>
             <Button onClick={handleSubmit}>Let's Go Hiking</Button>
+            <Button onClick={updateCord}>Update Cords</Button>
           </Form>
-          <ListGroup>
-            { newTrails.map((trail, index) => {
-              return(
-                <ListGroupItem>
-                  <NavLink to={`/trails/${ trail.id }`}>
-                    <ListGroupItemHeading>{trail.name}</ListGroupItemHeading>
-                  </NavLink>
-                  <img src={trail.imgSmall} />
-                  <ListGroupItemText>
-                  {trail.summary}
-                  </ListGroupItemText>
-                </ListGroupItem>
-              )
-            })}
-          </ListGroup>
-          <Button onClick={updateCord}>Update Cords</Button>
         </Container>
-
         </>
       );
     }
