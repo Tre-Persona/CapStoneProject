@@ -22,26 +22,23 @@ import Footer from "./Footer"
 
 const App = (props) => {
 
-  const [currentUserName, setCurrentUserName]= useState(props.user.user_name)
-  const [currentUserId, setCurrentUserId]= useState(props.user.id)
-  const [loggedIn, setLoggedIn] = useState(props.logged_in)
-
+  const {currentUserName, currentUserId, loggedIn, apiKey} = props
+  console.log(apiKey)
   return (
     <Router>
       <Header logged_in={props.logged_in} sign_in_route={props.sign_in_route} sign_out_route={props.sign_out_route}
-      user_id={currentUserId}
+      user_id={currentUserId} 
       />
       
       <Switch>
           {!props.logged_in &&
             <Route path="/user" render={() => <Redirect to="/" /> } />
           }
-          <Route exact path="/" render = { () => < Home logged_in={props.logged_in} sign_in_route={props.sign_in_route}/>}/>
+          <Route exact path="/" render = { () => < Home logged_in={logged_in} sign_in_route={sign_in_route}/>}/>
           <Route exact path="/about" render = { () => < About />}/>
           <Route exact path="/contact" render = { () => < Contact />}/>
-          <Route exact path="/trails" render = { (props) => < TrailsIndex {...props} />}/>
-          <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} 
-          user_id={currentUserId} user_name={currentUserName} loggedIn={loggedIn} />}/>
+          <Route exact path="/trails" render = { (props) => < TrailsIndex apiKey={apiKey} />}/>
+          <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} loggedIn={loggedIn} />}/>
           <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} user_name={currentUserName} {...props} />}/>
           <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} />}/>
           <Route exact path="/user/:id/favorites" render = { (props) => < UserFavorites {...props} user_id={currentUserId} />}/>

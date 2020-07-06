@@ -16,7 +16,7 @@ handleMapClick = (e) => {
 getTrails = async(lat,lng) => {
   try {
     //GET data from the backend
-    let response = await fetch(`https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lng}&maxDistance=10&key=200805451-d58078a69001bb6f37cb92b68bbebae3`)
+    let response = await fetch(`https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lng}&maxDistance=10&key=${this.props.apiKey}`)
       let data = await response.json();
       if(response.status === 200) {
         //check the console to make sure we have all the trails
@@ -29,6 +29,7 @@ getTrails = async(lat,lng) => {
     }
   }
 render(){
+  console.log(this.props.apiKey)
   return (
     <>
       <SimpleLeaflet handleClick={this.handleMapClick.bind(this)} />
