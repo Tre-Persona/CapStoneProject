@@ -79,7 +79,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   database: happy_trails_app_production
   username: happy_trails_app
