@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { Button, Container, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 
 
-const UserFavorites = () => {
+const UserFavorites = props => {
   // Array of trail objects fetched from API
   const [trails, setTrails] = useState([])
 
@@ -40,6 +40,9 @@ const UserFavorites = () => {
 
     return (
       <>
+        {props.user_id != props.match.params.id &&
+          <Redirect to="/" />
+        }
         <Container>
           <h2>User Favorites</h2>
           <ListGroup>

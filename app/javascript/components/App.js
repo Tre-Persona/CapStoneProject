@@ -10,8 +10,6 @@ import Home from "./pages/Home"
 import TrailsIndex from "./pages/TrailsIndex"
 import TrailsProfile from "./pages/TrailsProfile"
 import CommentIndex from "./pages/CommentIndex"
-import TrailCommentEdit from "./pages/TrailCommentEdit"
-import TrailsSearch from "./partials/TrailsSearch"
 import UserProfile from "./pages/UserProfile"
 import UserFavorites from "./pages/UserFavorites"
 import UserSettings from "./pages/UserSettings"
@@ -19,6 +17,7 @@ import UserActivity from "./pages/UserActivity"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Header from "./Header.js"
+import Footer from "./Footer"
 
 
 const App = (props) => {
@@ -31,19 +30,21 @@ const App = (props) => {
         user_id={currentUserId}
         />
        
-          <Switch>
-            <Route exact path="/" render = { () => < Home />}/>
+       <Switch>
+            {!props.logged_in &&
+              <Route path="/user" render={() => <Redirect to="/" /> } />
+            }
+            <Route exact path="/" render = { () => < Home logged_in={props.logged_in} sign_in_route={props.sign_in_route}/>}/>
             <Route exact path="/about" render = { () => < About />}/>
             <Route exact path="/contact" render = { () => < Contact />}/>
             <Route exact path="/trails" render = { (props) => < TrailsIndex {...props} />}/>
-            <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} />}/>
-            <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} {...props} />}/>
-            <Route exact path="/trails/:id/comment/edit" render = { () => < TrailCommentEdit />}/>
-            <Route exact path="/trails/search" render = { () => < TrailsSearch />}/>
-            <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} />}/>
-            <Route exact path="/user/:id/favorites" render = { () => < UserFavorites />}/>
-            <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props}/>}/>
-            <Route exact path="/user/:id/activity" render = { () => < UserActivity />}/>
+            <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} 
+            user_id={currentUserId} user_name={currentUserName} logged_in={props.logged_in} />}/>
+            <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} user_name={currentUserName} {...props} />}/>
+            <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} />}/>
+            <Route exact path="/user/:id/favorites" render = { (props) => < UserFavorites {...props} user_id={currentUserId} />}/>
+            <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props} user_id={currentUserId}/>}/>
+            <Route exact path="/user/:id/activity" render = { (props) => < UserActivity {...props} user_id={currentUserId} />}/>
           </Switch>
       </Router>
     );
