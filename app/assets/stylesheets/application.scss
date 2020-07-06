@@ -14,8 +14,39 @@
  *= require_self
  */
 @import 'bootstrap';
+
 .leaflet-container{
     width: 50em;
     height:50em;
-    
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-favorites-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-favorite-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-title {
+  text-align: center;
 }

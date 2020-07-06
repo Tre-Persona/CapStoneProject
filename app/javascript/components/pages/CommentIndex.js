@@ -1,69 +1,138 @@
 import React, { useState, useEffect } from "react"
-import { Media, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import CommentEdit from '../partials/commentsPartials/CommentEdit'
+import CommentNew from '../partials/commentsPartials/CommentNew'
+import CommentList from '../partials/commentsPartials/CommentList'
+import { Container, Media, Button, Form, FormGroup, Label, Input, FormText, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
 
-const CommentIndex = (props) => {
-  const [commentEntry, setCommentEntry]= useState("")
-  const [comments, setComments]=useState([])
-  const [success, setSuccess ]=useState(false)
-  const [error, setError ]=useState(false)
+const Comments = (props) => {
+  // State for a new comment (written in the comment form)
+  const [commentEntry, setCommentEntry] = useState("")
+  // State for existing comment within the editor form
+  const [commentEditEntry, setCommentEditEntry] = useState("")
+  // Array holding the ID of the comment that is in editor mode. ID gets removed after leaving edidtor mode
+  const [editArray, setEditArray] = useState([])
+  // Allows only one comment to be in editor mode at a time
+  const [editorOn, setEditorOn] = useState(false)
+  // Array of comment objects fetched from the API
+  const [comments, setComments] = useState([])
 
+  // Fetch all trail comments upon render
   useEffect(() => {
     getComments()},[])
 
+  // ---------- CODE FOR TYPING/POSTING NEW COMMENT ----------
+  
+  // Set state of commentEntry to whatever the form input is 
   const handleChange = (e) =>{
-    setCommentEntry(
-    e.target.value
-    )
-  }
-  const handleSubmit = (e) =>{
-    e.preventDefault()
-    addToComments()
+    setCommentEntry(e.target.value)
   }
 
+  // Only call POST function if comment isn't blank
+  const handleSubmit = () =>{
+    if (commentEntry === "") return
+    else addToComments()
+  }
+
+  // Fetch request to POST comment
   const addToComments = () => {
     fetch("/comments", {
-      body: JSON.stringify({post: commentEntry, trail_id: props.match.params.id}),
+      // JSON needs to include comment string, trail id, and user name
+      body: JSON.stringify({post: commentEntry, trail_id: props.trail_id, user_name: props.user_name, trail_name: props.trail_name}),
       headers:{
         "Content-Type": "application/json"
       },
       method: "POST"
     })
     .then(response => {
-      if (response.ok) setSuccess(true)
-      else setError(true)
-    })
-    .then(()=>{
-      getComments()
+      if (response.ok) {
+        // If post successful, clear new comment form
+        setCommentEntry("")
+        // Refetch comments upon adding new comment
+        getComments()
+      }
     })
     .catch(error => {
       console.log("error:",error)
     })
   }
-  //fetch comments
+
+  // ---------- CODE FOR EDITING/UPDATING EXISTING COMMENT ----------
+
+  // Upon clicking the Edit button, do the following:
+  const handleEditClick = (id,body) => {
+    // Check that the particular comment's ID is not in the "editArray" and editor mode is not open elsewhere
+    if (!editArray.includes(id) && !editorOn) {
+      // Set editor mode to true to prevent other editors from opening
+      setEditorOn(true)
+      // Add comment ID to array
+      setEditArray([...editArray, id])
+      // Set the comment edit entry to the comment text
+      setCommentEditEntry(body)
+    } // 
+      else if (editArray.includes(id) && editorOn) {
+      setEditorOn(false)
+      let temp = editArray.filter(num=> num !== id)
+      setEditArray(temp)
+      setCommentEditEntry("")
+    }
+  }
+
+  // Set state of commentEditEntry to 
+  const handleChangeEdit = e => {
+    setCommentEditEntry(e.target.value)
+  }
+
+  //
+  const updateComment = (id, trailId) => {
+    fetch(`/comments/${id}`, {
+      body: JSON.stringify({post: commentEditEntry, trail_id: trailId, user_name: props.user_name, trail_name: props.trail_name}),
+      headers:{
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => {
+      if (response.ok) {
+        let temp = editArray.filter(num=> num !== id)
+        setEditArray(temp)
+        setEditorOn(false)
+        getComments()
+      }
+    })
+    .catch(error => {
+      console.log("error:",error)
+    })
+  }
+
+  // ---------- CODE FOR FETCHIING ALL TRAIL COMMENTS ----------
+
   async function getComments() {
     try {
-      //GET data from the backend
       let response = await fetch('/comments')
+      let data = await response.json()
       
-        let data = await response.json();
-        //all good?
-        if(response.status === 200) {
-          //check the console to make sure we have all the trails
-          console.log("data", data)
-          let sortedData = data.filter(trail => {
-            return trail.trail_id == props.match.params.id
-          })
-          //populate the newTrails state array with data
-          setComments(sortedData)
-          console.log("sort", sortedData)
-        }
-      } catch (err) {
-        console.log(err)
+      if(response.ok) {
+        //check the console to make sure we have all the trails
+        console.log("data", data)
+        let sortedData = data.filter(trail => {
+          return trail.trail_id == props.trail_id
+        })
+        .sort((a,b)=>{
+          if (a.updated_at === b.updated_at) return 0
+          else if (a.updated_at > b.updated_at) return -1
+          else return 1
+        })
+        //populate the newTrails state array with data
+        setComments(sortedData)
+        console.log("sortedData", sortedData)
       }
+    } catch (err) {
+      console.log(err)
     }
-  const handleDelete = (e) => {
-    deleteComment(e)
   }
+  
+  // ---------- CODE FOR DELETING COMMENT ----------
+
   const deleteComment = (id) => {
     fetch(`/comments/${id}`, {
       headers:{
@@ -73,49 +142,31 @@ const CommentIndex = (props) => {
     })
     .then(response => {
       if (response.ok) {
-        // If favorite delete request is successful, set favorited to false
-        setSuccess(true)
+        getComments()
       }
-    })
-    .then(() => {
-      // Refresh the API call after delete action
-      getComments()
     })
   }
 
   return ( 
   
-  <>
-      <FormGroup>
-        <Label htmlFor="commentEntry">Text Area</Label>
-        <Input type="textarea" name="commentEntry" id="commentEntry" value={ commentEntry } onChange={ handleChange }/>
-      </FormGroup>
-      <Button onClick={ handleSubmit }>Submit</Button>
-    { comments.map((comment, index)=> {
-      let editable = false
-        if(props.user_id === comment.user_id) {
-          editable = true
-        }
-        let date = comment.updated_at.substring(0,10)
-      return(
-        <Media key = { index }>
-          <Media left href="#">
-            <Media object data-src='#' alt="Beautiful Face Picture" />
-          </Media>
-          <Media body>
-            { comment.post }
-          </Media>
-          <Media body>
-            { date }
-          </Media>
-          { editable &&
-          <Button onClick={ () => handleDelete(comment.id) }>Delete</Button>
-          }
-        </Media>
-      )
-    })}
-  </>
-  );
-};
+  <Container>
+      <CommentNew 
+        handleSubmit={handleSubmit}
+        commentEntry={commentEntry}
+        handleChange={handleChange}
+      />
+      <CommentList 
+        comments={comments}
+        commentEditEntry={commentEditEntry}
+        editArray={editArray}
+        user_id={props.user_id}
+        updateComment={updateComment}
+        handleChangeEdit={handleChangeEdit}
+        handleEditClick={handleEditClick}
+        deleteComment={deleteComment}
+      />
+  </Container>
+  )
+}
 
-export default CommentIndex
+export default Comments

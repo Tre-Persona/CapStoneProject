@@ -6,9 +6,29 @@ class CommentsController < ApplicationController
     render json: comments
   end
 
+  def user_only_index
+    comments = current_user.comments.all
+    render json: comments
+  end
+
   def show
     comment = Comment.all
     render json: comment
+  end
+
+  def edit
+    comment = current_user.comments.find(params[:id])
+    render json: comment
+  end
+
+  def update
+    comment = current_user.comments.find(params[:id])
+    comment.update(comment_params)
+    if comment.valid?
+      render json: comment
+    else
+      render json: comment.errors, status: 422
+    end
   end
 
   def create
@@ -31,6 +51,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:post, :trail_id)
+    params.require(:comment).permit(:post, :trail_id, :user_name, :trail_name)
   end
 end

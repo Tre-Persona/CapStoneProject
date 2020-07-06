@@ -22,7 +22,7 @@ const Header = (props) => {
             { props.logged_in &&
               <>
                 <NavItem>
-                  <NavLink to={`/user/${props.user_id}`}>User Dashboard</NavLink>
+                  <NavLink to={`/user/${props.user_id}`}>Dashboard</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink to={`/user/${props.user_id}/favorites`}>Favorite Trails</NavLink>
