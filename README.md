@@ -1,4 +1,3 @@
 # CapStoneProject
 this is the capstone project
-weve been working hard on it for two weeks
-git history is funny
+by Austin Jeremy and Chrissie -> the best of all humanity
