@@ -12,7 +12,8 @@ const TrailsProfile = (props) => {
   const [favId, setFavId] = useState()
 
   useEffect(() => {
-    getTrail()},[])
+    getTrail()
+ },[])
 
   const handleFavorite = () =>{
     if (favorited) {
@@ -59,22 +60,25 @@ const TrailsProfile = (props) => {
 
   async function getTrail() {
     try {
-      // Fetch JSON of favorites specific to current user
-      let favResponse = await fetch('/favorites')
-      let favData = await favResponse.json()
       // Declare array to hold only favorited Ids to be used in both if-statements below
-      let trailsIdsArray
-      if(favResponse.ok) {
-        console.log("favData:", favData)
-        favData.map(value=> {
-          // Determine the favorite id (for use in the favorite delete call) if current trail is currently favorited
-          if (value.fav_trail_id == props.match.params.id) {
-            setFavId(value.id)
-          }
-        })
-        // Create array of just the ids of the trails favorited by current user
-        trailsIdsArray = favData.map(value=>value.fav_trail_id)
-        console.log("Fav trail Ids:", trailsIdsArray)
+      let trailsIdsArray = []
+      if (props.loggedIn) {
+        // Fetch JSON of favorites specific to current user
+        let favResponse = await fetch('/favorites')
+        let favData = await favResponse.json()
+        
+        if(favResponse.ok) {
+          console.log("favData:", favData)
+          favData.map(value=> {
+            // Determine the favorite id (for use in the favorite delete call) if current trail is currently favorited
+            if (value.fav_trail_id == props.match.params.id) {
+              setFavId(value.id)
+            }
+          })
+          // Create array of just the ids of the trails favorited by current user
+          trailsIdsArray = favData.map(value=>value.fav_trail_id)
+          console.log("Fav trail Ids:", trailsIdsArray)
+        }
       }
 
       //GET data from the API
@@ -103,12 +107,14 @@ const TrailsProfile = (props) => {
             currentTrail={currentTrail}
             favorited={favorited}
             handleFavorite={handleFavorite}
+            loggedIn={props.loggedIn}
           />
           <CommentIndex 
             trail_id={props.match.params.id}
             user_name={props.user_name}
             user_id={props.user_id}
             trail_name={currentTrail.name}
+            loggedIn={props.loggedIn}
           />
         </Container>
       </>

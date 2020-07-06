@@ -113,7 +113,6 @@ const Comments = (props) => {
       
       if(response.ok) {
         //check the console to make sure we have all the trails
-        console.log("data", data)
         let sortedData = data.filter(trail => {
           return trail.trail_id == props.trail_id
         })
@@ -124,7 +123,7 @@ const Comments = (props) => {
         })
         //populate the newTrails state array with data
         setComments(sortedData)
-        console.log("sortedData", sortedData)
+        console.log("sorted comments data:", sortedData)
       }
     } catch (err) {
       console.log(err)
@@ -150,11 +149,13 @@ const Comments = (props) => {
   return ( 
   
   <Container>
-      <CommentNew 
-        handleSubmit={handleSubmit}
-        commentEntry={commentEntry}
-        handleChange={handleChange}
-      />
+      {props.loggedIn &&
+        <CommentNew 
+          handleSubmit={handleSubmit}
+          commentEntry={commentEntry}
+          handleChange={handleChange}
+        />
+      }
       <CommentList 
         comments={comments}
         commentEditEntry={commentEditEntry}

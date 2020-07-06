@@ -15679,3 +15679,2014 @@ Processing by CommentsController#user_only_index as */*
 Completed 200 OK in 122ms (Views: 18.2ms | ActiveRecord: 98.7ms | Allocations: 2930)
 
 
+Started GET "/" for ::1 at 2020-07-06 11:23:19 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mUser Load (46.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (39.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 932ms (Views: 446.0ms | ActiveRecord: 145.0ms | Allocations: 25141)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:23:34 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 94ms (Views: 19.4ms | ActiveRecord: 37.8ms | Allocations: 10131)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:23:57 -0700
+Started GET "/users/comments" for ::1 at 2020-07-06 11:23:57 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (22.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (5.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 47ms (Views: 10.3ms | ActiveRecord: 27.9ms | Allocations: 3255)
+
+
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 169ms (Views: 104.1ms | ActiveRecord: 48.9ms | Allocations: 8817)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:23:58 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (2.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 38ms (Views: 6.8ms | ActiveRecord: 14.0ms | Allocations: 2891)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:25:22 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:25:22 -0700
+  [1m[35m (26.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FavoritesController#index as */*
+  [1m[35m (53.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 95ms (Views: 75.6ms | ActiveRecord: 14.2ms | Allocations: 8619)
+
+
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 236ms (Views: 37.9ms | ActiveRecord: 37.5ms | Allocations: 26841)
+
+
+Started DELETE "/favorites/10" for ::1 at 2020-07-06 11:25:34 -0700
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"10", "favorite"=>{}}
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:19:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+  [1m[36mFavorite Destroy (12.4ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:20:in `destroy'
+Completed 200 OK in 80ms (Views: 0.6ms | ActiveRecord: 65.1ms | Allocations: 4944)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:25:34 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (3.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 56ms (Views: 6.0ms | ActiveRecord: 11.7ms | Allocations: 3142)
+
+
+Started POST "/favorites" for ::1 at 2020-07-06 11:25:34 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7022531", "favorite"=>{"fav_trail_id"=>"7022531"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7022531], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Create (2.4ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "fav_trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["fav_trail_id", 7022531], ["created_at", "2020-07-06 18:25:34.964111"], ["updated_at", "2020-07-06 18:25:34.964111"]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (26.0ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."id" != $2 AND "favorites"."user_id" = $3 LIMIT $4[0m  [["fav_trail_id", 7022531], ["id", 11], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 200 OK in 52ms (Views: 0.8ms | ActiveRecord: 30.4ms | Allocations: 7431)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:25:35 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (4.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 4.4ms | ActiveRecord: 5.8ms | Allocations: 3242)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:25:37 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:25:37 -0700
+Processing by CommentsController#user_only_index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (32.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 48ms (Views: 8.5ms | ActiveRecord: 32.9ms | Allocations: 6629)
+
+
+  [1m[36mFavorite Load (35.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 86ms (Views: 10.9ms | ActiveRecord: 64.3ms | Allocations: 6955)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:25:38 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (50.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 115ms (Views: 55.0ms | ActiveRecord: 54.2ms | Allocations: 2907)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:25:55 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:25:55 -0700
+Processing by CommentsController#user_only_index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (5.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+  [1m[36mFavorite Load (1.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 18ms (Views: 4.2ms | ActiveRecord: 7.8ms | Allocations: 5630)
+
+
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 8.2ms | ActiveRecord: 4.9ms | Allocations: 5888)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:25:55 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 12ms (Views: 4.7ms | ActiveRecord: 3.9ms | Allocations: 2894)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:26:00 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 3245)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:26:02 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:26:02 -0700
+Processing by CommentsController#user_only_index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (33.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 55ms (Views: 6.2ms | ActiveRecord: 36.2ms | Allocations: 5594)
+
+
+  [1m[36mFavorite Load (70.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 95ms (Views: 4.2ms | ActiveRecord: 82.0ms | Allocations: 5887)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:26:03 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 2.1ms | Allocations: 2884)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:26:03 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (2.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 4.2ms | ActiveRecord: 5.5ms | Allocations: 3227)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:26:04 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:26:04 -0700
+Processing by CommentsController#user_only_index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (4.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 18ms (Views: 5.9ms | ActiveRecord: 6.6ms | Allocations: 5092)
+
+
+  [1m[36mFavorite Load (29.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 44ms (Views: 4.9ms | ActiveRecord: 30.7ms | Allocations: 5922)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:26:05 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (24.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 35ms (Views: 4.3ms | ActiveRecord: 25.5ms | Allocations: 2905)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:26:31 -0700
+Started GET "/comments" for ::1 at 2020-07-06 11:26:31 -0700
+Processing by FavoritesController#index as */*
+Processing by CommentsController#index as */*
+  [1m[36mUser Load (35.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (22.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  [1m[36mFavorite Load (1.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 42ms (Views: 8.3ms | ActiveRecord: 22.6ms | Allocations: 3564)
+
+
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 52ms (Views: 9.0ms | ActiveRecord: 37.1ms | Allocations: 5685)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:26:32 -0700
+Started GET "/users/comments" for ::1 at 2020-07-06 11:26:32 -0700
+Processing by FavoritesController#index as */*
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mFavorite Load (84.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 101ms (Views: 4.8ms | ActiveRecord: 88.9ms | Allocations: 5342)
+
+
+  [1m[36mComment Load (87.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 106ms (Views: 8.4ms | ActiveRecord: 93.1ms | Allocations: 5920)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 11:26:32 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 1.5ms | Allocations: 2878)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:27:27 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (24.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 34ms (Views: 4.3ms | ActiveRecord: 24.7ms | Allocations: 3242)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:27:29 -0700
+Started GET "/comments" for ::1 at 2020-07-06 11:27:29 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CommentsController#index as */*
+  [1m[36mFavorite Load (4.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 4.5ms | Allocations: 4338)
+
+
+  [1m[36mComment Load (25.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 31ms (Views: 3.6ms | ActiveRecord: 25.2ms | Allocations: 3455)
+
+
+Started GET "/trails/7075150" for ::1 at 2020-07-06 11:30:07 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7075150"}
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 514)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 377ms (Views: 326.1ms | ActiveRecord: 20.3ms | Allocations: 18752)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:30:08 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:30:08 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (79.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 96ms (Views: 14.0ms | ActiveRecord: 79.8ms | Allocations: 4686)
+
+
+  [1m[36mFavorite Load (38.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 81ms (Views: 5.7ms | ActiveRecord: 64.4ms | Allocations: 5079)
+
+
+Started GET "/trails/7075150" for ::1 at 2020-07-06 11:30:42 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7075150"}
+  [1m[36mUser Load (36.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 279)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 181ms (Views: 80.2ms | ActiveRecord: 40.1ms | Allocations: 9549)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:30:44 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:30:44 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (127.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 139ms (Views: 8.9ms | ActiveRecord: 127.0ms | Allocations: 3508)
+
+
+  [1m[36mUser Load (34.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (40.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 110ms (Views: 4.9ms | ActiveRecord: 74.9ms | Allocations: 5075)
+
+
+Started GET "/trails/7075150" for ::1 at 2020-07-06 11:30:47 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7075150"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 59.9ms | ActiveRecord: 0.9ms | Allocations: 9643)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:30:49 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:30:49 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (145.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  [1m[36mUser Load (135.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 7.5ms | ActiveRecord: 145.4ms | Allocations: 3173)
+
+
+  [1m[36mFavorite Load (95.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 252ms (Views: 6.9ms | ActiveRecord: 231.3ms | Allocations: 5110)
+
+
+Started POST "/favorites" for ::1 at 2020-07-06 11:33:55 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7075150", "favorite"=>{"fav_trail_id"=>"7075150"}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (33.0ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7075150], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Create (54.0ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "fav_trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["fav_trail_id", 7075150], ["created_at", "2020-07-06 18:33:56.039576"], ["updated_at", "2020-07-06 18:33:56.039576"]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."id" != $2 AND "favorites"."user_id" = $3 LIMIT $4[0m  [["fav_trail_id", 7075150], ["id", 12], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 200 OK in 156ms (Views: 0.6ms | ActiveRecord: 127.7ms | Allocations: 7175)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:33:56 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (76.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (4.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 98ms (Views: 7.0ms | ActiveRecord: 80.8ms | Allocations: 3334)
+
+
+Started POST "/comments" for ::1 at 2020-07-06 11:34:06 -0700
+Processing by CommentsController#create as */*
+  Parameters: {"post"=>"Test comment for Cobb Trail", "trail_id"=>"7075150", "user_name"=>"Jeremy G.", "trail_name"=>"Cobb Trail", "comment"=>{"post"=>"Test comment for Cobb Trail", "trail_id"=>"7075150", "user_name"=>"Jeremy G.", "trail_name"=>"Cobb Trail"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+  [1m[36mComment Create (28.8ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "post", "created_at", "updated_at", "trail_id", "user_name", "trail_name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["post", "Test comment for Cobb Trail"], ["created_at", "2020-07-06 18:34:06.640943"], ["updated_at", "2020-07-06 18:34:06.640943"], ["trail_id", 7075150], ["user_name", "Jeremy G."], ["trail_name", "Cobb Trail"]]
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+Completed 200 OK in 47ms (Views: 0.5ms | ActiveRecord: 32.9ms | Allocations: 5099)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:34:06 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (2.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 2.4ms | Allocations: 2122)
+
+
+Started GET "/trails/7075150" for ::1 at 2020-07-06 11:34:32 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7075150"}
+  [1m[36mUser Load (32.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 69.1ms | ActiveRecord: 33.2ms | Allocations: 9636)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:34:34 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 1.0ms | Allocations: 2116)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:34:34 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (4.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 5.9ms | ActiveRecord: 4.9ms | Allocations: 3350)
+
+
+Started GET "/users/sign_out" for ::1 at 2020-07-06 11:39:06 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 6.7ms | Allocations: 4605)
+
+
+Started GET "/" for ::1 at 2020-07-06 11:39:06 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 62.0ms | ActiveRecord: 0.0ms | Allocations: 8200)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:39:13 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.0ms | Allocations: 8192)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:39:14 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:39:14 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (48.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 57ms (Views: 7.5ms | ActiveRecord: 48.3ms | Allocations: 2088)
+
+
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 538)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:39:14 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 4.6ms | Allocations: 599)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 25.9ms | Allocations: 2828)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 105.9ms | ActiveRecord: 0.0ms | Allocations: 12170)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:43:30 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: c05d5447a6ea73f7268d
+Version: webpack 4.43.0
+Time: 25668ms
+Built at: 07/06/2020 11:44:06 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f49580526f79987407de.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-f49580526f79987407de.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-802c8dec0ebdbc12c610.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-802c8dec0ebdbc12c610.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f49580526f79987407de.js js/application-f49580526f79987407de.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-802c8dec0ebdbc12c610.js js/server_rendering-802c8dec0ebdbc12c610.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 36044ms (Views: 36030.8ms | ActiveRecord: 0.0ms | Allocations: 9993)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:44:09 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:44:09 -0700
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 1220)
+
+
+Processing by CommentsController#index as */*
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:44:09 -0700
+Processing by Devise::SessionsController#new as */*
+  [1m[36mComment Load (348.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+Completed 200 OK in 827ms (Views: 64.3ms | ActiveRecord: 731.6ms | Allocations: 17058)
+
+
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 71.7ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 864ms (Views: 244.1ms | ActiveRecord: 566.8ms | Allocations: 21130)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:44:15 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 131)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 117.6ms | ActiveRecord: 0.0ms | Allocations: 9086)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-06 11:44:21 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"G91tBShQXeIglzYsJDe+Zr5LhUZcUtuAXtCAf5feybltsGjgo3GxIQvg65xsDPX5LG1HwapTsrbndMK+riBZJQ==", "user"=>{"email"=>"test2@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (29.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test2@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/favorites
+Completed 302 Found in 2268ms (ActiveRecord: 29.0ms | Allocations: 5012)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:44:24 -0700
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (288.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (38.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 715ms (Views: 32.8ms | ActiveRecord: 609.3ms | Allocations: 7361)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:44:35 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 277)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 118.7ms | ActiveRecord: 2.1ms | Allocations: 9749)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:44:37 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:44:37 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (248.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 259ms (Views: 8.2ms | ActiveRecord: 248.5ms | Allocations: 3285)
+
+
+  [1m[36mUser Load (58.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 305ms (Views: 8.8ms | ActiveRecord: 139.2ms | Allocations: 5346)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:45:47 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 287)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 260c0d4a17c8bb087334
+Version: webpack 4.43.0
+Time: 23558ms
+Built at: 07/06/2020 11:46:18 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-6751fe28178f73d2a71f.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-6751fe28178f73d2a71f.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-79ada4ae55e5927fbe39.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-79ada4ae55e5927fbe39.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-6751fe28178f73d2a71f.js js/application-6751fe28178f73d2a71f.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-79ada4ae55e5927fbe39.js js/server_rendering-79ada4ae55e5927fbe39.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 30975ms (Views: 30775.5ms | ActiveRecord: 74.1ms | Allocations: 16880)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:46:21 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:46:21 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (124.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  [1m[36mUser Load (256.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 565ms (Views: 50.5ms | ActiveRecord: 501.2ms | Allocations: 13218)
+
+
+  [1m[36mFavorite Load (79.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 643ms (Views: 36.9ms | ActiveRecord: 580.0ms | Allocations: 14504)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:49:47 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (25.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 287)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: b5b48f5f9d90e1ba2282
+Version: webpack 4.43.0
+Time: 14909ms
+Built at: 07/06/2020 11:50:07 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-c6cc55273af1095bf0e0.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-c6cc55273af1095bf0e0.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-94a35f9a48c56314c5ba.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-94a35f9a48c56314c5ba.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-c6cc55273af1095bf0e0.js js/application-c6cc55273af1095bf0e0.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-94a35f9a48c56314c5ba.js js/server_rendering-94a35f9a48c56314c5ba.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 20706ms (Views: 20573.1ms | ActiveRecord: 90.5ms | Allocations: 16799)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:50:09 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:50:09 -0700
+Processing by FavoritesController#index as */*
+Processing by CommentsController#index as */*
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (20.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  [1m[36mFavorite Load (159.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 297ms (Views: 33.9ms | ActiveRecord: 233.9ms | Allocations: 12583)
+
+
+Completed 200 OK in 314ms (Views: 52.4ms | ActiveRecord: 255.0ms | Allocations: 13739)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:50:56 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (21.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 287)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 638ad03d60772335763e
+Version: webpack 4.43.0
+Time: 16609ms
+Built at: 07/06/2020 11:51:21 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-dbe51c0cbef58c211056.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-dbe51c0cbef58c211056.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-ddbc9ee0a4727720851b.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ddbc9ee0a4727720851b.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-dbe51c0cbef58c211056.js js/application-dbe51c0cbef58c211056.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-ddbc9ee0a4727720851b.js js/server_rendering-ddbc9ee0a4727720851b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 24149ms (Views: 23883.7ms | ActiveRecord: 51.7ms | Allocations: 16823)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:51:22 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:51:22 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (47.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+  [1m[36mUser Load (75.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (105.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 314ms (Views: 148.3ms | ActiveRecord: 147.8ms | Allocations: 11818)
+
+
+Completed 200 OK in 495ms (Views: 55.5ms | ActiveRecord: 376.7ms | Allocations: 14136)
+
+
+Started GET "/users/sign_out" for ::1 at 2020-07-06 11:51:27 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 14.7ms | Allocations: 2738)
+
+
+Started GET "/" for ::1 at 2020-07-06 11:51:28 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 115ms (Views: 98.2ms | ActiveRecord: 0.0ms | Allocations: 8202)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:51:32 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 100.0ms | ActiveRecord: 0.0ms | Allocations: 8094)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:51:33 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:51:33 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 546)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:51:34 -0700
+  [1m[36mComment Load (146.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 158ms (Views: 9.2ms | ActiveRecord: 146.6ms | Allocations: 4660)
+
+
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1055)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 115.2ms | ActiveRecord: 0.0ms | Allocations: 9291)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:52:26 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: a646dc2b88e8fe8f8769
+Version: webpack 4.43.0
+Time: 16039ms
+Built at: 07/06/2020 11:52:48 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-4f2275dbb24a6cfc0653.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-4f2275dbb24a6cfc0653.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-36d2440b45f8d14bee17.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-36d2440b45f8d14bee17.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-4f2275dbb24a6cfc0653.js js/application-4f2275dbb24a6cfc0653.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-36d2440b45f8d14bee17.js js/server_rendering-36d2440b45f8d14bee17.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 21725ms (Views: 21723.2ms | ActiveRecord: 0.0ms | Allocations: 9917)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:52:50 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:52:50 -0700
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 1239)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:52:50 -0700
+Processing by Devise::SessionsController#new as */*
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (110.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 367ms (Views: 48.1ms | ActiveRecord: 311.3ms | Allocations: 7650)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 601ms (Views: 127.5ms | ActiveRecord: 405.0ms | Allocations: 24527)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:54:05 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: d02308e852c325f7df73
+Version: webpack 4.43.0
+Time: 13916ms
+Built at: 07/06/2020 11:54:25 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-d03e64822f5fe8a623cb.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-d03e64822f5fe8a623cb.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-f17bb5219edbc2bbe483.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-f17bb5219edbc2bbe483.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-d03e64822f5fe8a623cb.js js/application-d03e64822f5fe8a623cb.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f17bb5219edbc2bbe483.js js/server_rendering-f17bb5219edbc2bbe483.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 19557ms (Views: 19552.9ms | ActiveRecord: 0.0ms | Allocations: 9909)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:54:26 -0700
+Processing by CommentsController#index as */*
+Started GET "/favorites" for ::1 at 2020-07-06 11:54:26 -0700
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 1238)
+
+
+  [1m[36mComment Load (166.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 292ms (Views: 69.2ms | ActiveRecord: 216.9ms | Allocations: 11791)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:54:26 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 60.7ms | ActiveRecord: 41.1ms | Allocations: 14644)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:54:44 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 460c6e77ec7d4a21f25a
+Version: webpack 4.43.0
+Time: 16050ms
+Built at: 07/06/2020 11:55:05 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-9dfff280a010a452aab0.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-9dfff280a010a452aab0.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-1ae1bca8f0b2cfe13fb0.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1ae1bca8f0b2cfe13fb0.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-9dfff280a010a452aab0.js js/application-9dfff280a010a452aab0.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-1ae1bca8f0b2cfe13fb0.js js/server_rendering-1ae1bca8f0b2cfe13fb0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 20848ms (Views: 20845.1ms | ActiveRecord: 0.0ms | Allocations: 9937)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:55:07 -0700
+Processing by CommentsController#index as */*
+Started GET "/favorites" for ::1 at 2020-07-06 11:55:07 -0700
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 1220)
+
+
+  [1m[36mComment Load (49.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 131ms (Views: 49.4ms | ActiveRecord: 73.5ms | Allocations: 11703)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:55:07 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 3.6ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 51.5ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 251ms (Views: 170.3ms | ActiveRecord: 22.3ms | Allocations: 14634)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:55:36 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 4516decd72de6b403523
+Version: webpack 4.43.0
+Time: 15744ms
+Built at: 07/06/2020 11:55:57 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-dee379349859e85b8d41.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-dee379349859e85b8d41.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-7395923ecc5a189efc9d.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-7395923ecc5a189efc9d.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-dee379349859e85b8d41.js js/application-dee379349859e85b8d41.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-7395923ecc5a189efc9d.js js/server_rendering-7395923ecc5a189efc9d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 21117ms (Views: 21112.8ms | ActiveRecord: 0.0ms | Allocations: 9932)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:56:00 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:56:00 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (27.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 1220)
+
+
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:56:00 -0700
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 275ms (Views: 38.3ms | ActiveRecord: 228.2ms | Allocations: 15593)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 34.8ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 331ms (Views: 136.5ms | ActiveRecord: 72.6ms | Allocations: 19678)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:56:49 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 0358997e73161b127b45
+Version: webpack 4.43.0
+Time: 15823ms
+Built at: 07/06/2020 11:57:10 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-5d7cd49a8db34b596f0c.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-5d7cd49a8db34b596f0c.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-ade2a06a90bf56c58316.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ade2a06a90bf56c58316.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-5d7cd49a8db34b596f0c.js js/application-5d7cd49a8db34b596f0c.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-ade2a06a90bf56c58316.js js/server_rendering-ade2a06a90bf56c58316.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 21151ms (Views: 21144.8ms | ActiveRecord: 0.0ms | Allocations: 9970)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:57:12 -0700
+Processing by CommentsController#index as */*
+Started GET "/favorites" for ::1 at 2020-07-06 11:57:12 -0700
+  [1m[36mComment Load (51.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 1234)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:57:12 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+Completed 200 OK in 387ms (Views: 66.1ms | ActiveRecord: 309.0ms | Allocations: 21805)
+
+
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 6.6ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 24.5ms | Allocations: 1466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 490ms (Views: 315.1ms | ActiveRecord: 104.5ms | Allocations: 20130)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:58:21 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 216)
+[Webpacker] Compiling...
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:58:42 -0700
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: d586709ff67074d09cf4
+Version: webpack 4.43.0
+Time: 23357ms
+Built at: 07/06/2020 11:58:52 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-92cc3afbcbbd1f1fd889.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-92cc3afbcbbd1f1fd889.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-ccb867fadb1bc85d5f93.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ccb867fadb1bc85d5f93.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-92cc3afbcbbd1f1fd889.js js/application-92cc3afbcbbd1f1fd889.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-ccb867fadb1bc85d5f93.js js/server_rendering-ccb867fadb1bc85d5f93.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 30922ms (Views: 30911.2ms | ActiveRecord: 0.0ms | Allocations: 14393)
+
+
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 0.0ms | Allocations: 8379)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:58:54 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:58:54 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1226)
+
+
+  [1m[36mComment Load (25.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 151ms (Views: 77.9ms | ActiveRecord: 67.0ms | Allocations: 10821)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:58:55 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 275ms (Views: 130.0ms | ActiveRecord: 28.4ms | Allocations: 14634)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:58:58 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 8114)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:58:59 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (3.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 3.2ms | Allocations: 2106)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 11:58:59 -0700
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 557)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:58:59 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 131)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 0.0ms | Allocations: 9108)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 11:59:23 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 93.6ms | ActiveRecord: 0.0ms | Allocations: 8361)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 11:59:25 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 11:59:25 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 1220)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 11:59:25 -0700
+Processing by Devise::SessionsController#new as */*
+  [1m[36mComment Load (233.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 466ms (Views: 36.0ms | ActiveRecord: 424.3ms | Allocations: 16049)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 517ms (Views: 148.0ms | ActiveRecord: 302.9ms | Allocations: 21285)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:00:20 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 8113)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:00:20 -0700
+Processing by CommentsController#index as */*
+Started GET "/favorites" for ::1 at 2020-07-06 12:00:20 -0700
+  [1m[36mComment Load (48.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 55ms (Views: 4.9ms | ActiveRecord: 48.4ms | Allocations: 2765)
+
+
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 565)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:00:20 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 9095)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:00:37 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 3e61895bc63e7b3e1e03
+Version: webpack 4.43.0
+Time: 8641ms
+Built at: 07/06/2020 12:00:49 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-15fce5a4a80ed5382b61.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-15fce5a4a80ed5382b61.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a87ba35c7d124236c987.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a87ba35c7d124236c987.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-15fce5a4a80ed5382b61.js js/application-15fce5a4a80ed5382b61.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a87ba35c7d124236c987.js js/server_rendering-a87ba35c7d124236c987.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 12284ms (Views: 12282.7ms | ActiveRecord: 0.0ms | Allocations: 9906)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:00:51 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 12:00:51 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1216)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:00:51 -0700
+  [1m[36mComment Load (141.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 259ms (Views: 32.9ms | ActiveRecord: 219.0ms | Allocations: 16015)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 4.0ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 224ms (Views: 79.9ms | ActiveRecord: 107.4ms | Allocations: 20054)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:01:17 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 976bd6740e9e5f1fb400
+Version: webpack 4.43.0
+Time: 8783ms
+Built at: 07/06/2020 12:01:30 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a515c0292aaaa9bf3d91.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-a515c0292aaaa9bf3d91.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-aa45a33f602a11019f0a.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-aa45a33f602a11019f0a.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a515c0292aaaa9bf3d91.js js/application-a515c0292aaaa9bf3d91.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-aa45a33f602a11019f0a.js js/server_rendering-aa45a33f602a11019f0a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 12286ms (Views: 12284.8ms | ActiveRecord: 0.0ms | Allocations: 9900)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:01:30 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 12:01:30 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (29.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1234)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:01:31 -0700
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 183ms (Views: 42.7ms | ActiveRecord: 131.5ms | Allocations: 16000)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 158ms (Views: 48.4ms | ActiveRecord: 76.0ms | Allocations: 19648)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:01:36 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 1ac8781cae1fccc5816e
+Version: webpack 4.43.0
+Time: 7340ms
+Built at: 07/06/2020 12:01:46 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-df13152d216a446e6346.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-df13152d216a446e6346.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-61188db6e0d61734afab.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-61188db6e0d61734afab.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-df13152d216a446e6346.js js/application-df13152d216a446e6346.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-61188db6e0d61734afab.js js/server_rendering-61188db6e0d61734afab.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 10141ms (Views: 10138.3ms | ActiveRecord: 0.0ms | Allocations: 9927)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:01:47 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 12:01:47 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1229)
+
+
+  [1m[36mComment Load (112.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:01:47 -0700
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 258ms (Views: 33.5ms | ActiveRecord: 216.1ms | Allocations: 16040)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 157ms (Views: 57.3ms | ActiveRecord: 59.4ms | Allocations: 19704)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:02:46 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 20e6f71a45a6460ebb8c
+Version: webpack 4.43.0
+Time: 5851ms
+Built at: 07/06/2020 12:02:55 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-113344bc5e3758a50422.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-113344bc5e3758a50422.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-fb997095010dd3f49ca5.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-fb997095010dd3f49ca5.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-113344bc5e3758a50422.js js/application-113344bc5e3758a50422.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-fb997095010dd3f49ca5.js js/server_rendering-fb997095010dd3f49ca5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 8458ms (Views: 8456.3ms | ActiveRecord: 0.0ms | Allocations: 9889)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:02:56 -0700
+Processing by CommentsController#index as */*
+Started GET "/favorites" for ::1 at 2020-07-06 12:02:56 -0700
+  [1m[36mComment Load (21.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms | Allocations: 1261)
+
+
+Completed 200 OK in 117ms (Views: 26.4ms | ActiveRecord: 83.9ms | Allocations: 11993)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:02:56 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 47.2ms | ActiveRecord: 32.9ms | Allocations: 15013)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:04:08 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 169adcafbbcfeeb7b5e0
+Version: webpack 4.43.0
+Time: 5616ms
+Built at: 07/06/2020 12:04:16 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-6d48eada9aa57fdb2f57.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-6d48eada9aa57fdb2f57.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a9260236046e0cef3707.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a9260236046e0cef3707.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-6d48eada9aa57fdb2f57.js js/application-6d48eada9aa57fdb2f57.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a9260236046e0cef3707.js js/server_rendering-a9260236046e0cef3707.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 8094ms (Views: 8092.6ms | ActiveRecord: 0.0ms | Allocations: 9878)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:04:17 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 12:04:17 -0700
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1231)
+
+
+Processing by CommentsController#index as */*
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:04:17 -0700
+  [1m[36mComment Load (18.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 106ms (Views: 38.7ms | ActiveRecord: 61.6ms | Allocations: 10761)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 41.9ms | ActiveRecord: 137.0ms | Allocations: 19652)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:04:25 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 1ac8781cae1fccc5816e
+Version: webpack 4.43.0
+Time: 5679ms
+Built at: 07/06/2020 12:04:32 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-df13152d216a446e6346.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-df13152d216a446e6346.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-61188db6e0d61734afab.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-61188db6e0d61734afab.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-df13152d216a446e6346.js js/application-df13152d216a446e6346.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-61188db6e0d61734afab.js js/server_rendering-61188db6e0d61734afab.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 7389ms (Views: 7387.0ms | ActiveRecord: 0.0ms | Allocations: 9936)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:04:33 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 12:04:33 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (15.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 1217)
+
+
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 176ms (Views: 56.4ms | ActiveRecord: 115.1ms | Allocations: 11132)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:04:33 -0700
+Processing by Devise::SessionsController#new as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 52.1ms | ActiveRecord: 32.3ms | Allocations: 14630)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:05:27 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: a92659dbcaecdbdc76c9
+Version: webpack 4.43.0
+Time: 6678ms
+Built at: 07/06/2020 12:05:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a41180270ac527579cf8.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-a41180270ac527579cf8.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a831dc86f414093f1330.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a831dc86f414093f1330.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a41180270ac527579cf8.js js/application-a41180270ac527579cf8.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a831dc86f414093f1330.js js/server_rendering-a831dc86f414093f1330.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 9272ms (Views: 9270.8ms | ActiveRecord: 0.0ms | Allocations: 9878)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:05:37 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 12:05:37 -0700
+Processing by CommentsController#index as */*
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 1218)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:05:37 -0700
+  [1m[36mComment Load (28.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 142ms (Views: 27.6ms | ActiveRecord: 105.7ms | Allocations: 13331)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 190ms (Views: 113.5ms | ActiveRecord: 33.4ms | Allocations: 19686)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:06:07 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 1ac8781cae1fccc5816e
+Version: webpack 4.43.0
+Time: 5692ms
+Built at: 07/06/2020 12:06:15 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-df13152d216a446e6346.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-df13152d216a446e6346.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-61188db6e0d61734afab.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-61188db6e0d61734afab.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-df13152d216a446e6346.js js/application-df13152d216a446e6346.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-61188db6e0d61734afab.js js/server_rendering-61188db6e0d61734afab.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 7682ms (Views: 7679.9ms | ActiveRecord: 0.0ms | Allocations: 9897)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:06:16 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 12:06:16 -0700
+Processing by FavoritesController#index as */*
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 1231)
+
+
+Processing by CommentsController#index as */*
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:06:16 -0700
+  [1m[36mComment Load (4.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 96ms (Views: 31.1ms | ActiveRecord: 59.8ms | Allocations: 11274)
+
+
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 160ms (Views: 60.3ms | ActiveRecord: 45.0ms | Allocations: 19678)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:07:11 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 0ac390f17900c801a289
+Version: webpack 4.43.0
+Time: 5952ms
+Built at: 07/06/2020 12:07:19 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-2033deb3164f3e8753a7.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-2033deb3164f3e8753a7.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-2024e552fa681bb29b2b.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-2024e552fa681bb29b2b.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-2033deb3164f3e8753a7.js js/application-2033deb3164f3e8753a7.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-2024e552fa681bb29b2b.js js/server_rendering-2024e552fa681bb29b2b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+WARNING in ./app/javascript/components/pages/TrailsProfile.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/pages/TrailsProfile.js: Unexpected reserved word 'let' (65:8)
+
+  63 |       {props.loggedIn &&
+  64 |         // Fetch JSON of favorites specific to current user
+> 65 |         let favResponse = await fetch('/favorites')
+     |         ^
+  66 |         let favData = await favResponse.json()
+  67 |         // Declare array to hold only favorited Ids to be used in both if-statements below
+  68 |         let trailsIdsArray
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.checkReservedWord (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10916:14)
+    at Object.parseIdentifierName (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10876:12)
+    at Object.parseIdentifier (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10847:23)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9958:27)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4648:20)
+    at Object.parseExprSubscripts (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9688:23)
+    at Object.parseMaybeUnary (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9668:21)
+    at Object.parseExprOpBaseRightExpr (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9631:34)
+    at Object.parseExprOpRightExpr (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9624:21)
+    at Object.parseExprOp (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9590:27)
+    at Object.parseExprOps (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9548:17)
+    at Object.parseMaybeConditional (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9511:23)
+    at Object.parseMaybeAssign (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9466:21)
+    at Object.parseExpression (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9418:23)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11332:23)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseBlock (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11748:10)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11279:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseBlock (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11748:10)
+    at Object.parseTryStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11636:23)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11260:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+ @ ./app/javascript/components sync ^\.\/.*$ ./pages/TrailsProfile.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 8143ms (Views: 8141.3ms | ActiveRecord: 0.0ms | Allocations: 9878)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:08:27 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 216)
+[Webpacker] Compiling...
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:08:37 -0700
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: e3d84f23742fc3e99c35
+Version: webpack 4.43.0
+Time: 11033ms
+Built at: 07/06/2020 12:08:41 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-3c70d0961954757876d6.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-3c70d0961954757876d6.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a335488dbf270f2e2401.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a335488dbf270f2e2401.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-3c70d0961954757876d6.js js/application-3c70d0961954757876d6.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a335488dbf270f2e2401.js js/server_rendering-a335488dbf270f2e2401.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+WARNING in ./app/javascript/components/pages/TrailsProfile.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/pages/TrailsProfile.js: Unexpected reserved word 'let' (66:8)
+
+  64 |       {props.loggedIn &&
+  65 |         // Fetch JSON of favorites specific to current user
+> 66 |         let favResponse = await fetch('/favorites')
+     |         ^
+  67 |         let favData = await favResponse.json()
+  68 |         // Declare array to hold only favorited Ids to be used in both if-statements below
+  69 |         if(favResponse.ok) {
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.checkReservedWord (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10916:14)
+    at Object.parseIdentifierName (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10876:12)
+    at Object.parseIdentifier (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10847:23)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9958:27)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4648:20)
+    at Object.parseExprSubscripts (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9688:23)
+    at Object.parseMaybeUnary (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9668:21)
+    at Object.parseExprOpBaseRightExpr (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9631:34)
+    at Object.parseExprOpRightExpr (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9624:21)
+    at Object.parseExprOp (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9590:27)
+    at Object.parseExprOps (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9548:17)
+    at Object.parseMaybeConditional (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9511:23)
+    at Object.parseMaybeAssign (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9466:21)
+    at Object.parseExpression (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9418:23)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11332:23)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseBlock (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11748:10)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11279:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseBlock (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11748:10)
+    at Object.parseTryStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11636:23)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11260:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+ @ ./app/javascript/components sync ^\.\/.*$ ./pages/TrailsProfile.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 14822ms (Views: 14820.2ms | ActiveRecord: 0.0ms | Allocations: 14319)
+
+
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 8406)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:11:08 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 216)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 66d13f8ff463e09e42f3
+Version: webpack 4.43.0
+Time: 20661ms
+Built at: 07/06/2020 12:11:38 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-814ea07b890bd18fbc36.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-814ea07b890bd18fbc36.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-068784624a54eb298465.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-068784624a54eb298465.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-814ea07b890bd18fbc36.js js/application-814ea07b890bd18fbc36.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-068784624a54eb298465.js js/server_rendering-068784624a54eb298465.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 29198ms (Views: 29160.7ms | ActiveRecord: 0.0ms | Allocations: 9934)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:11:40 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (49.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 147ms (Views: 49.2ms | ActiveRecord: 89.2ms | Allocations: 7095)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-06 12:11:57 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 143)
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/devise-4.7.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 160ms (Views: 86.1ms | ActiveRecord: 33.9ms | Allocations: 14677)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-06 12:12:03 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pmV96RMmiFYLVLZQWyOAeY0HG2jAUsfsWP3K3dpviuynimy28g9y2eEC/r9J6uzKNQArtoyPzX74mnrq3lXXLg==", "user"=>{"email"=>"test2@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test2@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/favorites
+Completed 302 Found in 489ms (ActiveRecord: 1.0ms | Allocations: 3030)
+
+
+Started GET "/favorites" for ::1 at 2020-07-06 12:12:04 -0700
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (42.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (3.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 221ms (Views: 24.3ms | ActiveRecord: 174.7ms | Allocations: 7356)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:12:39 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 277)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 79.6ms | ActiveRecord: 2.3ms | Allocations: 9673)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:12:40 -0700
+Processing by CommentsController#index as */*
+Started GET "/favorites" for ::1 at 2020-07-06 12:12:40 -0700
+  [1m[36mComment Load (59.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 65ms (Views: 4.4ms | ActiveRecord: 59.4ms | Allocations: 2757)
+
+
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (20.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (4.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 4.1ms | ActiveRecord: 25.4ms | Allocations: 3339)
+
+
+Started GET "/users/sign_out" for ::1 at 2020-07-06 12:12:45 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 8.0ms | Allocations: 2562)
+
+
+Started GET "/" for ::1 at 2020-07-06 12:12:45 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 8168)
+
+
+Started GET "/trails/7022523" for ::1 at 2020-07-06 12:12:50 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 8089)
+
+
+Started GET "/comments" for ::1 at 2020-07-06 12:12:51 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 2091)
+
+
