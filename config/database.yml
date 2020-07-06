@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: happy_trails_app_production
   username: happy_trails_app
   password: <%= ENV['HAPPY_TRAILS_APP_DATABASE_PASSWORD'] %>
