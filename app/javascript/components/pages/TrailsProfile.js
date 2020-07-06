@@ -108,6 +108,7 @@ const TrailsProfile = (props) => {
             trail_id={props.match.params.id}
             user_name={props.user_name}
             user_id={props.user_id}
+            trail_name={currentTrail.name}
           />
         </Container>
       </>

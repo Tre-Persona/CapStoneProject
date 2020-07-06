@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_044146) do
+ActiveRecord::Schema.define(version: 2020_07_05_235134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "badges", force: :cascade do |t|
+    t.string "level"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -22,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_07_02_044146) do
     t.datetime "updated_at", null: false
     t.integer "trail_id"
     t.string "user_name"
+    t.string "trail_name"
   end
 
   create_table "favorites", force: :cascade do |t|
