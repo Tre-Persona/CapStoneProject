@@ -16,7 +16,8 @@ import UserSettings from "./pages/UserSettings"
 import UserActivity from "./pages/UserActivity"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
-import Header from "./Header.js"
+import Header from "./partials/Header"
+import Footer from "./partials/Footer"
 
 
 const App = (props) => {
@@ -32,7 +33,7 @@ const App = (props) => {
             {!props.logged_in &&
               <Route path="/user" render={() => <Redirect to="/" /> } />
             }
-            <Route exact path="/" render = { () => < Home logged_in={props.logged_in}/>}/>
+            <Route exact path="/" render = { () => < Home logged_in={props.logged_in} sign_in_route={props.sign_in_route}/>}/>
             <Route exact path="/about" render = { () => < About />}/>
             <Route exact path="/contact" render = { () => < Contact />}/>
             <Route exact path="/trails" render = { (props) => < TrailsIndex {...props} />}/>
@@ -42,7 +43,7 @@ const App = (props) => {
             <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} />}/>
             <Route exact path="/user/:id/favorites" render = { (props) => < UserFavorites {...props} user_id={currentUserId} />}/>
             <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props} user_id={currentUserId}/>}/>
-            <Route exact path="/user/:id/activity" render = { () => < UserActivity user_id={currentUserId} />}/>
+            <Route exact path="/user/:id/activity" render = { (props) => < UserActivity {...props} user_id={currentUserId} />}/>
           </Switch>
       </Router>
     );

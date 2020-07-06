@@ -23,7 +23,7 @@ const ActivityList = props => {
           )
         })}
       </ListGroup>
-      <NavLink to={`/user/${props.user_id}/comments`}>
+      <NavLink to={`/user/${props.user_id}/activity`}>
         <Button>See All Activity</Button>
       </NavLink>
     </>

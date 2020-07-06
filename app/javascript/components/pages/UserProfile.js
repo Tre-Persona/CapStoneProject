@@ -61,18 +61,22 @@ const UserProfile = (props) => {
       {props.user_id != props.match.params.id &&
         <Redirect to="/" />
       }
-      <Container>
-        <h2>Your Dashboard</h2>
-        <h4> Hello {props.user_name}</h4>
+      <Container className="dashboard-wrapper">
+        <h2 className="dashboard-title">Your Dashboard</h2>
+        <h4 className="dashboard-greeting"> Hello {props.user_name}</h4>
 
         <NavLink to={`/user/${props.match.params.id}/settings`}>
-          <Button>Settings</Button>
+          <Button className="dashboard-settings-button">Settings</Button>
         </NavLink>
 
         <FavoritesList 
           user_id={props.match.params.id}
           favTrails={favTrails}
         />
+
+        <NavLink to="/trails">
+          <Button>Discover More Trails</Button>
+        </NavLink>
 
         <Badges 
           user_id={props.user_id}

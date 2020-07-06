@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Container } from 'reactstrap';
 
 
 const UserSettings = props => {
@@ -29,20 +29,20 @@ const {
         {props.user_id != props.match.params.id &&
           <Redirect to="/" />
         }
-        <h2>User Settings</h2>
-        <div>
-        <Button color="danger" onClick={toggle}>Delete Profile</Button>
-        <Modal isOpen={modal} toggle={toggle} className={className}>
-          <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-          <ModalBody>
-          This is a permanent action and cannot be undone. Are you sure you want to proceed?
-          </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick= {deleteProfile} >Delete User Profile</Button>{' '}
-            <Button color="secondary" onClick={toggle}>Cancel</Button>
-          </ModalFooter>
-        </Modal>
-      </div>
+        <Container>
+          <h2>User Settings</h2>
+          <Button color="danger" onClick={toggle}>Delete Profile</Button>
+          <Modal isOpen={modal} toggle={toggle} className={className}>
+            <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+            <ModalBody>
+            This is a permanent action and cannot be undone. Are you sure you want to proceed?
+            </ModalBody>
+            <ModalFooter>
+              <Button color="primary" onClick= {deleteProfile} >Delete User Profile</Button>{' '}
+              <Button color="secondary" onClick={toggle}>Cancel</Button>
+            </ModalFooter>
+          </Modal>
+        </Container>
       </>
     );
 }
