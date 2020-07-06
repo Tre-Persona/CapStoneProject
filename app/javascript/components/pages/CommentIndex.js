@@ -149,7 +149,7 @@ const Comments = (props) => {
   return ( 
   
   <Container>
-      {props.loggedIn &&
+      {props.logged_in &&
         <CommentNew 
           handleSubmit={handleSubmit}
           commentEntry={commentEntry}

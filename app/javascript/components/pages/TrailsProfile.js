@@ -62,7 +62,7 @@ const TrailsProfile = (props) => {
     try {
       // Declare array to hold only favorited Ids to be used in both if-statements below
       let trailsIdsArray = []
-      if (props.loggedIn) {
+      if (props.logged_in) {
         // Fetch JSON of favorites specific to current user
         let favResponse = await fetch('/favorites')
         let favData = await favResponse.json()
@@ -107,14 +107,14 @@ const TrailsProfile = (props) => {
             currentTrail={currentTrail}
             favorited={favorited}
             handleFavorite={handleFavorite}
-            loggedIn={props.loggedIn}
+            logged_in={props.logged_in}
           />
           <CommentIndex 
             trail_id={props.match.params.id}
             user_name={props.user_name}
             user_id={props.user_id}
             trail_name={currentTrail.name}
-            loggedIn={props.loggedIn}
+            logged_in={props.logged_in}
           />
         </Container>
       </>

@@ -27,7 +27,7 @@ const TrailDisplay = props => {
         }
       </ListGroup>
       {/*Conditional render for how the favorite button looks between toggles*/}
-      {props.loggedIn &&
+      {props.logged_in &&
         <Button 
         color={favorited? "success" : "secondary"}
         onClick={() => handleFavorite()}

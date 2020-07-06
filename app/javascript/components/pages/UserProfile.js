@@ -14,6 +14,7 @@ const UserProfile = (props) => {
     getTrails()
     console.log(props.user_id)
     console.log(props.match.params.id)
+    console.log("props:",props)
   },[])
 
   async function getTrails() {

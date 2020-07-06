@@ -18244,3 +18244,279 @@ Entrypoint server_rendering = js/server_rendering-5618e3b3b2390ac9ff04.js js/ser
 Completed 200 OK in 9800ms (Views: 9696.8ms | ActiveRecord: 32.6ms | Allocations: 16542)
 
 
+Started GET "/" for ::1 at 2020-07-06 16:31:35 -0700
+  [1m[35m (36.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (48.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 666)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: e138c2a44bd8ae6afba2
+Version: webpack 4.43.0
+Time: 95751ms
+Built at: 07/06/2020 4:33:49 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-e4382ecfbb45e0e60f59.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-e4382ecfbb45e0e60f59.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-f81799770bb821445f7a.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-f81799770bb821445f7a.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-e4382ecfbb45e0e60f59.js js/application-e4382ecfbb45e0e60f59.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f81799770bb821445f7a.js js/server_rendering-f81799770bb821445f7a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 136597ms (Views: 134894.4ms | ActiveRecord: 1048.9ms | Allocations: 46751)
+
+
+Started GET "/" for ::1 at 2020-07-06 16:38:04 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 304)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: dd3e9cac2d6a7d6aaf45
+Version: webpack 4.43.0
+Time: 7152ms
+Built at: 07/06/2020 4:38:14 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-52c123eadafefcc1a1cd.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-52c123eadafefcc1a1cd.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-23c99b2771ecb27eeb35.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-23c99b2771ecb27eeb35.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-52c123eadafefcc1a1cd.js js/application-52c123eadafefcc1a1cd.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-23c99b2771ecb27eeb35.js js/server_rendering-23c99b2771ecb27eeb35.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 10338ms (Views: 10253.1ms | ActiveRecord: 42.0ms | Allocations: 16780)
+
+
+Started GET "/" for ::1 at 2020-07-06 16:38:52 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 2a1203a52b97e552bf92
+Version: webpack 4.43.0
+Time: 6914ms
+Built at: 07/06/2020 4:39:02 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-9f1dd19dc238411b2a1f.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-9f1dd19dc238411b2a1f.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-edbe208bb1f94ce9f59a.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-edbe208bb1f94ce9f59a.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-9f1dd19dc238411b2a1f.js js/application-9f1dd19dc238411b2a1f.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-edbe208bb1f94ce9f59a.js js/server_rendering-edbe208bb1f94ce9f59a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 10389ms (Views: 10304.0ms | ActiveRecord: 57.0ms | Allocations: 16767)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 16:39:09 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 16:39:09 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 67ms (Views: 30.2ms | ActiveRecord: 12.7ms | Allocations: 10892)
+
+
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (2.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 68ms (Views: 21.6ms | ActiveRecord: 27.2ms | Allocations: 8387)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 16:39:10 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (141.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 174ms (Views: 17.4ms | ActiveRecord: 142.6ms | Allocations: 3079)
+
+
+Started GET "/user/1" for ::1 at 2020-07-06 16:40:32 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"user/1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 304)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 8f742fe58a0dfebc5116
+Version: webpack 4.43.0
+Time: 6525ms
+Built at: 07/06/2020 4:40:41 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-80f4e643556c92bde790.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-80f4e643556c92bde790.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-4c5f277cebcf0c564f2a.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-4c5f277cebcf0c564f2a.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-80f4e643556c92bde790.js js/application-80f4e643556c92bde790.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-4c5f277cebcf0c564f2a.js js/server_rendering-4c5f277cebcf0c564f2a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 8737ms (Views: 8689.1ms | ActiveRecord: 26.7ms | Allocations: 16815)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 16:40:41 -0700
+Processing by CommentsController#user_only_index as */*
+Started GET "/favorites" for ::1 at 2020-07-06 16:40:41 -0700
+  [1m[36mUser Load (66.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (11.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 197ms (Views: 32.1ms | ActiveRecord: 140.7ms | Allocations: 15123)
+
+
+  [1m[36mFavorite Load (3.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 143ms (Views: 32.4ms | ActiveRecord: 86.3ms | Allocations: 14663)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 16:40:42 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (3.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 18ms (Views: 6.9ms | ActiveRecord: 5.5ms | Allocations: 3023)
+
+
+Started GET "/user/1" for ::1 at 2020-07-06 16:41:27 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"user/1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 304)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 1dd5b2550e4a78e4e51c
+Version: webpack 4.43.0
+Time: 6397ms
+Built at: 07/06/2020 4:41:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-e3c883dcc7bd3119575a.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-e3c883dcc7bd3119575a.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-e5af5f1bead34cc197ed.js  2.72 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-e5af5f1bead34cc197ed.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-e3c883dcc7bd3119575a.js js/application-e3c883dcc7bd3119575a.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-e5af5f1bead34cc197ed.js js/server_rendering-e5af5f1bead34cc197ed.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 9012ms (Views: 8938.3ms | ActiveRecord: 42.2ms | Allocations: 16774)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 16:41:37 -0700
+Started GET "/favorites" for ::1 at 2020-07-06 16:41:37 -0700
+Processing by FavoritesController#index as */*
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (66.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mUser Load (130.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (34.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+  [1m[36mFavorite Load (33.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 210ms (Views: 27.6ms | ActiveRecord: 166.7ms | Allocations: 12343)
+
+
+Completed 200 OK in 291ms (Views: 19.7ms | ActiveRecord: 242.8ms | Allocations: 19283)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-06 16:41:38 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (32.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 43ms (Views: 5.5ms | ActiveRecord: 32.6ms | Allocations: 3029)
+
+
