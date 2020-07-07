@@ -17,7 +17,7 @@ import UserActivity from "./pages/UserActivity"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Header from "./Header.js"
-import Footer from "./Footer"
+
 
 
 const App = (props) => {
@@ -33,7 +33,7 @@ const App = (props) => {
       />
       
       <Switch>
-          {!logged_in &&
+      {!logged_in &&
             <Route path="/user" render={() => <Redirect to="/" /> } />
           }
           <Route exact path="/" render = { () => < Home logged_in={logged_in} sign_in_route={props.sign_in_route}/>}/>
