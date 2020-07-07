@@ -20295,3 +20295,727 @@ Processing by MainController#index as HTML
 Completed 200 OK in 27ms (Views: 11.4ms | ActiveRecord: 4.3ms | Allocations: 15229)
 
 
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:42:46 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 2aa2c290e85775fd610b
+Version: webpack 4.43.0
+Time: 3461ms
+Built at: 07/06/2020 9:42:52 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-47461bf38b6a5906505e.js  2.86 MiB       application  [emitted] [immutable]  application
+     js/application-47461bf38b6a5906505e.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-1f2a18f8be05d020a922.js  2.74 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1f2a18f8be05d020a922.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-47461bf38b6a5906505e.js js/application-47461bf38b6a5906505e.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-1f2a18f8be05d020a922.js js/server_rendering-1f2a18f8be05d020a922.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 5867ms (Views: 5852.5ms | ActiveRecord: 1.6ms | Allocations: 16655)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:44:16 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: b347413b6c2ec35ba170
+Version: webpack 4.43.0
+Time: 3529ms
+Built at: 07/06/2020 9:44:21 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-2486a923ba42af353475.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-2486a923ba42af353475.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-225f07e3f31b3a60861c.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-225f07e3f31b3a60861c.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-2486a923ba42af353475.js js/application-2486a923ba42af353475.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-225f07e3f31b3a60861c.js js/server_rendering-225f07e3f31b3a60861c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 5618ms (Views: 5600.2ms | ActiveRecord: 6.6ms | Allocations: 16826)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:52:58 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 3272b21e52785b330368
+Version: webpack 4.43.0
+Time: 3416ms
+Built at: 07/06/2020 9:53:04 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-caa660b8d27216a1d568.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-caa660b8d27216a1d568.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-7d4e54bd3dd13dfdc348.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-7d4e54bd3dd13dfdc348.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-caa660b8d27216a1d568.js js/application-caa660b8d27216a1d568.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-7d4e54bd3dd13dfdc348.js js/server_rendering-7d4e54bd3dd13dfdc348.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 5880ms (Views: 5855.2ms | ActiveRecord: 1.6ms | Allocations: 16541)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:53:32 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 175c7b6c9131e507c79c
+Version: webpack 4.43.0
+Time: 2859ms
+Built at: 07/06/2020 9:53:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-d56ca36c34f91902ee72.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-d56ca36c34f91902ee72.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-8fd7703486b64c9fcc88.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-8fd7703486b64c9fcc88.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-d56ca36c34f91902ee72.js js/application-d56ca36c34f91902ee72.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-8fd7703486b64c9fcc88.js js/server_rendering-8fd7703486b64c9fcc88.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+WARNING in ./app/javascript/components/pages/Questionnaire.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/pages/Questionnaire.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (7:4)
+
+   5 |   return (
+   6 |     <h1>Trail Questionnaire</h1>
+>  7 |     <Form>
+     |     ^
+   8 |       <FormGroup>
+   9 |         <Label for="exampleCheckbox"></Label>
+  10 |         <div>
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.jsxParseElementAt (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4626:18)
+    at Object.jsxParseElement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4636:17)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4643:19)
+    at Object.parseExprSubscripts (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9688:23)
+    at Object.parseMaybeUnary (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9668:21)
+    at Object.parseExprOps (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9538:23)
+    at Object.parseMaybeConditional (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9511:23)
+    at Object.parseMaybeAssign (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9466:21)
+    at Object.parseParenAndDistinguishExpression (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10306:28)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10039:21)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4648:20)
+    at Object.parseExprSubscripts (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9688:23)
+    at Object.parseMaybeUnary (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9668:21)
+    at Object.parseExprOps (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9538:23)
+    at Object.parseMaybeConditional (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9511:23)
+    at Object.parseMaybeAssign (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9466:21)
+    at Object.parseExpression (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9418:23)
+    at Object.parseReturnStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11570:28)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11251:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseBlock (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11748:10)
+    at Object.parseFunctionBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10751:24)
+    at Object.parseArrowExpression (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10720:10)
+    at Object.parseParenAndDistinguishExpression (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10334:12)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10039:21)
+ @ ./app/javascript/components sync ^\.\/.*$ ./pages/Questionnaire.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 4084ms (Views: 4062.7ms | ActiveRecord: 7.8ms | Allocations: 16759)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:54:28 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 09612e1b7d67946b810b
+Version: webpack 4.43.0
+Time: 3002ms
+Built at: 07/06/2020 9:54:32 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-46a21b82a6c71e11ebcd.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-46a21b82a6c71e11ebcd.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-44a95e1dc2d0c7930b39.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-44a95e1dc2d0c7930b39.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-46a21b82a6c71e11ebcd.js js/application-46a21b82a6c71e11ebcd.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-44a95e1dc2d0c7930b39.js js/server_rendering-44a95e1dc2d0c7930b39.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4221ms (Views: 4204.5ms | ActiveRecord: 3.9ms | Allocations: 16756)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:55:22 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 400d5e9d5ffc5ed6cb52
+Version: webpack 4.43.0
+Time: 2941ms
+Built at: 07/06/2020 9:55:26 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-cf3dbd05f8a90e2ebb5c.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-cf3dbd05f8a90e2ebb5c.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-14027b3beb24f7b51817.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-14027b3beb24f7b51817.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-cf3dbd05f8a90e2ebb5c.js js/application-cf3dbd05f8a90e2ebb5c.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-14027b3beb24f7b51817.js js/server_rendering-14027b3beb24f7b51817.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4158ms (Views: 4140.4ms | ActiveRecord: 3.4ms | Allocations: 16761)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:56:17 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 232516298f558fa81720
+Version: webpack 4.43.0
+Time: 3101ms
+Built at: 07/06/2020 9:56:21 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-405be18f5662221f7dd0.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-405be18f5662221f7dd0.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-9597fbf346f408dfa838.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-9597fbf346f408dfa838.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-405be18f5662221f7dd0.js js/application-405be18f5662221f7dd0.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-9597fbf346f408dfa838.js js/server_rendering-9597fbf346f408dfa838.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4331ms (Views: 4313.4ms | ActiveRecord: 4.0ms | Allocations: 16746)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:58:30 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 9bc0a67c4743b2641424
+Version: webpack 4.43.0
+Time: 3329ms
+Built at: 07/06/2020 9:58:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a7a64c510ea596457532.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-a7a64c510ea596457532.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a5374cf8a955f16ee838.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a5374cf8a955f16ee838.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a7a64c510ea596457532.js js/application-a7a64c510ea596457532.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a5374cf8a955f16ee838.js js/server_rendering-a5374cf8a955f16ee838.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 5404ms (Views: 5387.9ms | ActiveRecord: 3.6ms | Allocations: 16769)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 21:59:42 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 1d226131598c86572e6f
+Version: webpack 4.43.0
+Time: 2990ms
+Built at: 07/06/2020 9:59:46 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-bdc32bfee7667b873a15.js  2.84 MiB       application  [emitted] [immutable]  application
+     js/application-bdc32bfee7667b873a15.js.map  2.79 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a26be7d43f6dc80c46d3.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a26be7d43f6dc80c46d3.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-bdc32bfee7667b873a15.js js/application-bdc32bfee7667b873a15.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a26be7d43f6dc80c46d3.js js/server_rendering-a26be7d43f6dc80c46d3.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4314ms (Views: 4300.2ms | ActiveRecord: 3.2ms | Allocations: 16770)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:00:55 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 5e273395287109f2ea6d
+Version: webpack 4.43.0
+Time: 3350ms
+Built at: 07/06/2020 10:01:00 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-3df907c6ce8dd3c7af92.js  2.85 MiB       application  [emitted] [immutable]  application
+     js/application-3df907c6ce8dd3c7af92.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a201967e4bca3cf7f338.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a201967e4bca3cf7f338.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-3df907c6ce8dd3c7af92.js js/application-3df907c6ce8dd3c7af92.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a201967e4bca3cf7f338.js js/server_rendering-a201967e4bca3cf7f338.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 5105ms (Views: 5080.1ms | ActiveRecord: 3.7ms | Allocations: 16766)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:03:27 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 752cc3baf8444d6072ec
+Version: webpack 4.43.0
+Time: 3083ms
+Built at: 07/06/2020 10:03:32 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f226e8f00f9b94b281a0.js  2.85 MiB       application  [emitted] [immutable]  application
+     js/application-f226e8f00f9b94b281a0.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-2c28186c49f629d0d036.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-2c28186c49f629d0d036.js.map  2.66 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-f226e8f00f9b94b281a0.js js/application-f226e8f00f9b94b281a0.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-2c28186c49f629d0d036.js js/server_rendering-2c28186c49f629d0d036.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4430ms (Views: 4414.5ms | ActiveRecord: 3.3ms | Allocations: 16766)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:04:20 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 184906b6e7d19c26ec8c
+Version: webpack 4.43.0
+Time: 3074ms
+Built at: 07/06/2020 10:04:24 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-078242b1d55b08897bf9.js  2.85 MiB       application  [emitted] [immutable]  application
+     js/application-078242b1d55b08897bf9.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-8a97af4731231bca4166.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-8a97af4731231bca4166.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-078242b1d55b08897bf9.js js/application-078242b1d55b08897bf9.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-8a97af4731231bca4166.js js/server_rendering-8a97af4731231bca4166.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4326ms (Views: 4308.8ms | ActiveRecord: 4.1ms | Allocations: 16773)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:05:54 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 2cf374cc0e3791c1130a
+Version: webpack 4.43.0
+Time: 3548ms
+Built at: 07/06/2020 10:06:00 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-cc93ad4b26f9704ba6fb.js  2.85 MiB       application  [emitted] [immutable]  application
+     js/application-cc93ad4b26f9704ba6fb.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-79f57425a298fab87c7c.js  2.74 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-79f57425a298fab87c7c.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-cc93ad4b26f9704ba6fb.js js/application-cc93ad4b26f9704ba6fb.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-79f57425a298fab87c7c.js js/server_rendering-79f57425a298fab87c7c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 5851ms (Views: 5835.2ms | ActiveRecord: 3.5ms | Allocations: 16802)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:12:03 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: b0c9302085a7435ca488
+Version: webpack 4.43.0
+Time: 3563ms
+Built at: 07/06/2020 10:12:09 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-8680f7ff33ca5c98afde.js  2.86 MiB       application  [emitted] [immutable]  application
+     js/application-8680f7ff33ca5c98afde.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-489140646a38047037dc.js  2.74 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-489140646a38047037dc.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-8680f7ff33ca5c98afde.js js/application-8680f7ff33ca5c98afde.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-489140646a38047037dc.js js/server_rendering-489140646a38047037dc.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 5608ms (Views: 5592.9ms | ActiveRecord: 1.5ms | Allocations: 16637)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:12:29 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: af97d504c2e39dfe225c
+Version: webpack 4.43.0
+Time: 3231ms
+Built at: 07/06/2020 10:12:33 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-68aa93f09d4997b3dfcf.js  2.86 MiB       application  [emitted] [immutable]  application
+     js/application-68aa93f09d4997b3dfcf.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-b0bca7c6545322d629e0.js  2.74 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-b0bca7c6545322d629e0.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-68aa93f09d4997b3dfcf.js js/application-68aa93f09d4997b3dfcf.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-b0bca7c6545322d629e0.js js/server_rendering-b0bca7c6545322d629e0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4492ms (Views: 4472.1ms | ActiveRecord: 7.7ms | Allocations: 16816)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:22:29 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 9c65c361ad8eebab218f
+Version: webpack 4.43.0
+Time: 3250ms
+Built at: 07/06/2020 10:22:33 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-6e5e6188f52d9a32dd80.js  2.87 MiB       application  [emitted] [immutable]  application
+     js/application-6e5e6188f52d9a32dd80.js.map  2.81 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-9c792dbdc626f54b5a83.js  2.75 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-9c792dbdc626f54b5a83.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-6e5e6188f52d9a32dd80.js js/application-6e5e6188f52d9a32dd80.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-9c792dbdc626f54b5a83.js js/server_rendering-9c792dbdc626f54b5a83.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4475ms (Views: 4459.9ms | ActiveRecord: 1.1ms | Allocations: 16655)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-06 22:24:05 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: ac60829baffdd0b8d963
+Version: webpack 4.43.0
+Time: 3317ms
+Built at: 07/06/2020 10:24:10 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-2e64f409045095e8b7ad.js  2.87 MiB       application  [emitted] [immutable]  application
+     js/application-2e64f409045095e8b7ad.js.map  2.81 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-49f3606eb0025b0bfbda.js  2.75 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-49f3606eb0025b0bfbda.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-2e64f409045095e8b7ad.js js/application-2e64f409045095e8b7ad.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-49f3606eb0025b0bfbda.js js/server_rendering-49f3606eb0025b0bfbda.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 4541ms (Views: 4518.8ms | ActiveRecord: 10.4ms | Allocations: 16782)
+
+
