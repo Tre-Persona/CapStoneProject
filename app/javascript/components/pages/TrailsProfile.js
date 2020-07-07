@@ -3,7 +3,7 @@ import CommentIndex from './CommentIndex'
 import TrailDisplay from '../partials/trailPartials/TrailDisplay.js'
 import { Container } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
-import { Button } from 'reactstrap'
+import { Jumbotron, Button } from 'reactstrap'
 
 
 const TrailsProfile = (props) => {
@@ -111,6 +111,17 @@ const TrailsProfile = (props) => {
             handleFavorite={handleFavorite}
             logged_in={props.logged_in}
           />
+        <Container>
+          <Jumbotron>
+            <h1>Trail Questionnaire</h1>
+            <p className="lead">Trail Rating:</p>
+            <hr className="my-2" />
+            <p>We believe knowledge is power.  The best resource of information about trails are other hikers.  Since every person is different, we can't tell you how difficult a trail may be for you, but we hope to offer you more information so you can make an informed decision if you want to hike a trail.  The above rating is based on a scale....lorem ipsum etc etc.</p>
+            <p className="lead">
+              <NavLink to={`/trails/${props.match.params.id}/questionnaire`} ><Button color="success">Click To Fill Out Questionnaire</Button></NavLink>
+            </p>
+          </Jumbotron>
+        </Container>
           <CommentIndex 
             trail_id={props.match.params.id}
             user_name={props.user_name}
