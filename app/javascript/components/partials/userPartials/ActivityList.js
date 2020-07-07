@@ -32,7 +32,7 @@ const ActivityList = props => {
       }
 
       {props.showEmptyActivityMessage && 
-        <p>You have no comment activity yet.</p>
+        <p className="dashboard-empty-message">You have no comment activity yet.</p>
       }
     </>
   )

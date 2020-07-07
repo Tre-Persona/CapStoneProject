@@ -26227,3 +26227,232 @@ Processing by CommentsController#user_only_index as */*
 Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 4.1ms | Allocations: 2230)
 
 
+Started GET "/favorites" for ::1 at 2020-07-07 09:10:28 -0700
+Started GET "/users/comments" for ::1 at 2020-07-07 09:10:28 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#user_only_index as */*
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (30.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (31.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mFavorite Load (2.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 161ms (Views: 19.5ms | ActiveRecord: 88.3ms | Allocations: 18702)
+
+
+Completed 200 OK in 185ms (Views: 19.5ms | ActiveRecord: 71.1ms | Allocations: 24446)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-07 09:10:29 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (35.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 48ms (Views: 4.2ms | ActiveRecord: 36.2ms | Allocations: 2246)
+
+
+Started GET "/favorites" for ::1 at 2020-07-07 09:10:45 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 2.1ms | Allocations: 3005)
+
+
+Started GET "/favorites" for ::1 at 2020-07-07 09:10:47 -0700
+Started GET "/users/comments" for ::1 at 2020-07-07 09:10:47 -0700
+Processing by FavoritesController#index as */*
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mFavorite Load (2.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 4.0ms | Allocations: 4361)
+
+
+  [1m[36mComment Load (5.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 22ms (Views: 7.5ms | ActiveRecord: 10.7ms | Allocations: 5330)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-07 09:10:47 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.4ms | Allocations: 2234)
+
+
+Started GET "/user/3" for ::1 at 2020-07-07 09:12:00 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"user/3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 182ms (Views: 170.7ms | ActiveRecord: 1.0ms | Allocations: 18533)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-07 09:12:01 -0700
+Started GET "/favorites" for ::1 at 2020-07-07 09:12:01 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (37.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+Processing by FavoritesController#index as */*
+  [1m[36mComment Load (97.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 146ms (Views: 4.9ms | ActiveRecord: 134.9ms | Allocations: 3137)
+
+
+  [1m[36mUser Load (156.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFavorite Load (132.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 301ms (Views: 4.8ms | ActiveRecord: 289.8ms | Allocations: 4719)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-07 09:12:02 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (126.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 138ms (Views: 4.5ms | ActiveRecord: 127.8ms | Allocations: 2240)
+
+
+Started GET "/users/sign_out" for ::1 at 2020-07-07 09:12:48 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 10.8ms | Allocations: 4635)
+
+
+Started GET "/" for ::1 at 2020-07-07 09:12:48 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 7868)
+
+
+Started GET "/" for ::1 at 2020-07-07 09:12:52 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms | Allocations: 7829)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-07 09:12:57 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.0ms | Allocations: 601)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 45.8ms | Allocations: 2983)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 103.2ms | ActiveRecord: 0.0ms | Allocations: 11828)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-07 09:13:03 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Wsxb8oQfEq3JlVlu/u5ZGBILxknqj+8VCci2v9LNmPd0y6n5hCT0j/ZZCrFvqEa2IjvJ02Ln2nsxx05zWni+fA==", "user"=>{"email"=>"test2@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test2@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 504ms (ActiveRecord: 0.6ms | Allocations: 4724)
+
+
+Started GET "/" for ::1 at 2020-07-07 09:13:04 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 80.3ms | ActiveRecord: 10.2ms | Allocations: 9388)
+
+
+Started GET "/favorites" for ::1 at 2020-07-07 09:13:08 -0700
+Started GET "/users/comments" for ::1 at 2020-07-07 09:13:08 -0700
+Processing by FavoritesController#index as */*
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (33.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mUser Load (38.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (29.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 86ms (Views: 7.1ms | ActiveRecord: 62.0ms | Allocations: 4741)
+
+
+  [1m[36mFavorite Load (90.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 145ms (Views: 5.4ms | ActiveRecord: 128.7ms | Allocations: 6864)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-07 09:13:08 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (173.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 202ms (Views: 6.2ms | ActiveRecord: 191.1ms | Allocations: 2785)
+
+
+Started GET "/" for ::1 at 2020-07-07 09:14:06 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 62.6ms | ActiveRecord: 2.7ms | Allocations: 9365)
+
+
+Started GET "/" for ::1 at 2020-07-07 09:14:16 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 1.1ms | Allocations: 9279)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-07 09:17:20 -0700
+Started GET "/favorites" for ::1 at 2020-07-07 09:17:20 -0700
+Processing by FavoritesController#index as */*
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 22ms (Views: 5.1ms | ActiveRecord: 10.3ms | Allocations: 4408)
+
+
+  [1m[36mComment Load (12.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 27ms (Views: 4.5ms | ActiveRecord: 18.2ms | Allocations: 5900)
+
+
+Started GET "/users/comments" for ::1 at 2020-07-07 09:17:21 -0700
+Processing by CommentsController#user_only_index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:10:in `user_only_index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/comments_controller.rb:11:in `user_only_index'
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 2.3ms | Allocations: 2783)
+
+

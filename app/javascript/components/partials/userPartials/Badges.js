@@ -40,11 +40,11 @@ const Badges = props => {
       <h4 className="dashboard-subtitle">Your Badges</h4>
       {badges.map((badge,index) => {
         return(
-          <h4 key={index}>{badge}</h4>
+          <h6 className="dashboard-badge-label" key={index}>{badge}</h6>
         )
       })}
       {showEmptyBadgesMessage &&
-        <p>Contribute or comment on at least 5 trails to get your first badge.</p>
+        <p className="dashboard-empty-message">Contribute or comment on at least 5 trails to get your first badge.</p>
       }
     </>
   )
