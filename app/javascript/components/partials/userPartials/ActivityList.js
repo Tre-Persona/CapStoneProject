@@ -9,19 +9,21 @@ const ActivityList = props => {
       <ListGroup className="dashboard-activity-list-group">
         {props.activity.map((comment,index) => {
           let date = comment.updated_at.substring(0,10)
-          return(
-            <ListGroupItem key={index} className="dashboard-activity-list-item-wrapper">
-
-              <ListGroupItemText className="dashboard-activity-list-item-title">
-                You commented on <NavLink className="dashboard-activity-list-item-link" to={`/trails/${comment.trail_id}`}><strong>{comment.trail_name}</strong></NavLink> <i>{ date }</i>
-              </ListGroupItemText>
-
-              <ListGroupItemText className="dashboard-activity-list-item-text">
-                { comment.post }
-              </ListGroupItemText>
-
-            </ListGroupItem>
-          )
+          if (index < 5) {
+            return(
+              <ListGroupItem key={index} className="dashboard-activity-list-item-wrapper">
+  
+                <ListGroupItemText className="dashboard-activity-list-item-title">
+                  You commented on <NavLink className="dashboard-activity-list-item-link" to={`/trails/${comment.trail_id}`}><strong>{comment.trail_name}</strong></NavLink> <i>{ date }</i>
+                </ListGroupItemText>
+  
+                <ListGroupItemText className="dashboard-activity-list-item-text">
+                  { comment.post }
+                </ListGroupItemText>
+  
+              </ListGroupItem>
+            )
+          }
         })}
       </ListGroup>
 

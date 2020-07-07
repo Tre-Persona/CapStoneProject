@@ -7,6 +7,7 @@ const CommentList = props => {
     <>
       <ListGroup className="comments-list-group">
       { props.comments.map((comment, index)=> {
+        console.log("username", comment.user_name)
         let editable = false
           if(props.user_id === comment.user_id) editable = true
           let date = comment.updated_at.substring(0,10)
@@ -23,7 +24,8 @@ const CommentList = props => {
             {!props.editArray.includes(comment.id) &&
               <>
                 <ListGroupItemText className="comments-list-item-title">
-                  <span className="comment-user-name">{comment.user_name}</span> <span className="comment-date">{ date }</span>
+                  <span className="comment-user-name">{ comment.user_name }</span> 
+                  <span className="comment-date">{ date }</span>
                 </ListGroupItemText>
                 <ListGroupItemText className="comments-list-item-text">
                   { comment.post }
