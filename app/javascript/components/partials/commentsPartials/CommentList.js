@@ -23,8 +23,7 @@ const CommentList = props => {
             {!props.editArray.includes(comment.id) &&
               <>
                 <ListGroupItemText className="comments-list-item-title">
-                  <span className="comment-user-name">{ comment.user_name }</span> 
-                  <span className="comment-date">{ date }</span>
+                  <span className="comment-user-name">{ comment.user_name }</span> <span className="comment-date">{ date }</span>
                 </ListGroupItemText>
                 <ListGroupItemText className="comments-list-item-text">
                   { comment.post }

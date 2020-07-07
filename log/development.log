@@ -29391,3 +29391,162 @@ Processing by FavoritesController#index as */*
 Completed 200 OK in 206ms (Views: 53.5ms | ActiveRecord: 110.2ms | Allocations: 9019)
 
 
+Started GET "/trails/7022531" for ::1 at 2020-07-07 13:42:22 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022531"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 552)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 22527e74d385f1a9facc
+Version: webpack 4.43.0
+Time: 15059ms
+Built at: 07/07/2020 1:42:45 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-10ffc8cfbdcec348a947.js  2.85 MiB       application  [emitted] [immutable]  application
+                                   js/application-10ffc8cfbdcec348a947.js.map   2.8 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-7f2bd252f5642cfdde1d.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-7f2bd252f5642cfdde1d.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-10ffc8cfbdcec348a947.js js/application-10ffc8cfbdcec348a947.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-7f2bd252f5642cfdde1d.js js/server_rendering-7f2bd252f5642cfdde1d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.71 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 258 hidden modules
+
+Completed 200 OK in 23224ms (Views: 23135.8ms | ActiveRecord: 20.3ms | Allocations: 27326)
+
+
+Started GET "/comments" for ::1 at 2020-07-07 13:42:49 -0700
+Started GET "/favorites" for ::1 at 2020-07-07 13:42:49 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (78.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 208ms (Views: 63.6ms | ActiveRecord: 132.3ms | Allocations: 11656)
+
+
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 296ms (Views: 36.2ms | ActiveRecord: 221.5ms | Allocations: 9009)
+
+
+Started GET "/trails/7022531" for ::1 at 2020-07-07 13:59:28 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022531"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: bfa9d37bb3e48540ce33
+Version: webpack 4.43.0
+Time: 18056ms
+Built at: 07/07/2020 1:59:50 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-01e7d5d8f99d1794c2a3.js  2.85 MiB       application  [emitted] [immutable]  application
+                                   js/application-01e7d5d8f99d1794c2a3.js.map   2.8 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-f149faa716a4e4510786.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-f149faa716a4e4510786.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-01e7d5d8f99d1794c2a3.js js/application-01e7d5d8f99d1794c2a3.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f149faa716a4e4510786.js js/server_rendering-f149faa716a4e4510786.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.71 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 258 hidden modules
+
+Completed 200 OK in 22673ms (Views: 22644.4ms | ActiveRecord: 13.7ms | Allocations: 17119)
+
+
+Started GET "/comments" for ::1 at 2020-07-07 13:59:53 -0700
+Started GET "/favorites" for ::1 at 2020-07-07 13:59:53 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (3.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 226ms (Views: 210.8ms | ActiveRecord: 3.8ms | Allocations: 10549)
+
+
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 98ms (Views: 58.8ms | ActiveRecord: 11.0ms | Allocations: 7048)
+
+
+Started POST "/comments" for ::1 at 2020-07-07 14:00:11 -0700
+Processing by CommentsController#create as */*
+  Parameters: {"post"=>"test", "trail_id"=>"7022531", "user_name"=>"Jeremy Test", "trail_name"=>"Mission Trails Loops", "comment"=>{"post"=>"test", "trail_id"=>"7022531", "user_name"=>"Jeremy Test", "trail_name"=>"Mission Trails Loops"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+  [1m[36mComment Create (25.6ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "post", "created_at", "updated_at", "trail_id", "user_name", "trail_name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 4], ["post", "test"], ["created_at", "2020-07-07 21:00:11.905621"], ["updated_at", "2020-07-07 21:00:11.905621"], ["trail_id", 7022531], ["user_name", "Jeremy Test"], ["trail_name", "Mission Trails Loops"]]
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+Completed 200 OK in 101ms (Views: 0.7ms | ActiveRecord: 64.9ms | Allocations: 15596)
+
+
+Started GET "/comments" for ::1 at 2020-07-07 14:00:11 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (6.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 6.6ms | Allocations: 6178)
+
+
+Started DELETE "/comments/71" for ::1 at 2020-07-07 14:00:13 -0700
+Processing by CommentsController#destroy as */*
+  Parameters: {"id"=>"71", "comment"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["user_id", 4], ["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:44:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:45:in `destroy'
+  [1m[36mComment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 71]]
+  ↳ app/controllers/comments_controller.rb:45:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:45:in `destroy'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 4694)
+
+
+Started GET "/comments" for ::1 at 2020-07-07 14:00:13 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.6ms | Allocations: 6016)
+
+

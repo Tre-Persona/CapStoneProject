@@ -91,7 +91,7 @@ const Comments = (props) => {
   //
   const updateComment = (id, trailId) => {
     fetch(`/comments/${id}`, {
-      body: JSON.stringify({post: commentEditEntry, trail_id: trailId, user_name: props.user_name, trail_name: props.trail_name}),
+      body: JSON.stringify({post: commentEditEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name}),
       headers:{
         "Content-Type": "application/json"
       },
