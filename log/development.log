@@ -23291,3 +23291,122 @@ Entrypoint server_rendering = js/server_rendering-351f013ecce91c828b09.js js/ser
 Completed 200 OK in 8014ms (Views: 7964.5ms | ActiveRecord: 23.5ms | Allocations: 16472)
 
 
+Started GET "/trails/7022531/questionnaire" for ::1 at 2020-07-07 15:44:13 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022531/questionnaire"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 41.4ms | ActiveRecord: 35.3ms | Allocations: 15096)
+
+
+Started GET "/trails/7022531/questionnaire" for ::1 at 2020-07-07 15:45:05 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022531/questionnaire"}
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 283)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 27.8ms | ActiveRecord: 18.1ms | Allocations: 9351)
+
+
+Started GET "/trails/7022531/questionnaire" for ::1 at 2020-07-07 15:45:53 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022531/questionnaire"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 283)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 0.8ms | Allocations: 9369)
+
+
+Started GET "/trails/7022531/questionnaire" for ::1 at 2020-07-07 15:47:30 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022531/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (20.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 6f2447b96e17f09c2ef6
+Version: webpack 4.43.0
+Time: 5522ms
+Built at: 07/07/2020 3:47:37 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-610e7a8ea275db828339.js  2.88 MiB       application  [emitted] [immutable]  application
+     js/application-610e7a8ea275db828339.js.map  2.81 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-dcec17c436211ee583fa.js  2.76 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-dcec17c436211ee583fa.js.map  2.68 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-610e7a8ea275db828339.js js/application-610e7a8ea275db828339.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-dcec17c436211ee583fa.js js/server_rendering-dcec17c436211ee583fa.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 7634ms (Views: 7594.5ms | ActiveRecord: 24.1ms | Allocations: 16500)
+
+
+Started GET "/trails/7022531/questionnaire" for ::1 at 2020-07-07 15:52:24 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022531/questionnaire"}
+  [1m[36mUser Load (23.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 0e69264c9755c16ba0ef
+Version: webpack 4.43.0
+Time: 4942ms
+Built at: 07/07/2020 3:52:31 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-7088f0a6b4d0bf7c84eb.js  2.88 MiB       application  [emitted] [immutable]  application
+     js/application-7088f0a6b4d0bf7c84eb.js.map  2.81 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-c3c7cc6670648e0ff688.js  2.76 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-c3c7cc6670648e0ff688.js.map  2.68 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-7088f0a6b4d0bf7c84eb.js js/application-7088f0a6b4d0bf7c84eb.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-c3c7cc6670648e0ff688.js js/server_rendering-c3c7cc6670648e0ff688.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.58 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 7226ms (Views: 7183.4ms | ActiveRecord: 27.7ms | Allocations: 16503)
+
+

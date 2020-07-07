@@ -90,7 +90,7 @@ const Questionnaire = (props) => {
                             <div>
                                 <CustomInput onChange={handleChange} type="radio" id="question6yes" name="question6" value="true" label="Yes" />
                                 <CustomInput onChange={handleChange} type="radio" id="question6no" name="question6" value="false" label="No" />
-                                <CustomInput onChange={handleChange} type="radio" id="question6na" name="question6" label="There were no bathrooms at the trailhead" />
+                                <CustomInput onChange={handleChange} type="radio" id="question6na" name="question6" value="not available" label="There were no bathrooms at the trailhead" />
                             </div>
                     </fieldset>
                 </FormGroup>
