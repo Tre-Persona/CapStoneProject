@@ -30,7 +30,6 @@ getTrails = async(lat,lng) => {
     }
   }
 render(){
-  console.log(this.props.apiKey)
   return (
     <>
       <Container className="trails-index-container">
