@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const Badges = props => {
   const [badges, setBadges] = useState([])
+  const [showEmptyBadgesMessage, setshowEmptyBadgesMessage] = useState(false)
   
   useEffect(() => {
     getBadges()
@@ -14,12 +15,11 @@ const Badges = props => {
       if (commentResponse.ok) {
         let len = commentData.length
         console.log("user comments", commentData)
-        if (len >=5) setBadges(["User", "Kinda User", "Super User"])
-        else if (len >=3) setBadges(["User", "Kinda User"])
-        else if (len >=1) setBadges(["User"])
+        if (len >=20) setBadges(["5 Comment Badge", "10 Comment Badger", "20 Comment Badge"])
+        else if (len >=10) setBadges(["5 Comment Badge", "10 Comment Badge"])
+        else if (len >=5) setBadges(["5 Comment Badge"])
+        else setshowEmptyBadgesMessage(true)
       }
-
-
       // let badgeResponse = await fetch('/badges')
       // let badgeData = await badgeResponse.json()
       // if (badgeResponse.ok) {
@@ -38,13 +38,14 @@ const Badges = props => {
   return(
     <>
       <h4 className="dashboard-subtitle">Your Badges</h4>
-      <ul>
-        {badges.map((badge,index) => {
-          return(
-            <li key={index}>{badge}</li>
-          )
-        })}
-      </ul>
+      {badges.map((badge,index) => {
+        return(
+          <h4 key={index}>{badge}</h4>
+        )
+      })}
+      {showEmptyBadgesMessage &&
+        <p>Contribute or comment on at least 5 trails to get your first badge.</p>
+      }
     </>
   )
 }

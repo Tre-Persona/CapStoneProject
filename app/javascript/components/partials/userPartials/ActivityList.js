@@ -25,9 +25,15 @@ const ActivityList = props => {
         })}
       </ListGroup>
 
-      <NavLink to={`/user/${props.user_id}/activity`}>
-        <Button className="dashboard-activity-button">See All Activity</Button>
-      </NavLink>
+      {!props.showEmptyActivityMessage &&
+        <NavLink to={`/user/${props.user_id}/activity`}>
+          <Button className="dashboard-activity-button">See All Activity</Button>
+        </NavLink>
+      }
+
+      {props.showEmptyActivityMessage && 
+        <p>You have no comment activity yet.</p>
+      }
     </>
   )
 }

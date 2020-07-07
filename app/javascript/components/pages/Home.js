@@ -14,7 +14,7 @@ const Home = props => {
             <a href={props.sign_in_route}><Button className="home-signup-button">Sign Up</Button></a>
           }
 
-          <h3 className="home-subtitle">Top Trails</h3>
+          <h3 className="home-subtitle">Trending Trails</h3>
 
           <NavLink to="/trails"><Button className="home-trails-button">Discover More Trails</Button></NavLink>
 

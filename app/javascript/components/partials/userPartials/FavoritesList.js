@@ -34,9 +34,15 @@ const FavoritesList = props => {
 
       </div>
 
+      {!props.showEmptyFavsMessage && 
       <NavLink to={`/user/${props.user_id}/favorites`}>
         <Button className="dashboard-favorites-button">See All Favorites</Button>
       </NavLink>
+      }
+
+      {props.showEmptyFavsMessage && 
+        <p>You haven't favorited any trails yet.</p>
+      }
     </>
   )
 }
