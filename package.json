@@ -8,10 +8,6 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-<<<<<<< HEAD
-=======
-    "leaflet": "^1.6.0",
->>>>>>> c5500d100c6475dba67cc78e09ddd9ab3ab1d654
     "leaflet-geosearch": "^3.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

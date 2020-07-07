@@ -14,6 +14,11 @@ handleMapClick = (e) => {
     console.log(e)
     this.getTrails(e.latlng.lat,e.latlng.lng)
 } 
+handleMoveend = (e) =>{
+  console.log(e)
+  // this.getTrails(e.latlng.lat,e.latlng.lng)
+}
+
 getTrails = async(lat,lng) => {
   try {
     //GET data from the backend
@@ -30,12 +35,12 @@ getTrails = async(lat,lng) => {
     }
   }
 render(){
-  console.log(this.props.apiKey)
+  
   return (
     <>
       <Container className="trails-index-container">
         <h2 className="page-title">Search Trails</h2>
-        <SimpleLeaflet handleClick={this.handleMapClick.bind(this)} />
+        <SimpleLeaflet handleClick={this.handleMapClick.bind(this)} handleMoveend={this.handleMoveend.bind(this)} />
         <TrailList trails={this.state.trails}/>
       </Container>
     </>
