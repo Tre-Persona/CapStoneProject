@@ -148,7 +148,7 @@ const Comments = (props) => {
 
   return ( 
   
-  <Container>
+  <Container className="comment-index-container">
       {props.logged_in &&
         <CommentNew 
           handleSubmit={handleSubmit}

@@ -32,20 +32,23 @@ const UserActivity = props => {
       {props.user_id != props.match.params.id &&
           <Redirect to="/" />
         }
-      <Container>
-        <h2>Your Activity</h2>
-        <ListGroup>
+      <Container className="user-activity-container">
+        <h2 className="page-title">Your Activity</h2>
+        <ListGroup className="user-activity-list-group">
         {activity.map((comment,index) => {
           let date = comment.updated_at.substring(0,10)
           return(
             <>
-              <ListGroupItem>
-                <ListGroupItemText>
-                  You commented on <NavLink to={`/trails/${comment.trail_id}`}><strong>{comment.trail_name}</strong></NavLink> <i>{ date }</i>
+              <ListGroupItem className="user-activity-list-item">
+
+                <ListGroupItemText className="user-activity-list-title">
+                  You commented on <NavLink className="user-activity-list-link" to={`/trails/${comment.trail_id}`}>{comment.trail_name}</NavLink> <i>{ date }</i>
                 </ListGroupItemText>
-                <ListGroupItemText>
+
+                <ListGroupItemText className="user-activity-list-text">
                   { comment.post }
                 </ListGroupItemText>
+
               </ListGroupItem>
             </>
           )

@@ -37,7 +37,7 @@ const Badges = props => {
   
   return(
     <>
-      <h4>Your Badges</h4>
+      <h4 className="dashboard-subtitle">Your Badges</h4>
       <ul>
         {badges.map((badge,index) => {
           return(

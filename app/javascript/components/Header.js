@@ -7,40 +7,40 @@ const Header = (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
-      <Navbar color="faded" light>
-        <NavbarBrand href="/" className="mr-auto">happytrails</NavbarBrand>
+    <>
+      <Navbar className="header-container" color="faded" light>
+        <NavLink to="/" className="header-title-link"><h1 className="header-title">happytrails</h1></NavLink>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink to ="/">Home</NavLink>
+              <NavLink className="header-nav-link" to="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to ="/trails">Search Trails</NavLink>
+              <NavLink className="header-nav-link" to="/trails">Search Trails</NavLink>
             </NavItem>
             { props.logged_in &&
               <>
                 <NavItem>
-                  <NavLink to={`/user/${props.user_id}`}>Dashboard</NavLink>
+                  <NavLink className="header-nav-link" to={`/user/${props.user_id}`}>Dashboard</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to={`/user/${props.user_id}/favorites`}>Favorite Trails</NavLink>
+                  <NavLink className="header-nav-link" to={`/user/${props.user_id}/favorites`}>Favorite Trails</NavLink>
                 </NavItem>
                 <NavItem>
-                  <a href= { props.sign_out_route }>Sign Out</a>
+                  <a className="header-nav-link" href= { props.sign_out_route }>Sign Out</a>
                 </NavItem>
               </>
             }
              { !props.logged_in &&
              <NavItem>
-             <a href= { props.sign_in_route }>Sign In</a>
+             <a className="header-nav-link" href= { props.sign_in_route }>Sign In</a>
            </NavItem>
             }
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </>
   );
 }
 

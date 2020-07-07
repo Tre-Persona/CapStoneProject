@@ -6,36 +6,33 @@ const TrailDisplay = props => {
   
   return(
     <>
-      <ListGroup>
+      <div className="trail-profile-wrapper">
         { currentTrail &&
-            <ListGroupItem>
-              <ListGroupItemHeading>
-                {currentTrail.name}
-              </ListGroupItemHeading>
+          <>
+            <img className="trail-profile-image" src={currentTrail.imgMedium} />
 
-              <img src={currentTrail.imgSmall} />
+            <div className="trail-profile-body">
+              <h4 className="trail-profile-title">{currentTrail.name}</h4>
 
-              <ListGroupItemText>
-                {currentTrail.summary}
-              </ListGroupItemText>
+              <p className="trail-profile-location">{currentTrail.location}</p>
 
-              <ListGroupItemText>
-                Current Trail Conditions for {currentTrail.conditionDate}:&nbsp;
-                { currentTrail.conditionDetails} and {currentTrail.conditionStatus}
-              </ListGroupItemText>
-            </ListGroupItem>
+              <p className="trail-profile-text">{currentTrail.summary}</p>
+              
+              {/*Conditional render for how the favorite button looks between toggles*/}
+              {props.logged_in &&
+                <Button
+                className="trail-profile-favorite-button" 
+                color={favorited? "success" : "secondary"}
+                onClick={() => handleFavorite()}
+              >
+                {favorited && "Favorited"}
+                {!favorited && "Favorite"}
+              </Button>
+              }
+            </div>
+          </>
         }
-      </ListGroup>
-      {/*Conditional render for how the favorite button looks between toggles*/}
-      {props.logged_in &&
-        <Button 
-        color={favorited? "success" : "secondary"}
-        onClick={() => handleFavorite()}
-      >
-        {favorited && "Favorited"}
-        {!favorited && "Favorite"}
-      </Button>
-      }
+      </div>
     </>
   )
 }

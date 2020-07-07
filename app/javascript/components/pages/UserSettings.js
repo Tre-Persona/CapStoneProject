@@ -30,8 +30,8 @@ const {
         {props.user_id != props.match.params.id &&
           <Redirect to="/" />
         }
-        <Container>
-          <h2>User Settings</h2>
+        <Container className="settings-container">
+          <h2 className="page-title">User Settings</h2>
           <Button color="danger" onClick={toggle}>Delete Profile</Button>
           <Modal isOpen={modal} toggle={toggle} className={className}>
             <ModalHeader toggle={toggle}>Modal title</ModalHeader>
