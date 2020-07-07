@@ -62,8 +62,8 @@ const UserProfile = (props) => {
       {props.user_id != props.match.params.id &&
         <Redirect to="/" />
       }
-      <Container className="dashboard-wrapper">
-        <h2 className="dashboard-title">Your Dashboard</h2>
+      <Container className="dashboard-container">
+        <h2 className="page-title">Your Dashboard</h2>
         <h4 className="dashboard-greeting"> Hello {props.user_name}</h4>
 
         <NavLink to={`/user/${props.match.params.id}/settings`}>
@@ -76,7 +76,7 @@ const UserProfile = (props) => {
         />
 
         <NavLink to="/trails">
-          <Button>Discover More Trails</Button>
+          <Button className="dashboard-trails-button">Discover More Trails</Button>
         </NavLink>
 
         <Badges 
