@@ -27,7 +27,31 @@ const Questionnaire = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(e.target.elements)
+        // Fetch request to POST comment
+    
+            const addToComments = () => {
+            fetch("/comments", {
+            // JSON needs to include comment string, trail id, and user name
+            body: JSON.stringify({post: commentEntry, trail_id: props.trail_id, user_name: props.user_name, trail_name: props.trail_name}),
+            headers:{
+                "Content-Type": "application/json"
+            },
+            method: "POST"
+            })
+            .then(response => {
+            if (response.ok) {
+                // If post successful, clear new comment form
+                setCommentEntry("")
+                // Refetch comments upon adding new comment
+                getComments()
+            }
+            })
+            .catch(error => {
+            console.log("error:",error)
+            })
+        }
     }
+    
 
     const handleChange = (e) => {
         newForm[e.target.name]= e.target.value
