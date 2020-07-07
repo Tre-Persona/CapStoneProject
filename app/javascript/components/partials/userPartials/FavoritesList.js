@@ -41,7 +41,7 @@ const FavoritesList = props => {
       }
 
       {props.showEmptyFavsMessage && 
-        <p>You haven't favorited any trails yet.</p>
+        <p className="dashboard-empty-message">You haven't favorited any trails yet.</p>
       }
     </>
   )

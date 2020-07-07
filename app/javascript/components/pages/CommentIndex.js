@@ -15,10 +15,12 @@ const Comments = (props) => {
   const [editorOn, setEditorOn] = useState(false)
   // Array of comment objects fetched from the API
   const [comments, setComments] = useState([])
+  const { trail_id, user_name, trail_name } = props
 
   // Fetch all trail comments upon render
   useEffect(() => {
-    getComments()},[])
+    getComments()
+  },[])
 
   // ---------- CODE FOR TYPING/POSTING NEW COMMENT ----------
   
@@ -37,7 +39,7 @@ const Comments = (props) => {
   const addToComments = () => {
     fetch("/comments", {
       // JSON needs to include comment string, trail id, and user name
-      body: JSON.stringify({post: commentEntry, trail_id: props.trail_id, user_name: props.user_name, trail_name: props.trail_name}),
+      body: JSON.stringify({post: commentEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name}),
       headers:{
         "Content-Type": "application/json"
       },

@@ -11,7 +11,12 @@ class SimpleLeaflet extends Component {
       zoom: 13,
   }
   }
+<<<<<<< HEAD
    render() {
+=======
+
+  render() {
+>>>>>>> c5500d100c6475dba67cc78e09ddd9ab3ab1d654
     const position = [this.state.lat, this.state.lng]
     const LeafletSearchbox = withLeaflet(LeafletSearch);
     return (
