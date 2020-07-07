@@ -51,6 +51,7 @@ const Comments = (props) => {
       console.log("trail name", trail_name);
       
       if (response.ok) {
+        console.log("response",response)
         // If post successful, clear new comment form
         setCommentEntry("")
         // Refetch comments upon adding new comment
