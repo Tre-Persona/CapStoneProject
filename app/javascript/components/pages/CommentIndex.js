@@ -46,7 +46,12 @@ const Comments = (props) => {
       method: "POST"
     })
     .then(response => {
+      console.log("trail id", trail_id);
+      console.log("user name", user_name);
+      console.log("trail name", trail_name);
+      
       if (response.ok) {
+        console.log("response",response)
         // If post successful, clear new comment form
         setCommentEntry("")
         // Refetch comments upon adding new comment
@@ -87,7 +92,7 @@ const Comments = (props) => {
   //
   const updateComment = (id, trailId) => {
     fetch(`/comments/${id}`, {
-      body: JSON.stringify({post: commentEditEntry, trail_id: trailId, user_name: props.user_name, trail_name: props.trail_name}),
+      body: JSON.stringify({post: commentEditEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name}),
       headers:{
         "Content-Type": "application/json"
       },
