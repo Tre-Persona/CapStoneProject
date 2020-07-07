@@ -26678,3 +26678,1630 @@ Processing by MainController#index as HTML
 Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 0.8ms | Allocations: 9365)
 
 
+Started GET "/" for ::1 at 2020-07-07 10:17:28 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 552)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-07-07 10:17:35 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 295)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: f625bf2ae93387f9b978
+Version: webpack 4.43.0
+Time: 5877ms
+Built at: 07/07/2020 10:17:37 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-479353bbd6077c60cb72.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-479353bbd6077c60cb72.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-3c2454a7b808f6863b5a.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-3c2454a7b808f6863b5a.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-479353bbd6077c60cb72.js js/application-479353bbd6077c60cb72.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-3c2454a7b808f6863b5a.js js/server_rendering-3c2454a7b808f6863b5a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Unexpected token (16:8)
+
+  14 |   }
+  15 |   }
+> 16 |   const provider = new OpenStreetMapProvider();
+     |         ^
+  17 | 
+  18 |   const searchControl = new GeoSearchControl({
+  19 |     provider: provider,
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8834:16)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12169:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11245:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11134:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12836:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12889:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transform.js:27:41)
+    at transform.next (<anonymous>)
+    at step (/Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:254:32)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:266:13
+    at async.call.result.err.err (/Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:216:11)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:184:28
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/gensync-utils/async.js:72:7
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 8511ms (Views: 8413.1ms | ActiveRecord: 68.3ms | Allocations: 39632)
+
+
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: f625bf2ae93387f9b978
+Version: webpack 4.43.0
+Time: 5862ms
+Built at: 07/07/2020 10:17:44 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-479353bbd6077c60cb72.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-479353bbd6077c60cb72.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-3c2454a7b808f6863b5a.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-3c2454a7b808f6863b5a.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-479353bbd6077c60cb72.js js/application-479353bbd6077c60cb72.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-3c2454a7b808f6863b5a.js js/server_rendering-3c2454a7b808f6863b5a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Unexpected token (16:8)
+
+  14 |   }
+  15 |   }
+> 16 |   const provider = new OpenStreetMapProvider();
+     |         ^
+  17 | 
+  18 |   const searchControl = new GeoSearchControl({
+  19 |     provider: provider,
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8834:16)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12169:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11245:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11134:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12836:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12889:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transform.js:27:41)
+    at transform.next (<anonymous>)
+    at step (/Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:254:32)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:266:13
+    at async.call.result.err.err (/Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:216:11)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:184:28
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/gensync-utils/async.js:72:7
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 9331ms (Views: 9322.4ms | ActiveRecord: 1.5ms | Allocations: 13404)
+
+
+Started GET "/" for ::1 at 2020-07-07 10:20:53 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 040fd619ce7b841bd187
+Version: webpack 4.43.0
+Time: 3827ms
+Built at: 07/07/2020 10:20:59 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-25aa90573b94ab0508a5.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-25aa90573b94ab0508a5.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-54f9bd1085e32da2b0be.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-54f9bd1085e32da2b0be.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-25aa90573b94ab0508a5.js js/application-25aa90573b94ab0508a5.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-54f9bd1085e32da2b0be.js js/server_rendering-54f9bd1085e32da2b0be.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Unexpected token (15:8)
+
+  13 |   }
+  14 |   }
+> 15 |   const provider = new OpenStreetMapProvider();
+     |         ^
+  16 | 
+  17 |   const searchControl = new GeoSearchControl({
+  18 |     provider: provider,
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8834:16)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12169:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11245:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11134:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12836:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12889:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transform.js:27:41)
+    at transform.next (<anonymous>)
+    at step (/Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:254:32)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:266:13
+    at async.call.result.err.err (/Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:216:11)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/gensync/index.js:184:28
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/gensync-utils/async.js:72:7
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/server_rendering.js
+
+Completed 200 OK in 5649ms (Views: 5585.4ms | ActiveRecord: 36.6ms | Allocations: 17227)
+
+
+Started GET "/" for ::1 at 2020-07-07 10:21:42 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (63.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 304)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 004ef10470bb1b03b3d2
+Version: webpack 4.43.0
+Time: 5358ms
+Built at: 07/07/2020 10:21:49 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-9784572a4d5e9d72c981.js  2.87 MiB       application  [emitted] [immutable]  application
+     js/application-9784572a4d5e9d72c981.js.map  2.82 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-d942c28eafe7725e775c.js  2.75 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-d942c28eafe7725e775c.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-9784572a4d5e9d72c981.js js/application-9784572a4d5e9d72c981.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-d942c28eafe7725e775c.js js/server_rendering-d942c28eafe7725e775c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 7609ms (Views: 7484.2ms | ActiveRecord: 83.8ms | Allocations: 17133)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:21:59 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 41.4ms | ActiveRecord: 1.8ms | Allocations: 9331)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:27:56 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (29.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 5bb278621be8eda9ddd7
+Version: webpack 4.43.0
+Time: 6378ms
+Built at: 07/07/2020 10:28:06 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-3ab6b088d42ff3d2b700.js  2.87 MiB       application  [emitted] [immutable]  application
+     js/application-3ab6b088d42ff3d2b700.js.map  2.82 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-c6a96ade836dd1a3e693.js  2.75 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-c6a96ade836dd1a3e693.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-3ab6b088d42ff3d2b700.js js/application-3ab6b088d42ff3d2b700.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-c6a96ade836dd1a3e693.js js/server_rendering-c6a96ade836dd1a3e693.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 9585ms (Views: 9398.0ms | ActiveRecord: 58.4ms | Allocations: 17014)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:28:42 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 3d3d7a6fa5baa0bf6af7
+Version: webpack 4.43.0
+Time: 7158ms
+Built at: 07/07/2020 10:28:52 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-08746cdb39b8f84e3053.js  2.85 MiB       application  [emitted] [immutable]  application
+     js/application-08746cdb39b8f84e3053.js.map   2.8 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a12d7b1e68395ea91018.js  2.73 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a12d7b1e68395ea91018.js.map  2.67 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-08746cdb39b8f84e3053.js js/application-08746cdb39b8f84e3053.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a12d7b1e68395ea91018.js js/server_rendering-a12d7b1e68395ea91018.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+Completed 200 OK in 9988ms (Views: 9929.0ms | ActiveRecord: 35.5ms | Allocations: 17200)
+
+
+Started GET "/favorites" for ::1 at 2020-07-07 10:29:18 -0700
+Started GET "/comments" for ::1 at 2020-07-07 10:29:18 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (2.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 79ms (Views: 4.5ms | ActiveRecord: 10.7ms | Allocations: 6089)
+
+
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (29.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 195ms (Views: 45.3ms | ActiveRecord: 143.8ms | Allocations: 5024)
+
+
+Started POST "/favorites" for ::1 at 2020-07-07 10:29:20 -0700
+Processing by FavoritesController#create as */*
+  Parameters: {"fav_trail_id"=>"7070495", "favorite"=>{"fav_trail_id"=>"7070495"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (21.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["fav_trail_id", 7070495], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Create (1.5ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "fav_trail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["fav_trail_id", 7070495], ["created_at", "2020-07-07 17:29:20.757637"], ["updated_at", "2020-07-07 17:29:20.757637"]]
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `create'
+  [1m[36mFavorite Exists? (21.2ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."fav_trail_id" = $1 AND "favorites"."id" != $2 AND "favorites"."user_id" = $3 LIMIT $4[0m  [["fav_trail_id", 7070495], ["id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:11:in `create'
+Completed 200 OK in 159ms (Views: 0.9ms | ActiveRecord: 62.8ms | Allocations: 10344)
+
+
+Started GET "/favorites" for ::1 at 2020-07-07 10:29:20 -0700
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (41.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (8.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 101ms (Views: 29.5ms | ActiveRecord: 50.4ms | Allocations: 2806)
+
+
+Started POST "/comments" for ::1 at 2020-07-07 10:29:29 -0700
+Processing by CommentsController#create as */*
+  Parameters: {"post"=>"comment", "trail_id"=>"7070495", "user_name"=>"FakeName", "trail_name"=>"Gold Shot Stamp Mill Out and Back", "comment"=>{"post"=>"comment", "trail_id"=>"7070495"}}
+  [1m[36mUser Load (56.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (68.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+  [1m[36mComment Create (115.0ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "post", "created_at", "updated_at", "trail_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["post", "comment"], ["created_at", "2020-07-07 17:29:29.230607"], ["updated_at", "2020-07-07"], ["trail_id", 7070495]]
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+  [1m[35m (78.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:35:in `create'
+Completed 200 OK in 340ms (Views: 0.8ms | ActiveRecord: 318.6ms | Allocations: 5585)
+
+
+Started GET "/comments" for ::1 at 2020-07-07 10:29:29 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (11.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 4.9ms | ActiveRecord: 11.2ms | Allocations: 1269)
+
+
+Started GET "/" for ::1 at 2020-07-07 10:39:16 -0700
+  [1m[35m (23.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 552)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 6851dddf47f6214e6e1f
+Version: webpack 4.43.0
+Time: 5484ms
+Built at: 07/07/2020 10:39:24 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-1fd4c05fb17894a4f6d2.js  2.87 MiB       application  [emitted] [immutable]  application
+     js/application-1fd4c05fb17894a4f6d2.js.map  2.82 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-c48670aa907923d2d529.js  2.76 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-c48670aa907923d2d529.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-1fd4c05fb17894a4f6d2.js js/application-1fd4c05fb17894a4f6d2.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-c48670aa907923d2d529.js js/server_rendering-c48670aa907923d2d529.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 256 hidden modules
+
+Completed 200 OK in 8248ms (Views: 8149.5ms | ActiveRecord: 59.5ms | Allocations: 27187)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:39:30 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 25.8ms | ActiveRecord: 1.4ms | Allocations: 9334)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:39:36 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 29.2ms | ActiveRecord: 25.3ms | Allocations: 9428)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:42:00 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 304)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 9f483cacb3666a9c2044
+Version: webpack 4.43.0
+Time: 9181ms
+Built at: 07/07/2020 10:42:12 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-2621f514040cd85cb3f1.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-2621f514040cd85cb3f1.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-03bb01e04439c220d0ea.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-03bb01e04439c220d0ea.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-2621f514040cd85cb3f1.js js/application-2621f514040cd85cb3f1.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-03bb01e04439c220d0ea.js js/server_rendering-03bb01e04439c220d0ea.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Can not use keyword 'await' outside an async function (22:16)
+
+  20 | 
+  21 | // search
+> 22 | const results = await provider.search({ query: input.value });
+     |                 ^
+  23 |     
+  24 | });
+  25 |     return (
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.checkReservedWord (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10914:14)
+    at Object.parseIdentifierName (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10876:12)
+    at Object.parseIdentifier (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10847:23)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9958:27)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4648:20)
+    at Object.parseExprSubscripts (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9688:23)
+    at Object.parseMaybeUnary (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9668:21)
+    at Object.parseExprOps (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9538:23)
+    at Object.parseMaybeConditional (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9511:23)
+    at Object.parseMaybeAssign (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9466:21)
+    at Object.parseVar (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11862:26)
+    at Object.parseVarStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11671:10)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11270:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseBlock (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11748:10)
+    at Object.parseFunctionBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10751:24)
+    at Object.parseFunctionBodyAndFinish (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10734:10)
+    at Object.parseMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10696:10)
+    at Object.pushClassMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12203:30)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12120:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 11686ms (Views: 11425.2ms | ActiveRecord: 83.1ms | Allocations: 17161)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:42:37 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: b6b1b11f0ee689475712
+Version: webpack 4.43.0
+Time: 5521ms
+Built at: 07/07/2020 10:42:45 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-250176622a999d139dab.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-250176622a999d139dab.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-033b30f25ef80f4d4d82.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-033b30f25ef80f4d4d82.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-250176622a999d139dab.js js/application-250176622a999d139dab.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-033b30f25ef80f4d4d82.js js/server_rendering-033b30f25ef80f4d4d82.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Can not use keyword 'await' outside an async function (22:20)
+
+  20 | 
+  21 |     // search
+> 22 |     const results = await provider.search({ query: input.value });
+     |                     ^
+  23 |         
+  24 | }
+  25 |     return (
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.checkReservedWord (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10914:14)
+    at Object.parseIdentifierName (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10876:12)
+    at Object.parseIdentifier (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10847:23)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9958:27)
+    at Object.parseExprAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:4648:20)
+    at Object.parseExprSubscripts (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9688:23)
+    at Object.parseMaybeUnary (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9668:21)
+    at Object.parseExprOps (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9538:23)
+    at Object.parseMaybeConditional (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9511:23)
+    at Object.parseMaybeAssign (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9466:21)
+    at Object.parseVar (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11862:26)
+    at Object.parseVarStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11671:10)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11270:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseBlock (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11748:10)
+    at Object.parseFunctionBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10751:24)
+    at Object.parseFunctionBodyAndFinish (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10734:10)
+    at Object.parseMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10696:10)
+    at Object.pushClassMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12203:30)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12120:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 7711ms (Views: 7671.9ms | ActiveRecord: 14.8ms | Allocations: 17151)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:43:31 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 35.1ms | ActiveRecord: 1.6ms | Allocations: 9309)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:45:45 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (23.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 49935fda52a415a1c1d0
+Version: webpack 4.43.0
+Time: 4678ms
+Built at: 07/07/2020 10:45:52 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b7e336798634c35808bd.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-b7e336798634c35808bd.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-2e28bcc8ec722cc4b57d.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-2e28bcc8ec722cc4b57d.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b7e336798634c35808bd.js js/application-b7e336798634c35808bd.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-2e28bcc8ec722cc4b57d.js js/server_rendering-2e28bcc8ec722cc4b57d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Unexpected token (28:6)
+
+  26 |   }
+  27 |     return (
+> 28 |       <Map onclick={this.props.handleClick} center={position} zoom={this.state.zoom}>
+     |       ^
+  29 |         <TileLayer
+  30 |           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  31 |           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8834:16)
+    at Object.parseIdentifierName (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10870:18)
+    at Object.parseIdentifier (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10847:23)
+    at Object.parseBindingAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9198:17)
+    at Object.parseMaybeDefault (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9258:25)
+    at Object.parseAssignableListItem (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9240:23)
+    at Object.parseBindingList (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9232:24)
+    at Object.parseFunctionParams (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11941:24)
+    at Object.parseMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10695:10)
+    at Object.pushClassMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12203:30)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12120:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11245:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11134:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12836:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12889:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 7088ms (Views: 6838.8ms | ActiveRecord: 121.9ms | Allocations: 17144)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:46:17 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (38.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 188393361f4f011ade37
+Version: webpack 4.43.0
+Time: 4434ms
+Built at: 07/07/2020 10:46:25 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-090c95a959afa3650fcf.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-090c95a959afa3650fcf.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-8ea8e48dee753a0a8dc1.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-8ea8e48dee753a0a8dc1.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-090c95a959afa3650fcf.js js/application-090c95a959afa3650fcf.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-8ea8e48dee753a0a8dc1.js js/server_rendering-8ea8e48dee753a0a8dc1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Unexpected token (28:6)
+
+  26 |   };
+  27 |     return (
+> 28 |       <Map onclick={this.props.handleClick} center={position} zoom={this.state.zoom}>
+     |       ^
+  29 |         <TileLayer
+  30 |           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  31 |           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8834:16)
+    at Object.parseIdentifierName (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10870:18)
+    at Object.parseIdentifier (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10847:23)
+    at Object.parseBindingAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9198:17)
+    at Object.parseMaybeDefault (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9258:25)
+    at Object.parseAssignableListItem (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9240:23)
+    at Object.parseBindingList (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9232:24)
+    at Object.parseFunctionParams (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11941:24)
+    at Object.parseMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10695:10)
+    at Object.pushClassMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12203:30)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12120:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11245:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11134:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12836:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12889:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 7075ms (Views: 6891.5ms | ActiveRecord: 117.5ms | Allocations: 17128)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 10:47:19 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (23.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (51.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 188393361f4f011ade37
+Version: webpack 4.43.0
+Time: 4737ms
+Built at: 07/07/2020 10:47:26 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-090c95a959afa3650fcf.js  2.29 MiB       application  [emitted] [immutable]  application
+     js/application-090c95a959afa3650fcf.js.map  2.21 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-8ea8e48dee753a0a8dc1.js  2.17 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-8ea8e48dee753a0a8dc1.js.map  2.08 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-090c95a959afa3650fcf.js js/application-090c95a959afa3650fcf.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-8ea8e48dee753a0a8dc1.js js/server_rendering-8ea8e48dee753a0a8dc1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.53 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 218 hidden modules
+
+WARNING in ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials/SimpleLeaflet.js: Unexpected token (28:6)
+
+  26 |   };
+  27 |     return (
+> 28 |       <Map onclick={this.props.handleClick} center={position} zoom={this.state.zoom}>
+     |       ^
+  29 |         <TileLayer
+  30 |           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  31 |           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    at Object._raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:757:17)
+    at Object.raiseWithData (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:750:17)
+    at Object.raise (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:744:17)
+    at Object.unexpected (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:8834:16)
+    at Object.parseIdentifierName (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10870:18)
+    at Object.parseIdentifier (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10847:23)
+    at Object.parseBindingAtom (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9198:17)
+    at Object.parseMaybeDefault (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9258:25)
+    at Object.parseAssignableListItem (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9240:23)
+    at Object.parseBindingList (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:9232:24)
+    at Object.parseFunctionParams (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11941:24)
+    at Object.parseMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:10695:10)
+    at Object.pushClassMethod (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12203:30)
+    at Object.parseClassMemberWithIsStatic (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12120:12)
+    at Object.parseClassMember (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12062:10)
+    at /Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12007:14
+    at Object.withTopicForbiddingContext (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11078:14)
+    at Object.parseClassBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11984:10)
+    at Object.parseClass (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11958:22)
+    at Object.parseStatementContent (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11245:21)
+    at Object.parseStatement (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11203:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11778:25)
+    at Object.parseBlockBody (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11764:10)
+    at Object.parseTopLevel (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:11134:10)
+    at Object.parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12836:10)
+    at parse (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/parser/lib/index.js:12889:38)
+    at parser (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/learnacademy/Desktop/CapStoneProject/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)
+    at normalizeFile.next (<anonymous>)
+ @ ./app/javascript/components sync ^\.\/.*$ ./partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 7437ms (Views: 7251.7ms | ActiveRecord: 123.1ms | Allocations: 17171)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:26:49 -0700
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 552)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 12f79b4fca950defea79
+Version: webpack 4.43.0
+Time: 12057ms
+Built at: 07/07/2020 11:27:06 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a89c168be3df78b0e43a.js  2.88 MiB       application  [emitted] [immutable]  application
+     js/application-a89c168be3df78b0e43a.js.map  2.83 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-bba5f8371c6b59400634.js  2.76 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-bba5f8371c6b59400634.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a89c168be3df78b0e43a.js js/application-a89c168be3df78b0e43a.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-bba5f8371c6b59400634.js js/server_rendering-bba5f8371c6b59400634.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.61 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 257 hidden modules
+
+Completed 200 OK in 17758ms (Views: 17581.6ms | ActiveRecord: 39.1ms | Allocations: 27252)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:27:28 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (26.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 295)
+[Webpacker] Compiling...
+Started GET "/trails" for ::1 at 2020-07-07 11:27:45 -0700
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 12f79b4fca950defea79
+Version: webpack 4.43.0
+Time: 15019ms
+Built at: 07/07/2020 11:27:46 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a89c168be3df78b0e43a.js  2.88 MiB       application  [emitted] [immutable]  application
+     js/application-a89c168be3df78b0e43a.js.map  2.83 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-bba5f8371c6b59400634.js  2.76 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-bba5f8371c6b59400634.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a89c168be3df78b0e43a.js js/application-a89c168be3df78b0e43a.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-bba5f8371c6b59400634.js js/server_rendering-bba5f8371c6b59400634.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.61 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 257 hidden modules
+
+Completed 200 OK in 19043ms (Views: 18998.8ms | ActiveRecord: 32.8ms | Allocations: 13614)
+
+
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 303)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 403ms (Views: 66.4ms | ActiveRecord: 29.2ms | Allocations: 15581)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:27:59 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 31.2ms | ActiveRecord: 5.1ms | Allocations: 9355)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:31:56 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 303)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: f6453c1fb2cd2920468c
+Version: webpack 4.43.0
+Time: 13374ms
+Built at: 07/07/2020 11:32:14 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-fd1d7bec404977de59c5.js  2.42 MiB       application  [emitted] [immutable]  application
+     js/application-fd1d7bec404977de59c5.js.map  2.29 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-ce8b09ab719c63208b94.js   2.3 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ce8b09ab719c63208b94.js.map  2.16 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-fd1d7bec404977de59c5.js js/application-fd1d7bec404977de59c5.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-ce8b09ab719c63208b94.js js/server_rendering-ce8b09ab719c63208b94.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.61 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+ERROR in ./node_modules/react-leaflet/es/ZoomControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/ZoomControl.js 4:0-34 18:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/MapControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/MapControl.js 6:0-34
+ @ ./node_modules/react-leaflet/es/ZoomControl.js
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/ScaleControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/ScaleControl.js 4:0-34 18:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Rectangle.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Rectangle.js 4:0-56 18:15-31
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/TileLayer.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/TileLayer.js 4:0-56 18:15-31
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Tooltip.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Tooltip.js 6:0-52 44:15-29
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Popup.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Popup.js 7:0-48 63:15-27
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Polyline.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Polyline.js 4:0-54 18:15-30
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Polygon.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Polygon.js 4:0-52 18:15-29
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Marker.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Marker.js 5:0-50 20:17-30
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/SVGOverlay.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/SVGOverlay.js 7:0-65 44:15-32
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/WMSTileLayer.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/WMSTileLayer.js 5:0-36 28:15-24
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/VideoOverlay.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/VideoOverlay.js 4:0-76 18:15-34 35:36-48
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/GridLayer.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/GridLayer.js 5:0-56 18:15-31
+ @ ./node_modules/react-leaflet/es/WMSTileLayer.js
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/LayersControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/LayersControl.js 8:0-34 157:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Map.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Map.js 8:0-58 86:15-25 281:19-31 281:45-57
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/LayerGroup.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/LayerGroup.js 5:0-58 19:17-34
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/GeoJSON.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/GeoJSON.js 4:0-52 18:15-29
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/FeatureGroup.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/FeatureGroup.js 5:0-62 19:17-36
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/ImageOverlay.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/ImageOverlay.js 5:0-76 19:17-36 32:36-48
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/CircleMarker.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/CircleMarker.js 5:0-62 19:17-36
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/AttributionControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/AttributionControl.js 4:0-34 18:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Circle.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Circle.js 5:0-50 23:15-28
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/utils/updateClassName.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es/utils'
+ @ ./node_modules/react-leaflet/es/utils/updateClassName.js 3:0-34 15:4-11 20:4-11
+ @ ./node_modules/react-leaflet/es/Pane.js
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/partials/trailPartials/LeafletSearch.js
+Module not found: Error: Can't resolve 'leaflet-geosearch' in '/Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials'
+ @ ./app/javascript/components/partials/trailPartials/LeafletSearch.js 22:0-76 38:25-46 39:13-29
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 18302ms (Views: 18189.2ms | ActiveRecord: 51.4ms | Allocations: 17041)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:32:35 -0700
+  [1m[35m (88.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 552)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 714ms (Views: 462.4ms | ActiveRecord: 120.4ms | Allocations: 25696)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:35:32 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 304)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 28955dc791cbe71aaf95
+Version: webpack 4.43.0
+Time: 15002ms
+Built at: 07/07/2020 11:36:03 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-8a92aef13259c570e1c3.js  2.42 MiB       application  [emitted] [immutable]  application
+     js/application-8a92aef13259c570e1c3.js.map  2.29 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-2914235c64f32943b612.js   2.3 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-2914235c64f32943b612.js.map  2.16 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-8a92aef13259c570e1c3.js js/application-8a92aef13259c570e1c3.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-2914235c64f32943b612.js js/server_rendering-2914235c64f32943b612.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.61 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 255 hidden modules
+
+ERROR in ./node_modules/react-leaflet/es/VideoOverlay.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/VideoOverlay.js 4:0-76 18:15-34 35:36-48
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/WMSTileLayer.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/WMSTileLayer.js 5:0-36 28:15-24
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Tooltip.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Tooltip.js 6:0-52 44:15-29
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/GridLayer.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/GridLayer.js 5:0-56 18:15-31
+ @ ./node_modules/react-leaflet/es/WMSTileLayer.js
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/ZoomControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/ZoomControl.js 4:0-34 18:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/MapControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/MapControl.js 6:0-34
+ @ ./node_modules/react-leaflet/es/ZoomControl.js
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/TileLayer.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/TileLayer.js 4:0-56 18:15-31
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/ScaleControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/ScaleControl.js 4:0-34 18:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Rectangle.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Rectangle.js 4:0-56 18:15-31
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/SVGOverlay.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/SVGOverlay.js 7:0-65 44:15-32
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Polyline.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Polyline.js 4:0-54 18:15-30
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Polygon.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Polygon.js 4:0-52 18:15-29
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Popup.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Popup.js 7:0-48 63:15-27
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Marker.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Marker.js 5:0-50 20:17-30
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/LayersControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/LayersControl.js 8:0-34 157:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Map.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Map.js 8:0-58 86:15-25 281:19-31 281:45-57
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/LayerGroup.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/LayerGroup.js 5:0-58 19:17-34
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/ImageOverlay.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/ImageOverlay.js 5:0-76 19:17-36 32:36-48
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/GeoJSON.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/GeoJSON.js 4:0-52 18:15-29
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/FeatureGroup.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/FeatureGroup.js 5:0-62 19:17-36
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/CircleMarker.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/CircleMarker.js 5:0-62 19:17-36
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/Circle.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/Circle.js 5:0-50 23:15-28
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/AttributionControl.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es'
+ @ ./node_modules/react-leaflet/es/AttributionControl.js 4:0-34 18:15-22
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./node_modules/react-leaflet/es/utils/updateClassName.js
+Module not found: Error: Can't resolve 'leaflet' in '/Users/learnacademy/Desktop/CapStoneProject/node_modules/react-leaflet/es/utils'
+ @ ./node_modules/react-leaflet/es/utils/updateClassName.js 3:0-34 15:4-11 20:4-11
+ @ ./node_modules/react-leaflet/es/DivOverlay.js
+ @ ./node_modules/react-leaflet/es/Tooltip.js
+ @ ./node_modules/react-leaflet/es/index.js
+ @ ./app/javascript/components/partials/trailPartials/SimpleLeaflet.js
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/partials/trailPartials/LeafletSearch.js
+Module not found: Error: Can't resolve 'leaflet-geosearch' in '/Users/learnacademy/Desktop/CapStoneProject/app/javascript/components/partials/trailPartials'
+ @ ./app/javascript/components/partials/trailPartials/LeafletSearch.js 22:0-76 38:25-46 39:13-29
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 31139ms (Views: 31084.8ms | ActiveRecord: 20.1ms | Allocations: 85445)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:37:58 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 552)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: f05dafcc81882d1330a2
+Version: webpack 4.43.0
+Time: 11624ms
+Built at: 07/07/2020 11:38:15 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-950a54a6296338c44303.js  2.88 MiB       application  [emitted] [immutable]  application
+     js/application-950a54a6296338c44303.js.map  2.82 MiB       application  [emitted] [dev]        application
+         js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-44e0260dcc0c76e3aea5.js  2.76 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-44e0260dcc0c76e3aea5.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-950a54a6296338c44303.js js/application-950a54a6296338c44303.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-44e0260dcc0c76e3aea5.js js/server_rendering-44e0260dcc0c76e3aea5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.61 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 257 hidden modules
+
+Completed 200 OK in 16540ms (Views: 16354.7ms | ActiveRecord: 80.5ms | Allocations: 36502)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:39:21 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (44.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 145ms (Views: 78.5ms | ActiveRecord: 52.1ms | Allocations: 9424)
+
+
+Started GET "/comments" for ::1 at 2020-07-07 11:39:28 -0700
+Started GET "/favorites" for ::1 at 2020-07-07 11:39:28 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (26.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 81ms (Views: 29.1ms | ActiveRecord: 39.6ms | Allocations: 5324)
+
+
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (51.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 282ms (Views: 26.1ms | ActiveRecord: 202.1ms | Allocations: 8788)
+
+
+Started GET "/trails" for ::1 at 2020-07-07 11:39:32 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails"}
+  [1m[36mUser Load (27.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 187ms (Views: 102.5ms | ActiveRecord: 28.1ms | Allocations: 9436)
+
+
