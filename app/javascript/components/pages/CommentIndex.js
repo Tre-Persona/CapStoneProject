@@ -46,6 +46,10 @@ const Comments = (props) => {
       method: "POST"
     })
     .then(response => {
+      console.log("trail id", trail_id);
+      console.log("user name", user_name);
+      console.log("trail name", trail_name);
+      
       if (response.ok) {
         // If post successful, clear new comment form
         setCommentEntry("")
