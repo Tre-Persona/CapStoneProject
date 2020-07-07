@@ -25,7 +25,6 @@ const App = (props) => {
   const {user, logged_in, apiKey} = props
   const currentUserId = user.id
   const currentUserName = user.user_name
-  console.log(apiKey)
 
   return (
     <Router>
@@ -40,11 +39,11 @@ const App = (props) => {
           <Route exact path="/" render = { () => < Home logged_in={logged_in} sign_in_route={props.sign_in_route}/>}/>
           <Route exact path="/about" render = { () => < About />}/>
           <Route exact path="/contact" render = { () => < Contact />}/>
-          <Route exact path="/trails" render = { (props) => < TrailsIndex apiKey={apiKey} />}/>
-          <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} />}/>
+          <Route exact path="/trails" render = { () => < TrailsIndex apiKey={apiKey} />}/>
+          <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} />}/>
           <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} user_name={currentUserName} {...props} />}/>
-          <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} />}/>
-          <Route exact path="/user/:id/favorites" render = { (props) => < UserFavorites {...props} user_id={currentUserId} />}/>
+          <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} />}/>
+          <Route exact path="/user/:id/favorites" render = { (props) => < UserFavorites {...props} user_id={currentUserId} apiKey={apiKey} />}/>
           <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props} user_id={currentUserId}/>}/>
           <Route exact path="/user/:id/activity" render = { (props) => < UserActivity {...props} user_id={currentUserId} />}/>
         </Switch>

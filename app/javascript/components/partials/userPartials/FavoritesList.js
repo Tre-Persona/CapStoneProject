@@ -10,16 +10,20 @@ const FavoritesList = props => {
       <div className="dashboard-favorites-wrapper">
 
         {props.favTrails.map((trail,index) => {
-          return(
-
-            <div className="dashboard-favorite-card">
-
-              <img className="dashboard-favorite-image" src={trail.imgMedium} />
-
-              <NavLink to={`/trails/${trail.id}`}><h6>{trail.name}</h6></NavLink>
-              
-            </div>
-          )
+          if (index < 3) {
+            return(
+  
+              <div
+              key={index} 
+              className="dashboard-favorite-card">
+  
+                <img className="dashboard-favorite-image" src={trail.imgMedium} />
+  
+                <NavLink to={`/trails/${trail.id}`}><h6>{trail.name}</h6></NavLink>
+                
+              </div>
+            )
+          }
         })}
 
       </div>

@@ -82,7 +82,7 @@ const TrailsProfile = (props) => {
       }
 
       //GET data from the API
-      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${props.match.params.id}&key=200805451-d58078a69001bb6f37cb92b68bbebae3`)
+      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${props.match.params.id}&key=${props.apiKey}`)
       let trailData = await trailResponse.json()
         //all good?
       if(trailResponse.ok) {

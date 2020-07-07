@@ -25,7 +25,7 @@ const UserFavorites = props => {
       }
 
       //GET trail data from the API
-      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${trailsIdsArray.join(",")}&key=200805451-d58078a69001bb6f37cb92b68bbebae3`)
+      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${trailsIdsArray.join(",")}&key=${props.apiKey}`)
       let trailData = await trailResponse.json()
       if(trailResponse.ok) {
         //check the console to make sure we have all the trails
@@ -48,7 +48,7 @@ const UserFavorites = props => {
           <ListGroup>
             {trails.map((trail,index) => {
               return(
-                <ListGroupItem>
+                <ListGroupItem key={index}>
                   <NavLink to={`/trails/${ trail.id }`}>
                     <ListGroupItemHeading>{trail.name}</ListGroupItemHeading>
                   </NavLink>

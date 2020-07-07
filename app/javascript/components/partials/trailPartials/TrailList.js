@@ -1,5 +1,6 @@
 import React from "react"
-import { NavLink, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 
 const TrailList = (props) => {
