@@ -17,6 +17,7 @@ import UserActivity from "./pages/UserActivity"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Header from "./Header.js"
+import Questionnaire from "./pages/Questionnaire"
 import Footer from "./Footer"
 
 
@@ -42,6 +43,7 @@ const App = (props) => {
           <Route exact path="/trails" render = { () => < TrailsIndex apiKey={apiKey} />}/>
           <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} />}/>
           <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} user_name={currentUserName} {...props} />}/>
+          <Route exact path="/trails/:id/questionnaire"render = { (props) => < Questionnaire user_id={currentUserId} user_name={currentUserName} {...props} />}/>
           <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} />}/>
           <Route exact path="/user/:id/favorites" render = { (props) => < UserFavorites {...props} user_id={currentUserId} apiKey={apiKey} />}/>
           <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props} user_id={currentUserId}/>}/>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import CommentIndex from './CommentIndex'
 import TrailDisplay from '../partials/trailPartials/TrailDisplay.js'
 import { Container } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
+import { Button } from 'reactstrap'
 
 
 const TrailsProfile = (props) => {
