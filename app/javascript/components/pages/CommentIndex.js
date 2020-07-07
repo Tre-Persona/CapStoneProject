@@ -9,7 +9,7 @@ const Comments = (props) => {
   const [commentEntry, setCommentEntry] = useState("")
   // State for existing comment within the editor form
   const [commentEditEntry, setCommentEditEntry] = useState("")
-  // Array holding the ID of the comment that is in editor mode. ID gets removed after leaving edidtor mode
+  // Array holding the ID of the comment that is in editor mode. ID gets removed after leaving editor mode
   const [editArray, setEditArray] = useState([])
   // Allows only one comment to be in editor mode at a time
   const [editorOn, setEditorOn] = useState(false)

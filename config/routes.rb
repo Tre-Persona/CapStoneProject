@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questionnaires
   resources :comments
   resources :favorites
   devise_for :users, :controllers => { :destroy => "users_controller", :show => "users_controller" }
