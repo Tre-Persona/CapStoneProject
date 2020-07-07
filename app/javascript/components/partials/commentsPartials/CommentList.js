@@ -7,7 +7,7 @@ const CommentList = props => {
     <>
       <ListGroup className="comments-list-group">
       { props.comments.map((comment, index)=> {
-        console.log("username", comment.user_name)
+        console.log("Comment List Test")
         let editable = false
           if(props.user_id === comment.user_id) editable = true
           let date = comment.updated_at.substring(0,10)
