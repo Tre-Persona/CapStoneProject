@@ -114,7 +114,7 @@ const TrailsProfile = (props) => {
         <Container>
           <Jumbotron>
             <h1>Trail Questionnaire</h1>
-            <p className="lead">Trail Rating:</p>
+            <p className="lead">Trail Badges:</p>
             <hr className="my-2" />
             <p>We believe knowledge is power.  The best resource of information about trails are other hikers.  Since every person is different, we can't tell you how difficult a trail may be for you, but we hope to offer you more information so you can make an informed decision if you want to hike a trail.  The above rating is based on a scale....lorem ipsum etc etc.</p>
             <p className="lead">
