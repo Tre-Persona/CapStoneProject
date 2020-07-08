@@ -48894,3 +48894,324 @@ Completed 200 OK in 20ms (Views: 4.6ms | ActiveRecord: 9.4ms | Allocations: 2092
 >>>>>>> fd1d1e260c967960c041b549359aea63800eb24d
 
 
+Started GET "/" for ::1 at 2020-07-08 16:54:27 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 583)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: b8bdd03f4a6a743fdbcf
+Version: webpack 4.43.0
+Time: 19012ms
+Built at: 07/08/2020 4:54:50 PM
+                                                                                            Asset      Size            Chunks                         Chunk Names
+                                                           js/application-2e6cc99d50f574e55235.js   2.9 MiB       application  [emitted] [immutable]  application
+                                                       js/application-2e6cc99d50f574e55235.js.map  2.84 MiB       application  [emitted] [dev]        application
+                                                           js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                                       js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                                      js/server_rendering-fdd09d069a1ad255d975.js  2.79 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                                                  js/server_rendering-fdd09d069a1ad255d975.js.map  2.71 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                                    manifest.json  2.37 KiB                    [emitted]              
+              media/components/images/hiking-generic-cropped-4192375591d6581e4b4684cbcf6ecba4.jpg   240 KiB                    [emitted]              
+                      media/components/images/hiking-generic-f791e1fd30ad2d22fe4454702aab1d6b.jpg   333 KiB                    [emitted]              
+          media/components/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+                media/components/partials/images/avatar-test-21338131f2d15771ef5b72546b74c621.png  57.1 KiB                    [emitted]              
+                    media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+                    media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+                     media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+media/components/partials/images/trail-image-profile-default-45e09fce3a9646d995b02a9094ec4542.jpg  10.2 KiB                    [emitted]              
+ media/components/partials/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+Entrypoint application = js/application-2e6cc99d50f574e55235.js js/application-2e6cc99d50f574e55235.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-fdd09d069a1ad255d975.js js/server_rendering-fdd09d069a1ad255d975.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 2.29 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 266 hidden modules
+
+Completed 200 OK in 23299ms (Views: 23281.7ms | ActiveRecord: 0.0ms | Allocations: 97861)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:55:41 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 234)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 8f8b70fd1e3be06dd7f2
+Version: webpack 4.43.0
+Time: 7214ms
+Built at: 07/08/2020 4:55:53 PM
+                                                                                            Asset      Size            Chunks                         Chunk Names
+                                                           js/application-bae96ee8d7c3d905e80e.js   2.9 MiB       application  [emitted] [immutable]  application
+                                                       js/application-bae96ee8d7c3d905e80e.js.map  2.84 MiB       application  [emitted] [dev]        application
+                                                           js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                                       js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                                      js/server_rendering-f24749449e675121e676.js  2.79 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                                                  js/server_rendering-f24749449e675121e676.js.map  2.71 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                                    manifest.json  2.37 KiB                    [emitted]              
+              media/components/images/hiking-generic-cropped-4192375591d6581e4b4684cbcf6ecba4.jpg   240 KiB                    [emitted]              
+                      media/components/images/hiking-generic-f791e1fd30ad2d22fe4454702aab1d6b.jpg   333 KiB                    [emitted]              
+          media/components/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+                media/components/partials/images/avatar-test-21338131f2d15771ef5b72546b74c621.png  57.1 KiB                    [emitted]              
+                    media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+                    media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+                     media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+media/components/partials/images/trail-image-profile-default-45e09fce3a9646d995b02a9094ec4542.jpg  10.2 KiB                    [emitted]              
+ media/components/partials/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+Entrypoint application = js/application-bae96ee8d7c3d905e80e.js js/application-bae96ee8d7c3d905e80e.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f24749449e675121e676.js js/server_rendering-f24749449e675121e676.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 2.29 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 266 hidden modules
+
+Completed 200 OK in 11308ms (Views: 11295.2ms | ActiveRecord: 0.0ms | Allocations: 10387)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-08 16:56:24 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 597)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 44.9ms | Allocations: 7675)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 130ms (Views: 68.4ms | ActiveRecord: 23.4ms | Allocations: 23015)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-08 16:56:32 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"KJucixZq8DMQLqrieBhAUTQ8WYtZs2hWo2GNILcDbqTXOMLqFg1CYPNRZYIQgdMSMgJPsGr9XptTQ9upt4teVw==", "user"=>{"email"=>"test3@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test3@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 300ms (ActiveRecord: 4.0ms | Allocations: 6462)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:56:32 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 23.6ms | ActiveRecord: 0.9ms | Allocations: 9646)
+
+
+Started GET "/users/sign_out" for ::1 at 2020-07-08 16:56:49 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (29.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 54ms (ActiveRecord: 29.6ms | Allocations: 3084)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:56:49 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 8040)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-08 16:56:51 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1035)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.0ms | Allocations: 8976)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-08 16:56:56 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"bmzvRDprBOdiHGGxyGLKPUzI+E8ZIk9APxt94W+Z5Sbza27nGrwR9itMNUzQ848MiR0wpnpgA3YHo7r+HagNLg==", "user"=>{"email"=>"test4@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test4@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 283ms (ActiveRecord: 25.8ms | Allocations: 2713)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:56:56 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 0.9ms | Allocations: 9490)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:57:45 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 334)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: b8bdd03f4a6a743fdbcf
+Version: webpack 4.43.0
+Time: 5616ms
+Built at: 07/08/2020 4:57:53 PM
+                                                                                            Asset      Size            Chunks                         Chunk Names
+                                                           js/application-2e6cc99d50f574e55235.js   2.9 MiB       application  [emitted] [immutable]  application
+                                                       js/application-2e6cc99d50f574e55235.js.map  2.84 MiB       application  [emitted] [dev]        application
+                                                           js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                                       js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                                      js/server_rendering-fdd09d069a1ad255d975.js  2.79 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                                                  js/server_rendering-fdd09d069a1ad255d975.js.map  2.71 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                                    manifest.json  2.37 KiB                    [emitted]              
+              media/components/images/hiking-generic-cropped-4192375591d6581e4b4684cbcf6ecba4.jpg   240 KiB                    [emitted]              
+                      media/components/images/hiking-generic-f791e1fd30ad2d22fe4454702aab1d6b.jpg   333 KiB                    [emitted]              
+          media/components/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+                media/components/partials/images/avatar-test-21338131f2d15771ef5b72546b74c621.png  57.1 KiB                    [emitted]              
+                    media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+                    media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+                     media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+media/components/partials/images/trail-image-profile-default-45e09fce3a9646d995b02a9094ec4542.jpg  10.2 KiB                    [emitted]              
+ media/components/partials/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+Entrypoint application = js/application-2e6cc99d50f574e55235.js js/application-2e6cc99d50f574e55235.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-fdd09d069a1ad255d975.js js/server_rendering-fdd09d069a1ad255d975.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 2.29 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 266 hidden modules
+
+Completed 200 OK in 8018ms (Views: 7961.8ms | ActiveRecord: 22.1ms | Allocations: 17370)
+
+
+Started GET "/users/sign_out" for ::1 at 2020-07-08 16:57:57 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (26.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 26.5ms | Allocations: 2743)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:57:57 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 8095)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:57:58 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 7978)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:58:05 -0700
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 233)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 8f8b70fd1e3be06dd7f2
+Version: webpack 4.43.0
+Time: 8782ms
+Built at: 07/08/2020 4:58:17 PM
+                                                                                            Asset      Size            Chunks                         Chunk Names
+                                                           js/application-bae96ee8d7c3d905e80e.js   2.9 MiB       application  [emitted] [immutable]  application
+                                                       js/application-bae96ee8d7c3d905e80e.js.map  2.84 MiB       application  [emitted] [dev]        application
+                                                           js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                                       js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                                      js/server_rendering-f24749449e675121e676.js  2.79 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                                                  js/server_rendering-f24749449e675121e676.js.map  2.71 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                                    manifest.json  2.37 KiB                    [emitted]              
+              media/components/images/hiking-generic-cropped-4192375591d6581e4b4684cbcf6ecba4.jpg   240 KiB                    [emitted]              
+                      media/components/images/hiking-generic-f791e1fd30ad2d22fe4454702aab1d6b.jpg   333 KiB                    [emitted]              
+          media/components/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+                media/components/partials/images/avatar-test-21338131f2d15771ef5b72546b74c621.png  57.1 KiB                    [emitted]              
+                    media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+                    media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+                     media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+media/components/partials/images/trail-image-profile-default-45e09fce3a9646d995b02a9094ec4542.jpg  10.2 KiB                    [emitted]              
+ media/components/partials/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+Entrypoint application = js/application-bae96ee8d7c3d905e80e.js js/application-bae96ee8d7c3d905e80e.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f24749449e675121e676.js js/server_rendering-f24749449e675121e676.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 2.29 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 266 hidden modules
+
+Completed 200 OK in 12322ms (Views: 12317.5ms | ActiveRecord: 0.0ms | Allocations: 10460)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-08 16:58:25 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 23.1ms | ActiveRecord: 8.4ms | Allocations: 14549)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-08 16:58:40 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"fB9H+RQF8Bijs/mgmS/b7LRdxxoN8ML9zs+fUPyTXaahQ43VG93L5JfC2qhFgHW8FhC4X9FWN171ElZF/GtD0w==", "user"=>{"email"=>"test4@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test4@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 275ms (ActiveRecord: 0.4ms | Allocations: 2849)
+
+
+Started GET "/" for ::1 at 2020-07-08 16:58:40 -0700
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 324)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 32.0ms | ActiveRecord: 0.8ms | Allocations: 9695)
+
+
+Started GET "/comments" for ::1 at 2020-07-08 16:58:52 -0700
+Started GET "/favorites" for ::1 at 2020-07-08 16:58:52 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (23.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 62ms (Views: 16.5ms | ActiveRecord: 31.0ms | Allocations: 7568)
+
+
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 81ms (Views: 2.5ms | ActiveRecord: 46.1ms | Allocations: 7755)
+
+
