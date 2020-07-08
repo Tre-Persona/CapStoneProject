@@ -300,7 +300,9 @@
   }
 }
 
-
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
 
 // HOME
 
@@ -322,6 +324,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 0 0 5px 5px;
 }
 
 .home-jumbotron-title {
@@ -338,6 +341,7 @@
 
 .home-jumbotron-image {
   width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .home-subtitle {
@@ -368,12 +372,14 @@
   object-fit: cover;
   height: 200px;
   width: 200px;
+  border-radius: 5px 5px 0 0;
 }
 
 .home-trail-text-box {
   background-color: #ededed;
   padding: 10px;
   height: 150px;
+  border-radius: 0 0 5px 5px;
 }
 
 .home-trail-link {
@@ -405,6 +411,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .dashboard-content-wrapper {
@@ -415,6 +422,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  border-radius: 10px;
 }
 
 .dashboard-greeting {
@@ -439,6 +447,7 @@
   width: 200px;
   height: 200px;
   object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
 
 .dashboard-badge-image {
@@ -474,6 +483,7 @@
   padding: 10px;
   background-color: #f9f9f9;
   height: 100px;
+  border-radius: 0 0 5px 5px;
 }
 
 .dashboard-favorites-button {
@@ -531,6 +541,7 @@
 .trail-profile-body {
   background-color: #ededed;
   padding: 20px;
+  border-radius: 0 0 5px 5px;
 }
 
 .trail-profile-location {
@@ -541,6 +552,7 @@
   width: 100%;
   max-height: 300px;
   object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
 
 .trail-profile-wrapper {
@@ -599,6 +611,10 @@
 
 // TRAILS INDEX
 
+.trails-index-container {
+  margin-bottom: 50px;
+}
+
 .trails-index-list-wrapper {
   display: flex;
   flex-direction: row;
@@ -611,6 +627,7 @@
   height: 200px;
   width: 200px;
   object-fit: cover;
+  border-radius: 5px 0 0 5px;
 }
 
 .trails-index-list-text-box {
@@ -618,6 +635,11 @@
   padding: 10px;
   height: 200px;
   width: 100%;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .trails-index-list-link {
@@ -632,4 +654,49 @@
 
 .trails-index-list-title {
   font-weight: 800;
+}
+
+.trails-index-list-location {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600
+}
+
+.trails-index-list-length-wrapper {
+  display: flex;
+}
+
+.trails-index-list-length {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  padding: 1px 5px 1px 5px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.trails-index-list-summary {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300
+}
+
+.trails-index-list-button-wrapper {
+  position: absolute;
+  bottom: 0px;
+  margin: 0 10px 10px 0;
+  text-align: right;
+}
+
+.trails-index-list-button {
+  font-size: 12px;
+}
+
+.trails-index-list-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
 }
