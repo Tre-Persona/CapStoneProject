@@ -17,7 +17,9 @@ const FavoritesList = props => {
               key={index} 
               className="dashboard-favorite-card">
   
-                <img className="dashboard-favorite-image" src={trail.imgMedium} />
+                <NavLink to={`/trails/${trail.id}`}>
+                  <img className="dashboard-favorite-image" src={trail.imgSmallMed} />
+                </NavLink>
   
                 <div className="dashboard-favorite-text-box">
                   <NavLink className="dashboard-favorite-link" to={`/trails/${trail.id}`}><h6 className="dashboard-favorite-title">{trail.name}</h6></NavLink>

@@ -54,5 +54,16 @@ class TrailsIndex extends Component {
       </>
     );
   }
-}
-export default TrailsIndex;
+render(){
+  return (
+    <>
+      <Container className="trails-index-container">
+        <h2 className="page-title">Search Trails</h2>
+        <SimpleLeaflet handleClick={this.handleMapClick.bind(this)} />
+        <TrailList trails={this.state.trails}/>
+      </Container>
+    </>
+  )
+  }
+} 
+export default TrailsIndex

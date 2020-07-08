@@ -31,6 +31,9 @@ class CommentsController < ApplicationController
     end
   end
 
+  def new
+  end
+
   def create
     comment = current_user.comments.create(comment_params)
     if comment.valid?

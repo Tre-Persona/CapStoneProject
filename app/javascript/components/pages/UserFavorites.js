@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Button, Container, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import { Button, Container } from 'reactstrap'
 import { NavLink, Redirect } from 'react-router-dom'
 
 
@@ -49,26 +49,30 @@ const UserFavorites = props => {
         }
         <Container className="trails-index-container">
           <h2 className="page-title">Your Favorite Trails</h2>
-          <ListGroup className="trails-index-list-group">
+          <div className="trails-index-list-group">
             {trails.map((trail,index) => {
               return(
-                <ListGroupItem key={index} className="trails-index-list-wrapper">
+                <div key={index} className="trails-index-list-wrapper">
 
-                  <img className="trails-index-list-image" src={trail.imgSmall} />
-
-                  <NavLink className="trails-index-list-link" to={`/trails/${ trail.id }`}>
-                    <ListGroupItemHeading className="trails-index-list-title">{trail.name}</ListGroupItemHeading>
+                  <NavLink to={`/trails/${ trail.id }`}>
+                    <img className="trails-index-list-image" src={trail.imgSmallMed} />
                   </NavLink>
 
-                  <ListGroupItemText className="trails-index-list-text">
-                    <strong>{trail.location}</strong><br/>
-                    {trail.summary}
-                  </ListGroupItemText>
+                  <div className="trails-index-list-text-box">
+                    <NavLink className="trails-index-list-link" to={`/trails/${ trail.id }`}>
+                      <h4 className="trails-index-list-title">{trail.name}</h4>
+                    </NavLink>
 
-                </ListGroupItem>
+                    <p className="trails-index-list-text">
+                      <strong>{trail.location}</strong><br/>
+                      {trail.summary}
+                    </p>
+                  </div>
+
+                </div>
               )
             })}
-          </ListGroup>
+          </div>
           {showEmptyMessage &&
             <p className="favorites-empty-message">You haven't favorited any trails yet.</p>
           }

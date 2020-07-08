@@ -260,16 +260,27 @@
 
 // GENERAL
 
+#app-container {
+  font-family: 'Manrope', sans-serif;
+}
+
 .page-title {
   text-align: center;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 // HEADER
 
+.header-container {
+  background-color: #1ba274;
+}
+
 .header-title {
-  font-size: 20px;
-  color: black;
+  font-size: 25px;
+  color:white;
   margin: 0px;
+  font-weight: 800;
 }
 
 .header-title-link {
@@ -278,6 +289,18 @@
     text-decoration: none;
   }
 }
+
+.header-nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+
 
 // HOME
 
@@ -288,8 +311,91 @@
   justify-content: center;
 }
 
-.home-title {
+.home-jumbotron-wrapper {
+  margin: 10px 0px 30px 0px;
+}
+
+.home-jumbotron-text-box {
+  padding: 20px;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-jumbotron-title {
   text-align: center;
+  font-weight: 700;
+}
+
+.home-jumbotron-button {
+  background-color: #1ba274;
+  border: 1px solid #1ba274;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.home-jumbotron-image {
+  width: 100%;
+}
+
+.home-subtitle {
+  font-weight: 700;
+}
+
+.home-trails-button {
+  background-color: #1ba274;
+  border: 1px solid #1ba274;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 10px 0px 50px 0px;
+}
+
+.home-featured-trails-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-trail-card {
+  width: 200px;
+  margin: 10px;
+}
+
+.home-trail-image {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+}
+
+.home-trail-text-box {
+  background-color: #ededed;
+  padding: 10px;
+  height: 150px;
+}
+
+.home-trail-link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: #1ba274;
+  }
+}
+
+.home-trail-title {
+  font-weight: 800;
+}
+
+.home-trail-location {
+  margin-bottom: 5px;
+}
+
+.home-trail-summary {
+  font-size: 12px;
+  margin:0;
 }
 
 // DASHBOARD
@@ -299,6 +405,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.dashboard-content-wrapper {
+  background-color: #ededed;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.dashboard-greeting {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dashboard-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 .dashboard-favorites-wrapper {
@@ -330,10 +457,73 @@
   margin: 10px;
 }
 
+.dashboard-favorite-link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: #1ba274;
+  }
+}
+
+.dashboard-favorite-title {
+  font-weight: 800;
+}
+
 .dashboard-favorite-text-box {
-  padding: 5px;
+  padding: 10px;
   background-color: #f9f9f9;
   height: 100px;
+}
+
+.dashboard-favorites-button {
+  background-color: #1ba274;
+  border: 1px solid #1ba274;
+  font-weight: 800;
+  margin: 10px;
+}
+
+.dashboard-trails-button {
+  background-color: black;
+  border: 1px solid black;
+  font-weight: 800;
+  font-size: 22px;
+  margin: 30px 10px 10px 10px;
+}
+
+.dashboard-activity-button {
+  background-color: #1ba274;
+  border: 1px solid #1ba274;
+  font-weight: 800;
+  margin: 10px;
+}
+
+.dashboard-settings-button {
+  font-weight: 800;
+  margin: 10px;
+}
+
+.dashboard-activity-list-item-link {
+  text-decoration: none;
+  color: #1ba274;
+  font-weight: 800;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.dashboard-empty-message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dashboard-activity-list-item-text {
+  font-weight: 600;
+}
+
+.dashboard-activity-list-item-title {
+  font-size: 14px;
 }
 
 // TRAIL PROFILE
@@ -351,6 +541,18 @@
   width: 100%;
   max-height: 300px;
   object-fit: cover;
+}
+
+.trail-profile-wrapper {
+  margin: 10px 0px 20px 0px;
+}
+
+.trail-profile-title {
+  font-weight: 800;
+}
+
+.trail-profile-favorite-button {
+  font-weight: 800;
 }
 
 // FAVORITES PAGE
@@ -371,4 +573,63 @@
 
 .user-activity-list-link {
   font-weight: bold;
+}
+
+.comment-index-container {
+  margin-bottom: 50px;
+}
+
+.comments-new-form-submit {
+  font-weight: 800;
+  margin: 10px 0px;
+}
+
+.comments-list-item-edit-button {
+  margin-right: 10px;
+}
+
+.comments-list-item-edit-form-submit {
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.comments-new-form-label {
+  font-weight: 700;
+}
+
+// TRAILS INDEX
+
+.trails-index-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+
+.trails-index-list-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.trails-index-list-text-box {
+  background-color: #ededed;
+  padding: 10px;
+  height: 200px;
+  width: 100%;
+}
+
+.trails-index-list-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  &:hover {
+    text-decoration: none;
+    color: #1ba274;
+  }
+}
+
+.trails-index-list-title {
+  font-weight: 800;
 }
