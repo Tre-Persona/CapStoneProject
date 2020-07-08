@@ -34741,3 +34741,183 @@ Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms | Allocations:
 NameError (undefined local variable or method `id' for #<QuestionnairesController:0x00007f8cb51909f8>):
   
 app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 12:44:25 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 13.3ms | Allocations: 113776)
+
+
+  
+NameError (undefined local variable or method `id' for #<QuestionnairesController:0x00007f8cb6316ee8>):
+  
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 12:44:28 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.5ms | Allocations: 107558)
+
+
+  
+NameError (undefined local variable or method `id' for #<QuestionnairesController:0x00007f8cbb9d92a8>):
+  
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 12:50:05 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.0ms | Allocations: 106854)
+
+
+  
+NameError (undefined local variable or method `id' for #<QuestionnairesController:0x00007f8cb8937438>):
+  
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 12:50:13 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.0ms | Allocations: 106081)
+
+
+  
+NameError (undefined local variable or method `id' for #<QuestionnairesController:0x00007f8cb526e758>):
+  
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+  [1m[36mQuestionnaire Load (2.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."trail_id" = $1 LIMIT $2[0m  [["trail_id", 7022523], ["LIMIT", 11]]
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 12:58:48 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.0ms | Allocations: 106854)
+
+
+  
+NameError (undefined local variable or method `id' for #<QuestionnairesController:0x00007f8cb6772898>):
+  
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:10:27 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms | Allocations: 9262)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:10:40 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 9.1ms | Allocations: 9440)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:10:42 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 3251)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:11:53 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 3251)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:21:53 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 16.2ms | Allocations: 9242)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:23:13 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 3250)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:23:27 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.0ms | Allocations: 3250)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:23:35 -0700
+Processing by QuestionnairesController#by_id as HTML
+  Parameters: {"id"=>"7022523"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 3250)
+
+
+  
+NoMethodError (undefined method `permit' for "7022523":String):
+  
+app/controllers/questionnaires_controller.rb:16:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:10:in `by_id'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7236519184996959060)[0m
+  [1m[35m (28.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnTrailIdValueFromIntegerToString (20200708202549)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200708202549"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7236519184996959060)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7236519184996959060)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (20.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7236519184996959060)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:49:29 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
