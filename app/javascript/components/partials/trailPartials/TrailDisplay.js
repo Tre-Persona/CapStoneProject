@@ -22,7 +22,8 @@ const TrailDisplay = props => {
               {props.logged_in &&
                 <Button
                 className="trail-profile-favorite-button" 
-                color={favorited? "success" : "secondary"}
+                style={{backgroundColor: favorited? "#1ba274" : "gray", border: favorited? "1px solid #1ba274" : "1px solid gray"}}
+                
                 onClick={() => handleFavorite()}
               >
                 {favorited && "Favorited"}
