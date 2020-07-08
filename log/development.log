@@ -34921,3 +34921,1446 @@ app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', e
 app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
 app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
 app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:52:39 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:53:19 -0700
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:54:04 -0700
+  
+ActionController::RoutingError (uninitialized constant QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 13:55:49 -0700
+  
+ActionController::RoutingError (uninitialized constant QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:00:24 -0700
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:00:41 -0700
+  
+ActionController::RoutingError (uninitialized constant QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:04:01 -0700
+  
+ActionController::RoutingError (uninitialized constant QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:04:03 -0700
+  
+ActionController::RoutingError (uninitialized constant QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:04:58 -0700
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:11: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:09:48 -0700
+  
+ActionController::RoutingError (uninitialized constant QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:10:39 -0700
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:16: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:12:13 -0700
+  
+ActionController::RoutingError (uninitialized constant QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7236519184996959060)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7236519184996959060)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (26.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-07-08 14:22:51 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 596ms (Views: 366.5ms | ActiveRecord: 31.0ms | Allocations: 37640)
+
+
+Started GET "/comments" for ::1 at 2020-07-08 14:23:01 -0700
+Started GET "/favorites" for ::1 at 2020-07-08 14:23:01 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 52ms (Views: 15.3ms | ActiveRecord: 30.5ms | Allocations: 7155)
+
+
+Processing by FavoritesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/favorites_controller.rb:6:in `index'
+Completed 200 OK in 83ms (Views: 33.5ms | ActiveRecord: 29.0ms | Allocations: 8810)
+
+
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:23:10 -0700
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:19: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaires" for ::1 at 2020-07-08 14:26:59 -0700
+  
+AbstractController::ActionNotFound (The action 'by_id' could not be found for QuestionnairesController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:32:06 -0700
+  [1m[35m (28.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 547)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: ab5a5509ff6de1e8f59e
+Version: webpack 4.43.0
+Time: 9744ms
+Built at: 07/08/2020 2:32:20 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-bacf4474a8167586972d.js  2.89 MiB       application  [emitted] [immutable]  application
+                                   js/application-bacf4474a8167586972d.js.map  2.83 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-33f0c147f978545eaf28.js  2.78 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-33f0c147f978545eaf28.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-bacf4474a8167586972d.js js/application-bacf4474a8167586972d.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-33f0c147f978545eaf28.js js/server_rendering-33f0c147f978545eaf28.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.89 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 260 hidden modules
+
+Completed 200 OK in 13960ms (Views: 13901.3ms | ActiveRecord: 33.1ms | Allocations: 27712)
+
+
+Started POST "/questionnaires/new" for ::1 at 2020-07-08 14:32:57 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/questionnaires/new"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/questionnaires/new" for ::1 at 2020-07-08 14:42:11 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/questionnaires/new"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:42:12 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 302)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 8a6a028bc5283d1a7dbe
+Version: webpack 4.43.0
+Time: 10813ms
+Built at: 07/08/2020 2:42:27 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-f2f81fd539fd150463c8.js  2.89 MiB       application  [emitted] [immutable]  application
+                                   js/application-f2f81fd539fd150463c8.js.map  2.83 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-f6cba336a4e5dde72b40.js  2.78 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-f6cba336a4e5dde72b40.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-f2f81fd539fd150463c8.js js/application-f2f81fd539fd150463c8.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-f6cba336a4e5dde72b40.js js/server_rendering-f6cba336a4e5dde72b40.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.89 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 260 hidden modules
+
+Completed 200 OK in 14619ms (Views: 14554.5ms | ActiveRecord: 39.3ms | Allocations: 17760)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:42:35 -0700
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ':', expecting ')'
+...n10, :question11, :question12,: question13, :question14, :qu...
+...                              ^
+/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...on12,: question13, :question14, :question15, :question16, :q...
+...                              ^
+):
+  
+app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ':', expecting ')'
+app/controllers/questionnaires_controller.rb:25: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:43:31 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 299)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 24.2ms | ActiveRecord: 20.0ms | Allocations: 15785)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:43:35 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"post"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :post, :questionnaire[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (5.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 21:43:35.531073"], ["updated_at", "2020-07-08 21:43:35.531073"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 40.3ms | Allocations: 121638)
+
+
+  
+NameError (undefined local variable or method `quesitonnaire' for #<QuestionnairesController:0x00007fa73e6d2418>
+Did you mean?  questionnaire):
+  
+app/controllers/questionnaires_controller.rb:16:in `create'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:44:18 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (22.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 24.0ms | ActiveRecord: 49.7ms | Allocations: 15797)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:44:21 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"post"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :post, :questionnaire[0m
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (0.4ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 21:44:21.781396"], ["updated_at", "2020-07-08 21:44:21.781396"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 13.8ms | Allocations: 121823)
+
+
+  
+NameError (undefined local variable or method `quesitonnaire' for #<QuestionnairesController:0x00007fa73f26c378>
+Did you mean?  questionnaire):
+  
+app/controllers/questionnaires_controller.rb:16:in `create'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:45:23 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 30.5ms | ActiveRecord: 39.4ms | Allocations: 15774)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:45:27 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"post"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :post, :questionnaire[0m
+  [1m[35m (10.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (0.4ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 21:45:27.723763"], ["updated_at", "2020-07-08 21:45:27.723763"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 407ms (ActiveRecord: 41.7ms | Allocations: 121849)
+
+
+  
+NameError (undefined local variable or method `quesitonnaire' for #<QuestionnairesController:0x00007fa7429c9960>
+Did you mean?  questionnaire):
+  
+app/controllers/questionnaires_controller.rb:16:in `create'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:46:52 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 17.3ms | ActiveRecord: 21.7ms | Allocations: 15783)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:47:08 -0700
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 152ms (Views: 63.1ms | ActiveRecord: 35.4ms | Allocations: 26100)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:47:16 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 24.3ms | ActiveRecord: 2.0ms | Allocations: 9445)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:47:18 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"post"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :post, :questionnaire[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 21:47:18.892799"], ["updated_at", "2020-07-08 21:47:18.892799"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 103ms (Views: 0.9ms | ActiveRecord: 62.2ms | Allocations: 15821)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:50:21 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 4632901b43b1e4351464
+Version: webpack 4.43.0
+Time: 8454ms
+Built at: 07/08/2020 2:50:33 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-c956881cf996e2a193be.js  2.89 MiB       application  [emitted] [immutable]  application
+                                   js/application-c956881cf996e2a193be.js.map  2.83 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-b54a0d463a44e0a84ea9.js  2.78 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-b54a0d463a44e0a84ea9.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-c956881cf996e2a193be.js js/application-c956881cf996e2a193be.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-b54a0d463a44e0a84ea9.js js/server_rendering-b54a0d463a44e0a84ea9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.89 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 260 hidden modules
+
+Completed 200 OK in 11779ms (Views: 11702.0ms | ActiveRecord: 45.5ms | Allocations: 17328)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:50:37 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"questionnaire"=>{}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameter: :questionnaire[0m
+  [1m[35m (21.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (1.4ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 21:50:37.312082"], ["updated_at", "2020-07-08 21:50:37.312082"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 104ms (Views: 0.6ms | ActiveRecord: 53.9ms | Allocations: 14983)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:56:01 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 299)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 18.3ms | ActiveRecord: 27.9ms | Allocations: 15767)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:56:05 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"questionnaire"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameter: :questionnaire[0m
+  [1m[35m (13.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (2.5ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 21:56:05.868099"], ["updated_at", "2020-07-08 21:56:05.868099"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 55ms (Views: 0.6ms | ActiveRecord: 41.0ms | Allocations: 14974)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 14:59:54 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 299)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 20.1ms | ActiveRecord: 9.3ms | Allocations: 15801)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 14:59:57 -0700
+  
+SyntaxError (/Users/learnacademy/Desktop/CapStoneProject/app/controllers/questionnaires_controller.rb:26: syntax error, unexpected local variable or method, expecting `end'
+...s.require(:questionnaire)params.permit(:trail_id, :question1...
+...                         ^~~~~~
+):
+  
+app/controllers/questionnaires_controller.rb:26: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/questionnaires_controller.rb:26: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/questionnaires_controller.rb:26: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:00:48 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (22.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 301)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 20.3ms | ActiveRecord: 27.8ms | Allocations: 15896)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:00:50 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"questionnaire"=>{}}
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 30ms (ActiveRecord: 26.4ms | Allocations: 2196)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: questionnaire):
+  
+app/controllers/questionnaires_controller.rb:26:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:15:in `create'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:04:11 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 298)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: f0d4dee9c938853c031b
+Version: webpack 4.43.0
+Time: 7357ms
+Built at: 07/08/2020 3:04:21 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-08574af0d463e69f8d5a.js  2.89 MiB       application  [emitted] [immutable]  application
+                                   js/application-08574af0d463e69f8d5a.js.map  2.83 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-6c9bbea50974f807a6b2.js  2.78 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-6c9bbea50974f807a6b2.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-08574af0d463e69f8d5a.js js/application-08574af0d463e69f8d5a.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-6c9bbea50974f807a6b2.js js/server_rendering-6c9bbea50974f807a6b2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.89 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 260 hidden modules
+
+Completed 200 OK in 10037ms (Views: 9997.5ms | ActiveRecord: 19.4ms | Allocations: 17325)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:04:31 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"questionnaire"=>{}}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 17ms (ActiveRecord: 5.6ms | Allocations: 2258)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: questionnaire):
+  
+app/controllers/questionnaires_controller.rb:26:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:15:in `create'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:04:49 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 218ms (Views: 147.5ms | ActiveRecord: 14.5ms | Allocations: 26095)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:04:53 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"questionnaire"=>{}}
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 22ms (ActiveRecord: 15.8ms | Allocations: 2225)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: questionnaire):
+  
+app/controllers/questionnaires_controller.rb:26:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:15:in `create'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:06:46 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 547)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 45e48582eb09a797f1e6
+Version: webpack 4.43.0
+Time: 8534ms
+Built at: 07/08/2020 3:06:58 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-930ce0410f2d49d6aa40.js  2.89 MiB       application  [emitted] [immutable]  application
+                                   js/application-930ce0410f2d49d6aa40.js.map  2.83 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-75c7dce7b1f24b5bb51c.js  2.78 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-75c7dce7b1f24b5bb51c.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-930ce0410f2d49d6aa40.js js/application-930ce0410f2d49d6aa40.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-75c7dce7b1f24b5bb51c.js js/server_rendering-75c7dce7b1f24b5bb51c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.89 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 260 hidden modules
+
+Completed 200 OK in 11889ms (Views: 11830.2ms | ActiveRecord: 30.8ms | Allocations: 27694)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:07:01 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"questionnaire"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.6ms | Allocations: 2223)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: questionnaire):
+  
+app/controllers/questionnaires_controller.rb:26:in `questionnaire_params'
+app/controllers/questionnaires_controller.rb:15:in `create'
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:11:06 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 34.3ms | ActiveRecord: 28.5ms | Allocations: 15913)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:11:18 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 136ms (Views: 65.5ms | ActiveRecord: 18.8ms | Allocations: 26103)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:11:21 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"questionnaire"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameter: :questionnaire[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (1.3ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 22:11:21.891671"], ["updated_at", "2020-07-08 22:11:21.891671"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 102ms (Views: 0.5ms | ActiveRecord: 38.5ms | Allocations: 16869)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:12:51 -0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 547)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 692b9d3645a72c7cf7ab
+Version: webpack 4.43.0
+Time: 8502ms
+Built at: 07/08/2020 3:13:04 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-4259f20221a9d28ae595.js  2.89 MiB       application  [emitted] [immutable]  application
+                                   js/application-4259f20221a9d28ae595.js.map  2.83 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-a1d0edf880f8958ffc4f.js  2.78 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-a1d0edf880f8958ffc4f.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-4259f20221a9d28ae595.js js/application-4259f20221a9d28ae595.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-a1d0edf880f8958ffc4f.js js/server_rendering-a1d0edf880f8958ffc4f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.89 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 260 hidden modules
+
+Completed 200 OK in 12183ms (Views: 12113.1ms | ActiveRecord: 12.5ms | Allocations: 27679)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:13:06 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"newForm"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :newForm, :questionnaire[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (5.1ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 22:13:06.879272"], ["updated_at", "2020-07-08 22:13:06.879272"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 102ms (Views: 1.6ms | ActiveRecord: 64.8ms | Allocations: 15851)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:14:01 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (19.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 299)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 668b7589b7a5ee44ce29
+Version: webpack 4.43.0
+Time: 8038ms
+Built at: 07/08/2020 3:14:12 PM
+                                                                        Asset      Size            Chunks                         Chunk Names
+                                       js/application-5228b2b0d008fcdd6a73.js  2.89 MiB       application  [emitted] [immutable]  application
+                                   js/application-5228b2b0d008fcdd6a73.js.map  2.83 MiB       application  [emitted] [dev]        application
+                                       js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                   js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                  js/server_rendering-4876333e13d7ab6867f1.js  2.78 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                              js/server_rendering-4876333e13d7ab6867f1.js.map  2.69 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                                                manifest.json  1.45 KiB                    [emitted]              
+media/components/partials/images/badge10-b15b3baab7e1e3dc26f8510603b21491.png  13.3 KiB                    [emitted]              
+media/components/partials/images/badge20-b0f8be5f403bc44f1cec2c06408e6bb3.png   9.7 KiB                    [emitted]              
+ media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
+Entrypoint application = js/application-5228b2b0d008fcdd6a73.js js/application-5228b2b0d008fcdd6a73.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-4876333e13d7ab6867f1.js js/server_rendering-4876333e13d7ab6867f1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.89 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 260 hidden modules
+
+Completed 200 OK in 11008ms (Views: 10943.7ms | ActiveRecord: 34.8ms | Allocations: 17312)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:14:14 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"newForm"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :newForm, :questionnaire[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 22:14:14.922542"], ["updated_at", "2020-07-08 22:14:14.922542"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 100ms (Views: 2.3ms | ActiveRecord: 36.0ms | Allocations: 15038)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:15:42 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 132ms (Views: 56.9ms | ActiveRecord: 28.6ms | Allocations: 26088)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:15:47 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"newForm"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :newForm, :questionnaire[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (2.0ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 22:15:47.577972"], ["updated_at", "2020-07-08 22:15:47.577972"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 57ms (Views: 0.8ms | ActiveRecord: 10.7ms | Allocations: 15848)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:16:48 -0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 54.4ms | ActiveRecord: 20.1ms | Allocations: 26102)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:16:52 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"newForm"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :newForm, :questionnaire[0m
+  [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (1.3ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 22:16:52.558911"], ["updated_at", "2020-07-08 22:16:52.558911"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 99ms (Views: 1.7ms | ActiveRecord: 52.6ms | Allocations: 15855)
+
+
+Started GET "/trails/7022523/questionnaire" for ::1 at 2020-07-08 15:17:20 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7022523/questionnaire"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:3:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 61.2ms | ActiveRecord: 26.1ms | Allocations: 26104)
+
+
+Started POST "/questionnaires" for ::1 at 2020-07-08 15:17:22 -0700
+Processing by QuestionnairesController#create as */*
+  Parameters: {"newForm"=>{}, "questionnaire"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameters: :newForm, :questionnaire[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[36mQuestionnaire Create (1.0ms)[0m  [1m[32mINSERT INTO "questionnaires" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-08 22:17:22.935950"], ["updated_at", "2020-07-08 22:17:22.935950"]]
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questionnaires_controller.rb:15:in `create'
+Completed 200 OK in 56ms (Views: 0.5ms | ActiveRecord: 8.1ms | Allocations: 15869)
+
+

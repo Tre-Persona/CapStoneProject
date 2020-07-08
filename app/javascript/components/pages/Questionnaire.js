@@ -34,14 +34,15 @@ const Questionnaire = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.elements);
+    completedQuestionnaire()
   };
 
     // Fetch request to POST Questionnaire
     const completedQuestionnaire = () => {
-      fetch(`/trails/${trail.id}/questionnaire`, {
-        // JSON needs to include comment string, trail id, and user name
+      console.log({newForm})
+      fetch('/questionnaires', {
         body: JSON.stringify({
-          post: newForm
+          newForm
         }),
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +51,6 @@ const Questionnaire = (props) => {
       })
         .then((response) => {
           if (response.ok) {
-            // If post successful, clear new comment form
             setNewForm(initialForm);
           }
         })
