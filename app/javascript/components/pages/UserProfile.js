@@ -62,7 +62,7 @@ const UserProfile = (props) => {
         console.log(err)
       }
   }
-
+console.log(props.avatar)
   return (
     <>
       {props.user_id != props.match.params.id &&
@@ -70,6 +70,7 @@ const UserProfile = (props) => {
       }
       <Container className="dashboard-container">
         <h2 className="page-title">Your Dashboard</h2>
+        <img src={props.avatar}/>
 
         <NavLink to={`/user/${props.match.params.id}/settings`}>
             <Button className="dashboard-settings-button">Settings</Button>
