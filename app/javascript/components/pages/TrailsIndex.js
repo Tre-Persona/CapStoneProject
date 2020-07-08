@@ -16,11 +16,8 @@ class TrailsIndex extends Component {
   };
   handleMoveend = (e) => {
     console.log("this is the handle move end", e);
-
-    // this.getTrails(e.latlng.lat,e.latlng.lng)
-    //if marker exits
-    //then find LatLng
-    //else
+    
+    
   };
 
   getTrails = async (lat, lng) => {

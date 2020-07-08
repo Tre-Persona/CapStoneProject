@@ -8,7 +8,7 @@ const Header = (props) => {
 
   return (
     <>
-      <Navbar className="header-container" color="faded" light>
+      <Navbar className="header-container" color="faded" dark>
         <NavLink to="/" className="header-title-link"><h1 className="header-title">happy trails</h1></NavLink>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
