@@ -12,7 +12,7 @@ const Home = props => {
 
   async function getFeaturedTrails() {
     try {
-      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${`7050003,7022596,7085292`}&key=${props.apiKey}`)
+      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${`7050003,7022596,7085292,7021815`}&key=${props.apiKey}`)
       let trailData = await trailResponse.json()
       if(trailResponse.ok) {
         console.log("data", trailData.trails)

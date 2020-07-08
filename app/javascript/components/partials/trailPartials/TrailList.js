@@ -7,26 +7,29 @@ const TrailList = props => {
   //trails needs to be defined
   const {trails} = props
   return(
-    <ListGroup className="trails-index-list-group">
+    <div className="trails-index-list-group">
       { trails.length>0 && trails.map((trail, index) => {
         return(
-          <ListGroupItem key={trail.id} className="trails-index-list-wrapper">
-
-            <img className="trails-index-list-image" src={trail.imgSmall} />
-
-            <NavLink className="trails-index-list-link" to={`/trails/${ trail.id }`}>
-              <ListGroupItemHeading className="trails-index-list-title">{trail.name}</ListGroupItemHeading>
+          <div key={trail.id} className="trails-index-list-wrapper">
+            
+            <NavLink to={`/trails/${ trail.id }`}>
+              <img className="trails-index-list-image" src={trail.imgSmallMed} />
             </NavLink>
 
-            <ListGroupItemText className="trails-index-list-text">
-              <strong>{trail.location}</strong><br/>
-              {trail.summary}
-            </ListGroupItemText>
+            <div className="trails-index-list-text-box">
+              <NavLink className="trails-index-list-link" to={`/trails/${ trail.id }`}>
+                <h4 className="trails-index-list-title">{trail.name}</h4>
+              </NavLink>
 
-          </ListGroupItem>
+              <p className="trails-index-list-text">
+                <strong>{trail.location}</strong><br/>
+                {trail.summary}
+              </p>
+            </div>
+          </div>
         )
       })}
-    </ListGroup>
+    </div>
   )
 }
 export default TrailList

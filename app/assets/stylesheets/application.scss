@@ -31,6 +31,7 @@
 .page-title {
   text-align: center;
   font-weight: 700;
+  margin-top: 20px;
 }
 
 // HEADER
@@ -149,7 +150,7 @@
 }
 
 .home-trail-title {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .home-trail-location {
@@ -168,6 +169,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.dashboard-content-wrapper {
+  background-color: #ededed;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.dashboard-greeting {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dashboard-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 .dashboard-favorites-wrapper {
@@ -199,10 +221,73 @@
   margin: 10px;
 }
 
+.dashboard-favorite-link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: #1ba274;
+  }
+}
+
+.dashboard-favorite-title {
+  font-weight: 800;
+}
+
 .dashboard-favorite-text-box {
-  padding: 5px;
+  padding: 10px;
   background-color: #f9f9f9;
   height: 100px;
+}
+
+.dashboard-favorites-button {
+  background-color: #1ba274;
+  border: 1px solid #1ba274;
+  font-weight: 800;
+  margin: 10px;
+}
+
+.dashboard-trails-button {
+  background-color: black;
+  border: 1px solid black;
+  font-weight: 800;
+  font-size: 22px;
+  margin: 30px 10px 10px 10px;
+}
+
+.dashboard-activity-button {
+  background-color: #1ba274;
+  border: 1px solid #1ba274;
+  font-weight: 800;
+  margin: 10px;
+}
+
+.dashboard-settings-button {
+  font-weight: 800;
+  margin: 10px;
+}
+
+.dashboard-activity-list-item-link {
+  text-decoration: none;
+  color: #1ba274;
+  font-weight: 800;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.dashboard-empty-message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dashboard-activity-list-item-text {
+  font-weight: 600;
+}
+
+.dashboard-activity-list-item-title {
+  font-size: 14px;
 }
 
 // TRAIL PROFILE
@@ -224,6 +309,14 @@
 
 .trail-profile-wrapper {
   margin: 10px 0px 20px 0px;
+}
+
+.trail-profile-title {
+  font-weight: 800;
+}
+
+.trail-profile-favorite-button {
+  font-weight: 800;
 }
 
 // FAVORITES PAGE
@@ -248,4 +341,59 @@
 
 .comment-index-container {
   margin-bottom: 50px;
+}
+
+.comments-new-form-submit {
+  font-weight: 800;
+  margin: 10px 0px;
+}
+
+.comments-list-item-edit-button {
+  margin-right: 10px;
+}
+
+.comments-list-item-edit-form-submit {
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.comments-new-form-label {
+  font-weight: 700;
+}
+
+// TRAILS INDEX
+
+.trails-index-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+
+.trails-index-list-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.trails-index-list-text-box {
+  background-color: #ededed;
+  padding: 10px;
+  height: 200px;
+  width: 100%;
+}
+
+.trails-index-list-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  &:hover {
+    text-decoration: none;
+    color: #1ba274;
+  }
+}
+
+.trails-index-list-title {
+  font-weight: 800;
 }

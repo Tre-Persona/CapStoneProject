@@ -70,32 +70,34 @@ const UserProfile = (props) => {
       }
       <Container className="dashboard-container">
         <h2 className="page-title">Your Dashboard</h2>
-        <h4 className="dashboard-greeting"> Hello {props.user_name}</h4>
 
         <NavLink to={`/user/${props.match.params.id}/settings`}>
-          <Button className="dashboard-settings-button">Settings</Button>
+            <Button className="dashboard-settings-button">Settings</Button>
         </NavLink>
 
-        <FavoritesList 
-          user_id={props.match.params.id}
-          favTrails={favTrails}
-          showEmptyFavsMessage={showEmptyFavsMessage}
-        />
+        <div className="dashboard-content-wrapper">
+          <h4 className="dashboard-greeting"> Hello {props.user_name}!</h4>
 
-        <NavLink to="/trails">
-          <Button className="dashboard-trails-button">Discover More Trails</Button>
-        </NavLink>
+          <FavoritesList 
+            user_id={props.match.params.id}
+            favTrails={favTrails}
+            showEmptyFavsMessage={showEmptyFavsMessage}
+          />
 
-        <Badges 
-          user_id={props.user_id}
-        />
+          <NavLink to="/trails">
+            <Button className="dashboard-trails-button">Discover More Trails</Button>
+          </NavLink>
 
-        <ActivityList 
-          user_id={props.match.params.id}
-          activity={activity}
-          showEmptyActivityMessage={showEmptyActivityMessage}
-        />
+          <Badges 
+            user_id={props.user_id}
+          />
 
+          <ActivityList 
+            user_id={props.match.params.id}
+            activity={activity}
+            showEmptyActivityMessage={showEmptyActivityMessage}
+          />
+        </div>
       </Container>
     </>
   );

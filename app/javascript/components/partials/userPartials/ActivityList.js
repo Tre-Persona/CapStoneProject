@@ -14,7 +14,7 @@ const ActivityList = props => {
               <ListGroupItem key={index} className="dashboard-activity-list-item-wrapper">
   
                 <ListGroupItemText className="dashboard-activity-list-item-title">
-                  You commented on <NavLink className="dashboard-activity-list-item-link" to={`/trails/${comment.trail_id}`}><strong>{comment.trail_name}</strong></NavLink> <i>{ date }</i>
+                  You commented on <NavLink className="dashboard-activity-list-item-link" to={`/trails/${comment.trail_id}`}>{comment.trail_name}</NavLink> <i>{ date }</i>
                 </ListGroupItemText>
   
                 <ListGroupItemText className="dashboard-activity-list-item-text">
