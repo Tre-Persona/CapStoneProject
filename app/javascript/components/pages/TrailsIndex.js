@@ -15,14 +15,19 @@ handleMapClick = (e) => {
     this.getTrails(e.latlng.lat,e.latlng.lng)
 } 
 handleMoveend = (e) =>{
-  console.log(e)
+  console.log("this is the handle move end", e)
+  
+  
   // this.getTrails(e.latlng.lat,e.latlng.lng)
+    //if marker exits 
+    //then find LatLng
+    //else
 }
 
 getTrails = async(lat,lng) => {
   try {
     //GET data from the backend
-    let response = await fetch(`https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lng}&maxDistance=10&key=${this.props.apiKey}`)
+    let response = await fetch(`https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lng}&maxDistance=30&minStars=3&sort=distance&key=${this.props.apiKey}`)
       let data = await response.json();
       if(response.status === 200) {
         //check the console to make sure we have all the trails

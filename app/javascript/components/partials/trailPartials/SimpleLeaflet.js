@@ -12,10 +12,11 @@ class SimpleLeaflet extends Component {
   }
   }
    render() {
+    
     const position = [this.state.lat, this.state.lng]
     const LeafletSearchbox = withLeaflet(LeafletSearch);
     return (
-      <Map onclick={this.props.handleClick} onMoveend={this.props.handleMoveend}  center={position} zoom={this.state.zoom}>
+      <Map onclick={this.props.handleClick} onMoveend={this.props.handleMoveend}  center={position} zoom={this.state.zoom} onLocationfound={this.props.handleMoveend}>
         <LeafletSearchbox/>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

@@ -4,7 +4,9 @@ import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
 class LeafletSearch extends MapControl {
   createLeafletElement() {
     const provider = new OpenStreetMapProvider();
+    console.log(provider)
     return GeoSearchControl({ provider: provider });
+    
   }
 }
 export default LeafletSearch
