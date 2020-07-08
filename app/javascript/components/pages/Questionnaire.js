@@ -39,11 +39,9 @@ const Questionnaire = (props) => {
 
     // Fetch request to POST Questionnaire
     const completedQuestionnaire = () => {
-      console.log({newForm})
+      console.log(newForm)
       fetch('/questionnaires', {
-        body: JSON.stringify({
-          newForm
-        }),
+        body: JSON.stringify(newForm),
         headers: {
           "Content-Type": "application/json",
         },

@@ -10,6 +10,9 @@ class QuestionnairesController < ApplicationController
         questionnaires = Questionnaire.where(params[:trail_id])
         render json: questionnaires
     end
+    
+    def new
+    end
 
     def create
         questionnaire = Questionnaire.create(questionnaire_params)
