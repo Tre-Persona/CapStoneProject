@@ -28,6 +28,7 @@ const App = (props) => {
 
   return (
     <Router>
+      <div id="app-container">
       <Header logged_in={props.logged_in} sign_in_route={props.sign_in_route} sign_out_route={props.sign_out_route}
       user_id={currentUserId} 
       />
@@ -36,7 +37,7 @@ const App = (props) => {
           {!logged_in &&
             <Route path="/user" render={() => <Redirect to="/" /> } />
           }
-          <Route exact path="/" render = { () => < Home logged_in={logged_in} sign_in_route={props.sign_in_route}/>}/>
+          <Route exact path="/" render = { () => < Home apiKey={apiKey} logged_in={logged_in} sign_in_route={props.sign_in_route} user_id={currentUserId}/>}/>
           <Route exact path="/about" render = { () => < About />}/>
           <Route exact path="/contact" render = { () => < Contact />}/>
           <Route exact path="/trails" render = { () => < TrailsIndex apiKey={apiKey} />}/>
@@ -47,6 +48,7 @@ const App = (props) => {
           <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props} user_id={currentUserId}/>}/>
           <Route exact path="/user/:id/activity" render = { (props) => < UserActivity {...props} user_id={currentUserId} />}/>
         </Switch>
+      </div>
     </Router>
   );
 }
