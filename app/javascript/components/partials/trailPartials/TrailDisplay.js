@@ -1,5 +1,6 @@
 import React from 'react'
-import {  Button, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap'
+import {  Button } from 'reactstrap'
+import TrailProfileDefault from '../images/trail-image-profile-default.jpg'
 
 const TrailDisplay = props => {
   const { currentTrail, favorited, handleFavorite } = props
@@ -7,14 +8,24 @@ const TrailDisplay = props => {
   return(
     <>
       <div className="trail-profile-wrapper">
-        { currentTrail &&
+        { currentTrail.name !== undefined &&
           <>
-            <img className="trail-profile-image" src={currentTrail.imgMedium} />
+            {currentTrail.imgMedium === "" &&
+              <img alt={`Image of ${currentTrail.name}`} className="trail-profile-image" src={TrailProfileDefault} />
+            }
+            {currentTrail.imgMedium !== "" &&
+              <img alt={`Image of ${currentTrail.name}`} className="trail-profile-image" src={currentTrail.imgMedium} />
+            }
 
             <div className="trail-profile-body">
               <h4 className="trail-profile-title">{currentTrail.name}</h4>
 
-              <p className="trail-profile-location">{currentTrail.location}</p>
+              <div className="trail-profile-subtitle-wrapper">
+                <p className="trail-profile-location">{currentTrail.location}</p>
+                {typeof currentTrail.length === "number" &&
+                  <p className="trail-profile-length">{currentTrail.length} mi long</p>
+                }
+              </div>
 
               <p className="trail-profile-text">{currentTrail.summary}</p>
               

@@ -56,6 +56,7 @@ render(){
     <>
       <Container className="trails-index-container">
         <h2 className="page-title">Search Trails</h2>
+        <h6 className="trails-index-subtitle">Click on your desired location in the map to see results of local trails.</h6>
         <SimpleLeaflet handleClick={this.handleMapClick.bind(this)} />
         <TrailList trails={this.state.trails}/>
       </Container>

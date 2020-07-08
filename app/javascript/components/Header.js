@@ -10,7 +10,7 @@ const Header = (props) => {
     <>
       <Navbar className="header-container" color="faded" dark>
         <NavLink to="/" className="header-title-link"><h1 className="header-title">happy trails</h1></NavLink>
-        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <NavbarToggler onClick={toggleNavbar} className="header-nav-toggler" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>

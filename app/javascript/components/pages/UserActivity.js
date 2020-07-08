@@ -35,24 +35,24 @@ const UserActivity = props => {
       <Container className="user-activity-container">
         <h2 className="page-title">Your Activity</h2>
         <ListGroup className="user-activity-list-group">
+
         {activity.map((comment,index) => {
           let date = comment.updated_at.substring(0,10)
           return(
-            <>
-              <ListGroupItem className="user-activity-list-item">
+            <ListGroupItem className="user-activity-list-item" key={index}>
 
-                <ListGroupItemText className="user-activity-list-title">
-                  You commented on <NavLink className="user-activity-list-link" to={`/trails/${comment.trail_id}`}>{comment.trail_name}</NavLink> <i>{ date }</i>
-                </ListGroupItemText>
+              <ListGroupItemText className="user-activity-list-title">
+                You commented on <NavLink className="user-activity-list-link" to={`/trails/${comment.trail_id}`}>{comment.trail_name}</NavLink>, <i>{ date }</i>
+              </ListGroupItemText>
 
-                <ListGroupItemText className="user-activity-list-text">
-                  { comment.post }
-                </ListGroupItemText>
+              <ListGroupItemText className="user-activity-list-text">
+                { comment.post }
+              </ListGroupItemText>
 
-              </ListGroupItem>
-            </>
+            </ListGroupItem>
           )
         })}
+
         </ListGroup>
       </Container>
     </>
