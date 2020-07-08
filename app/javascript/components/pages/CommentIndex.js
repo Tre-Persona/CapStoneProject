@@ -15,10 +15,12 @@ const Comments = (props) => {
   const [editorOn, setEditorOn] = useState(false)
   // Array of comment objects fetched from the API
   const [comments, setComments] = useState([])
+  const { trail_id, user_name, trail_name } = props
 
   // Fetch all trail comments upon render
   useEffect(() => {
-    getComments()},[])
+    getComments()
+  },[])
 
   // ---------- CODE FOR TYPING/POSTING NEW COMMENT ----------
   
@@ -37,14 +39,19 @@ const Comments = (props) => {
   const addToComments = () => {
     fetch("/comments", {
       // JSON needs to include comment string, trail id, and user name
-      body: JSON.stringify({post: commentEntry, trail_id: props.trail_id, user_name: props.user_name, trail_name: props.trail_name}),
+      body: JSON.stringify({post: commentEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name}),
       headers:{
         "Content-Type": "application/json"
       },
       method: "POST"
     })
     .then(response => {
+      console.log("trail id", trail_id);
+      console.log("user name", user_name);
+      console.log("trail name", trail_name);
+      
       if (response.ok) {
+        console.log("response",response)
         // If post successful, clear new comment form
         setCommentEntry("")
         // Refetch comments upon adding new comment
@@ -85,7 +92,7 @@ const Comments = (props) => {
   //
   const updateComment = (id, trailId) => {
     fetch(`/comments/${id}`, {
-      body: JSON.stringify({post: commentEditEntry, trail_id: trailId, user_name: props.user_name, trail_name: props.trail_name}),
+      body: JSON.stringify({post: commentEditEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name}),
       headers:{
         "Content-Type": "application/json"
       },
@@ -148,7 +155,7 @@ const Comments = (props) => {
 
   return ( 
   
-  <Container>
+  <Container className="comment-index-container">
       {props.logged_in &&
         <CommentNew 
           handleSubmit={handleSubmit}

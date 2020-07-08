@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Container } from 'reactstrap'
 import SimpleLeaflet from '../partials/trailPartials/SimpleLeaflet.js'
 import TrailList from '../partials/trailPartials/TrailList.js'
 
@@ -29,11 +30,13 @@ getTrails = async(lat,lng) => {
     }
   }
 render(){
-  console.log(this.props.apiKey)
   return (
     <>
-      <SimpleLeaflet handleClick={this.handleMapClick.bind(this)} />
-      <TrailList trails={this.state.trails}/>
+      <Container className="trails-index-container">
+        <h2 className="page-title">Search Trails</h2>
+        <SimpleLeaflet handleClick={this.handleMapClick.bind(this)} />
+        <TrailList trails={this.state.trails}/>
+      </Container>
     </>
   )
   }

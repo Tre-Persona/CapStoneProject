@@ -104,7 +104,7 @@ const TrailsProfile = (props) => {
 
     return (
       <>
-        <Container>
+        <Container className="trail-profile-container">
           <TrailDisplay
             currentTrail={currentTrail}
             favorited={favorited}

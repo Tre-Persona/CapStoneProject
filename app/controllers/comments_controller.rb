@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    comment = Comment.all
+    comment = Comment.find(params[:id])
     render json: comment
   end
 
@@ -29,6 +29,9 @@ class CommentsController < ApplicationController
     else
       render json: comment.errors, status: 422
     end
+  end
+
+  def new
   end
 
   def create

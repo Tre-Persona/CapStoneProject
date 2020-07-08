@@ -5,7 +5,7 @@ import { Button } from 'reactstrap'
 const FavoritesList = props => {
   return(
     <>
-      <h4>Your Favorite Trails</h4>
+      <h4 className="dashboard-subtitle">Your Favorite Trails</h4>
 
       <div className="dashboard-favorites-wrapper">
 
@@ -19,7 +19,13 @@ const FavoritesList = props => {
   
                 <img className="dashboard-favorite-image" src={trail.imgMedium} />
   
-                <NavLink to={`/trails/${trail.id}`}><h6>{trail.name}</h6></NavLink>
+                <div className="dashboard-favorite-text-box">
+                  <NavLink className="dashboard-favorite-link" to={`/trails/${trail.id}`}><h6 className="dashboard-favorite-title">{trail.name}</h6></NavLink>
+
+                  <p className="dashboard-favorite-text">
+                    {trail.location}
+                  </p>
+                </div>
                 
               </div>
             )
@@ -28,9 +34,15 @@ const FavoritesList = props => {
 
       </div>
 
+      {!props.showEmptyFavsMessage && 
       <NavLink to={`/user/${props.user_id}/favorites`}>
-        <Button>See All Favorites</Button>
+        <Button className="dashboard-favorites-button">See All Favorites</Button>
       </NavLink>
+      }
+
+      {props.showEmptyFavsMessage && 
+        <p className="dashboard-empty-message">You haven't favorited any trails yet.</p>
+      }
     </>
   )
 }
