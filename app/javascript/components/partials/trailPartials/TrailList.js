@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import TrailSqDefault from '../images/trail-image-square-default.jpg'
 
 
 const TrailList = props => {
@@ -12,9 +13,17 @@ const TrailList = props => {
         return (
           <div key={trail.id} className="trails-index-list-wrapper">
 
-            <NavLink to={`/trails/${trail.id}`}>
+            {trail.imgSmallMed === "" &&
+              <NavLink to={`/trails/${trail.id}`}>
+                <img alt={`Image opens trail profile for ${trail.name}.`} className="trails-index-list-image" src={TrailSqDefault} />
+              </NavLink>
+            }
+
+            {trail.imgSmallMed.length > 0 &&
+              <NavLink to={`/trails/${trail.id}`}>
               <img alt={`Image opens trail profile for ${trail.name}.`} className="trails-index-list-image" src={trail.imgSmallMed} />
             </NavLink>
+            }
 
             <div className="trails-index-list-text-box">
               <div className="trails-index-list-text-wrapper">
@@ -25,11 +34,13 @@ const TrailList = props => {
                 <p className="trails-index-list-location">
                   {trail.location}
                 </p>
-                <div className="trails-index-list-length-wrapper">
-                  <p className="trails-index-list-length">
-                    {trail.length} mi long
-                        </p>
-                </div>
+                {typeof trail.length === "number" &&
+                  <div className="trails-index-list-length-wrapper">
+                    <p className="trails-index-list-length">
+                      {trail.length} mi long
+                    </p>
+                  </div>
+                }
                 <p className="trails-index-list-summary">
                   {trail.summary}
                 </p>

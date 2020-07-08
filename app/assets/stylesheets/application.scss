@@ -300,9 +300,6 @@
   }
 }
 
-.navbar-toggler-icon {
-  filter: invert(100%);
-}
 
 // HOME
 
@@ -536,6 +533,30 @@
   font-size: 14px;
 }
 
+.dashboard-activity-list-group {
+  margin-top: 10px;
+}
+
+// USER ACTIVITY
+
+.user-activity-container {
+  margin-bottom: 50px;
+}
+
+.user-activity-list-title {
+  font-size: 14px;
+}
+
+.user-activity-list-link {
+  font-weight: 800;
+  color: #1ba274
+}
+
+.user-activity-list-text {
+  font-weight: 600;
+}
+
+
 // TRAIL PROFILE
 
 .trail-profile-body {
@@ -545,7 +566,8 @@
 }
 
 .trail-profile-location {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .trail-profile-image {
@@ -565,6 +587,22 @@
 
 .trail-profile-favorite-button {
   font-weight: 800;
+}
+
+.trail-profile-subtitle-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 5px;
+}
+
+.trail-profile-length {
+  margin: 0 0 0 20px;
+  font-size: 18px;
+  background-color: white;
+  padding: 2px 5px;
+  font-weight: 600;
+  height: 100%;
+  border-radius: 2px;
 }
 
 // FAVORITES PAGE
@@ -609,10 +647,26 @@
   font-weight: 700;
 }
 
+.comments-list-item-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.comments-list-item-avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
 // TRAILS INDEX
 
 .trails-index-container {
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .trails-index-list-wrapper {
@@ -620,7 +674,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 .trails-index-list-image {
@@ -658,7 +712,7 @@
 
 .trails-index-list-location {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600
 }
 
@@ -668,7 +722,7 @@
 
 .trails-index-list-length {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   background-color: white;
   padding: 1px 5px 1px 5px;
@@ -677,8 +731,8 @@
 }
 
 .trails-index-list-summary {
-  margin: 0;
-  font-size: 16px;
+  margin: 5px 0 0 0;
+  font-size: 14px;
   font-weight: 300
 }
 
@@ -699,4 +753,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+}
+
+.trails-index-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
 }
