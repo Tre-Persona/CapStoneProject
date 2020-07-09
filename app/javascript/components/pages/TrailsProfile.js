@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import CommentIndex from './CommentIndex'
 import TrailDisplay from '../partials/trailPartials/TrailDisplay.js'
-import { Container } from 'reactstrap'
+import { Container, Button } from 'reactstrap'
+import { NavLink } from 'react-router-dom';
 
 
 const TrailsProfile = (props) => {
@@ -109,6 +110,10 @@ const TrailsProfile = (props) => {
             handleFavorite={handleFavorite}
             logged_in={props.logged_in}
           />
+          <NavLink to={`/trails/${props.match.params.id}/questionnaire`} ><Button color="success">Click To Fill Out Questionnaire</Button></NavLink>
+          <br></br>
+          <a href="">Why fill out a questionnaire?</a>
+          <br></br>
           <CommentIndex 
             trail_id={props.match.params.id}
             user_name={props.user_name}
