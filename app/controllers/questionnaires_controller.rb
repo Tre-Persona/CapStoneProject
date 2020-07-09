@@ -1,5 +1,4 @@
 class QuestionnairesController < ApplicationController
-    class QuestionnairesController < ApplicationController
         before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
     
         def index
@@ -26,12 +25,12 @@ class QuestionnairesController < ApplicationController
         end
     
         def edit
-            question = current_user.questions.find(params[:id])
+            question = current_user.questionnaires.find(params[:id])
             render json: question
           end
     
         def update
-            question = current_user.questions.find(params[:id])
+            question = current_user.questionnaires.find(params[:id])
             question.update(questionnaire_params)
             if question.valid?
               render json: question
@@ -41,7 +40,7 @@ class QuestionnairesController < ApplicationController
         end
     
         def create
-            question = Questionnaire.create(questionnaire_params)
+            question = current_user.questionnaires.create(questionnaire_params)
             if question.valid?
               render json: question
             else
@@ -50,7 +49,7 @@ class QuestionnairesController < ApplicationController
         end
     
         def destroy
-            question = current_user.questions.find(params[:id])
+            question = current_user.questionnaires.find(params[:id])
             if question.destroy
               render json: question
             else
@@ -60,8 +59,6 @@ class QuestionnairesController < ApplicationController
     
     private
         def questionnaire_params
-            puts params
-            params.require(:question)params.permit(:trail_id, :question1, :question2, :question3, :question4, :question5, :question6, :question7, :question8, :question9, :question10, :question11, :question12, :question13, :question14, :question15, :question16, :question17, :question18, :question19)
+            params.require(:questionnaire).permit(:trail_id, :trail_name, :question1, :question2, :question3, :question4, :question5, :question6, :question7, :question8, :question9, :question10, :question11, :question12, :question13, :question14, :question15, :question16, :question17, :question18, :question19)
         end
-    end
 end

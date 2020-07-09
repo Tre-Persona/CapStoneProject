@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CustomInput, Form, FormGroup, Button } from "reactstrap";
+import { CustomInput, Form, FormGroup, Button, Container } from "reactstrap";
 
 const initialForm = {
   question1: undefined,
@@ -20,7 +20,7 @@ const initialForm = {
   question16: undefined,
   question17: undefined,
   question18: undefined,
-  question19: undefined,
+  question19: undefined
 };
 const Questionnaire = (props) => {
     //State for a new questionnaire form
@@ -60,7 +60,7 @@ const Questionnaire = (props) => {
 
 
   return (
-    <>
+    <Container>
       <h1 className="questionnaire-title">Trail Questionnaire</h1>
       <Form className="question-form" onSubmit={handleSubmit}>
         <FormGroup>
@@ -75,7 +75,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question1yes"
                 name="question1"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -84,8 +84,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question1no"
                 name="question1"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question1notavailable"
+                name="question1"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -102,7 +111,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question2yes"
                 name="question2"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -111,8 +120,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question2no"
                 name="question2"
-                value="false"
+                value="no"
                 label="No"
+              />
+              <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question2notavailable"
+                name="question2"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -129,7 +147,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question3yes"
                 name="question3"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -138,8 +156,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question3no"
                 name="question3"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question3notavailable"
+                name="question3"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -156,7 +183,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question4yes"
                 name="question4"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -165,8 +192,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question4no"
                 name="question4"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question4notavailable"
+                name="question4"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -183,7 +219,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question5yes"
                 name="question5"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -192,8 +228,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question5no"
                 name="question5"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question5notavailable"
+                name="question5"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -211,7 +256,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question6yes"
                 name="question6"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -220,17 +265,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question6no"
                 name="question6"
-                value="false"
+                value="no"
                 label="No"
               />
               <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
-                id="question6na"
+                id="question6notavailable"
                 name="question6"
-                value="not available"
-                label="There were no bathrooms at the trailhead"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -247,7 +292,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question7yes"
                 name="question7"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -256,8 +301,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question7no"
                 name="question7"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question7notavailable"
+                name="question7"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -274,7 +328,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question8yes"
                 name="question8"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -283,8 +337,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question8no"
                 name="question8"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question8notavailable"
+                name="question8"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -302,7 +365,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question9yes"
                 name="question9"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -311,8 +374,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question9no"
                 name="question9"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question9notavailable"
+                name="question9"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -329,7 +401,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question10yes"
                 name="question10"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -338,8 +410,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question10no"
                 name="question10"
-                value="false"
+                value="no"
                 label="No"
+              />
+               <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question10notavailable"
+                name="question10"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -357,7 +438,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question11yes"
                 name="question11"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -366,8 +447,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question11no"
                 name="question11"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question11notavailable"
+                name="question11"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -384,7 +474,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question12yes"
                 name="question12"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -393,8 +483,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question12no"
                 name="question12"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question12notavailable"
+                name="question12"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -411,7 +510,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question13yes"
                 name="question13"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -420,8 +519,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question13no"
                 name="question13"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question13notavailable"
+                name="question13"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -440,7 +548,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question14yes"
                 name="question14"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -449,8 +557,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question14no"
                 name="question14"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question14notavailable"
+                name="question14"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -467,7 +584,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question15yes"
                 name="question15"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -476,8 +593,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question15no"
                 name="question15"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question15notavailable"
+                name="question15"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -494,7 +620,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question16yes"
                 name="question16"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -503,8 +629,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question16no"
                 name="question16"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question16notavailable"
+                name="question16"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -521,7 +656,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question17yes"
                 name="question17"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -530,8 +665,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question17no"
                 name="question17"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question17notavailable"
+                name="question17"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -548,7 +692,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question18yes"
                 name="question18"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -557,8 +701,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question18no"
                 name="question18"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question18notavailable"
+                name="question18"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -575,7 +728,7 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question19yes"
                 name="question19"
-                value="true"
+                value="yes"
                 label="Yes"
               />
               <CustomInput
@@ -584,8 +737,17 @@ const Questionnaire = (props) => {
                 type="radio"
                 id="question19no"
                 name="question19"
-                value="false"
+                value="no"
                 label="No"
+              />
+                <CustomInput
+                onChange={handleChange}
+                className="radio-btn"
+                type="radio"
+                id="question19notavailable"
+                name="question19"
+                value="notavailable"
+                label="Not Available"
               />
             </div>
           </fieldset>
@@ -598,7 +760,7 @@ const Questionnaire = (props) => {
           Submit
         </Button>
       </Form>
-    </>
+    </Container>
   );
 };
 

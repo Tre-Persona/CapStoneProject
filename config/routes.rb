@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :destroy => "users_controller", :show => "users_controller" }
   get 'users/comments' => 'comments#user_only_index'
   get 'users/:id' => 'users#show'
+  get 'users/questionnaires' => 'questionnaires#user_only_index'
   get '/trails/:trail_id/questionnaires' => 'questionnaires#by_id'
   get '*path', to: 'main#index', constraints: ->(request){ request.format.html? }
   root to: 'main#index'
