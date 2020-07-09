@@ -25,7 +25,7 @@ const App = (props) => {
   const {user, logged_in, apiKey} = props
   const currentUserId = user.id
   const currentUserName = user.user_name
-  console.log(user, user.avatar.url)
+  console.log(user, user.avatar)
   return (
     <Router>
       <div id="app-container">
