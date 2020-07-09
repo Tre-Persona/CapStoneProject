@@ -3,7 +3,7 @@ import { CustomInput, Form, FormGroup, Button, Container } from "reactstrap";
 import { Redirect } from 'react-router-dom'
 
 const Questionnaire = (props) => {
-    //State for a new questionnaire form
+  //State for a new questionnaire form
   const [newForm, setNewForm] = useState({
     question1: undefined,
     question2: undefined,
@@ -32,8 +32,8 @@ const Questionnaire = (props) => {
 
   useEffect(() => {
     getTrailName()
-  },[])
-  
+  }, [])
+
   const handleChange = (e) => {
     setNewForm({
       ...newForm,
@@ -47,43 +47,44 @@ const Questionnaire = (props) => {
     console.log("form upon submit:", newForm)
   };
 
-    // Fetch request to POST Questionnaire
-    const completedQuestionnaire = () => {
-      console.log(newForm)
-      fetch('/questionnaires', {
-        body: JSON.stringify(newForm),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      })
-        .then((response) => {
-          if (response.ok) {
-            setSuccess(true)
-          }
-        })
-        .catch((error) => {
-          console.log("error:", error);
-        });
-    };
-
-    async function getTrailName() {
-      try {
-        //GET data from the API
-        let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${props.match.params.id}&key=${props.apiKey}`)
-        let trailData = await trailResponse.json()
-          //all good?
-        if(trailResponse.ok) {
-          console.log("trailData", trailData.trails[0].name)
-          setNewForm({
-            ...newForm,
-            trail_name: trailData.trails[0].name
-          })
-          }
-        } catch (err) {
-          console.log(err)
+  // Fetch request to POST Questionnaire
+  const completedQuestionnaire = () => {
+    
+    fetch('/questionnaires', {
+      body: JSON.stringify(newForm),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("form submitted!",newForm)
+          setSuccess(true)
         }
+      })
+      .catch((error) => {
+        console.log("error:", error);
+      });
+  };
+
+  async function getTrailName() {
+    try {
+      //GET data from the API
+      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${props.match.params.id}&key=${props.apiKey}`)
+      let trailData = await trailResponse.json()
+      //all good?
+      if (trailResponse.ok) {
+        console.log("trailData", trailData.trails[0].name)
+        setNewForm({
+          ...newForm,
+          trail_name: trailData.trails[0].name
+        })
+      }
+    } catch (err) {
+      console.log(err)
     }
+  }
 
 
   return (
@@ -114,7 +115,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -186,7 +187,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -222,7 +223,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -258,7 +259,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -331,7 +332,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -367,7 +368,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -404,7 +405,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -440,7 +441,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-               <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -477,7 +478,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -513,7 +514,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -549,7 +550,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -587,7 +588,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -623,7 +624,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -659,7 +660,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -695,7 +696,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -731,7 +732,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
@@ -767,7 +768,7 @@ const Questionnaire = (props) => {
                 value="no"
                 label="No"
               />
-                <CustomInput
+              <CustomInput
                 onChange={handleChange}
                 className="radio-btn"
                 type="radio"
