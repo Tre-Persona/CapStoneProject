@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button, FormGroup, Label, Input, ListGroup, ListGroupItem, ListGroupItemText } from 'reactstrap'
-import AvatarTest from '../images/avatar-test.png'
 
 
 const CommentList = props => {
@@ -14,7 +13,7 @@ const CommentList = props => {
         return(
           <ListGroupItem key={index} className="comments-list-item-wrapper">
 
-            <img className="comments-list-item-avatar" src={AvatarTest} />
+            <img className="comments-list-item-avatar" src={comment.avatar} />
 
             <div className="comments-list-item-text-area">
               {props.editArray.includes(comment.id) &&

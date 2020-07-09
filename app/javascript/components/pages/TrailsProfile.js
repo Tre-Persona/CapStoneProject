@@ -115,6 +115,7 @@ const TrailsProfile = (props) => {
             user_id={props.user_id}
             trail_name={currentTrail.name}
             logged_in={props.logged_in}
+            avatar={props.avatar}
           />
         </Container>
       </>

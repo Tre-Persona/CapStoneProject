@@ -41,8 +41,8 @@ const App = (props) => {
           <Route exact path="/about" render = { () => < About />}/>
           <Route exact path="/contact" render = { () => < Contact />}/>
           <Route exact path="/trails" render = { () => < TrailsIndex apiKey={apiKey} />}/>
-          <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} />}/>
-          <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} user_name={currentUserName} avatar={user.avatar.url} {...props} />}/>
+          <Route exact path="/trails/:id" render = { (props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} avatar={user.avatar.url} />}/>
+          <Route exact path="/trails/:id/comments"render = { (props) => < CommentIndex user_id={currentUserId} user_name={currentUserName} {...props} />}/>
           <Route exact path="/user/:id" render = { (props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} />}/>
           <Route exact path="/user/:id/favorites" render = { (props) => < UserFavorites {...props} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url}/>}/>
           <Route exact path="/user/:id/settings" render = { (props) => < UserSettings {...props} user_id={currentUserId} avatar={user.avatar.url}/>}/>

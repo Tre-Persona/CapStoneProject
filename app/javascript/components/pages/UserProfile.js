@@ -62,7 +62,7 @@ const UserProfile = (props) => {
         console.log(err)
       }
   }
-console.log(props.avatar)
+
   return (
     <>
       {props.user_id != props.match.params.id &&
