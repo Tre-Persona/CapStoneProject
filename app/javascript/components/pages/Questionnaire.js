@@ -1,41 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CustomInput, Form, FormGroup, Button, Container } from "reactstrap";
+import { Redirect } from 'react-router-dom'
 
-const initialForm = {
-  question1: undefined,
-  question2: undefined,
-  question3: undefined,
-  question4: undefined,
-  question5: undefined,
-  question6: undefined,
-  question7: undefined,
-  question8: undefined,
-  question9: undefined,
-  question10: undefined,
-  question11: undefined,
-  question12: undefined,
-  question13: undefined,
-  question14: undefined,
-  question15: undefined,
-  question16: undefined,
-  question17: undefined,
-  question18: undefined,
-  question19: undefined
-};
 const Questionnaire = (props) => {
     //State for a new questionnaire form
-  const [newForm, setNewForm] = useState(initialForm);
+  const [newForm, setNewForm] = useState({
+    question1: undefined,
+    question2: undefined,
+    question3: undefined,
+    question4: undefined,
+    question5: undefined,
+    question6: undefined,
+    question7: undefined,
+    question8: undefined,
+    question9: undefined,
+    question10: undefined,
+    question11: undefined,
+    question12: undefined,
+    question13: undefined,
+    question14: undefined,
+    question15: undefined,
+    question16: undefined,
+    question17: undefined,
+    question18: undefined,
+    question19: undefined,
+    trail_id: parseInt(props.match.params.id),
+    trail_name: ""
+  })
+  const [trailName, setTrailName] = useState("")
+  const [success, setSuccess] = useState(false)
+
+  useEffect(() => {
+    getTrailName()
+  },[])
   
   const handleChange = (e) => {
-    newForm[e.target.name] = e.target.value;
-    setNewForm(newForm);
-    console.log(newForm);
-  };
+    setNewForm({
+      ...newForm,
+      [e.target.name]: e.target.value
+    })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.target.elements);
+    e.preventDefault()
     completedQuestionnaire()
+    console.log("form upon submit:", newForm)
   };
 
     // Fetch request to POST Questionnaire
@@ -50,13 +59,31 @@ const Questionnaire = (props) => {
       })
         .then((response) => {
           if (response.ok) {
-            setNewForm(initialForm);
+            setSuccess(true)
           }
         })
         .catch((error) => {
           console.log("error:", error);
         });
     };
+
+    async function getTrailName() {
+      try {
+        //GET data from the API
+        let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${props.match.params.id}&key=${props.apiKey}`)
+        let trailData = await trailResponse.json()
+          //all good?
+        if(trailResponse.ok) {
+          console.log("trailData", trailData.trails[0].name)
+          setNewForm({
+            ...newForm,
+            trail_name: trailData.trails[0].name
+          })
+          }
+        } catch (err) {
+          console.log(err)
+        }
+    }
 
 
   return (
@@ -752,13 +779,17 @@ const Questionnaire = (props) => {
             </div>
           </fieldset>
         </FormGroup>
-        <Button
-          className="questionnaire-submit-button"
-          type="submit"
-          onSubmit={handleSubmit}
-        >
-          Submit
-        </Button>
+
+        
+          <Button
+            className="questionnaire-submit-button"
+            type="submit"
+            onSubmit={handleSubmit}
+          >
+            Submit
+          </Button>
+          {/*success && <Redirect to={`/trails/${props.match.params.id}`} />*/}
+        
       </Form>
     </Container>
   );

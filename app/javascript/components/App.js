@@ -55,7 +55,7 @@ const App = (props) => {
 
             <Route exact path="/trails/:id" render={(props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} avatar={user.avatar.url} />} />
 
-            <Route exact path="/trails/:id/questionnaire"render = { (props) => < Questionnaire user_id={currentUserId} user_name={currentUserName} {...props} />}/>
+            <Route exact path="/trails/:id/questionnaire" render = { (props) => < Questionnaire user_id={currentUserId} apiKey={apiKey} {...props} />}/>
 
             <Route exact path="/user/:id" render={(props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} />} />
 
