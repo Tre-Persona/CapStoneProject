@@ -37,7 +37,7 @@ const Home = props => {
             }
 
             {!props.logged_in &&
-              <a href={props.sign_in_route}><Button className="home-jumbotron-button">Sign Up</Button></a>
+              <a href="users/sign_up"><Button className="home-jumbotron-button">Sign Up</Button></a>
             }
           </div>
         </div>

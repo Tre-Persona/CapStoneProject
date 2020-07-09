@@ -295,6 +295,7 @@
   -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.37);
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.37);
   z-index: 100000;
+  align-items: flex-start;
 }
 
 .header-title {
@@ -302,6 +303,7 @@
   color:white;
   margin: 0px;
   font-weight: 800;
+  margin-top: 3px;
 }
 
 .header-title-link {
@@ -314,13 +316,44 @@
 .header-nav-link {
   text-decoration: none;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 18px;
   &:hover {
     text-decoration: none;
     color: black;
   }
 }
 
+.header-nav-dashboard-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-avatar {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.header-nav-group {
+  margin-top: 10px;
+}
+
+.header-nav-search-button {
+  font-weight: 800;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+  padding: 3px 5px;
+  margin-right: 15px;
+}
+
+.header-nav-search-wrapper {
+  margin-bottom: 5px;
+}
 
 // HOME
 
@@ -831,6 +864,7 @@
 .footer-link {
   text-decoration: none;
   color: white;
+  font-weight: 800;
   margin-bottom: 5px;
   &:hover {
     text-decoration: none;

@@ -26,13 +26,16 @@ const App = (props) => {
   const { user, logged_in, apiKey } = props
   const currentUserId = user.id
   const currentUserName = user.user_name
-  console.log(user, user.avatar)
+  
   return (
     <Router>
       <div id="app-container">
 
-        <Header logged_in={props.logged_in} sign_in_route={props.sign_in_route} sign_out_route={props.sign_out_route}
+        <Header logged_in={props.logged_in}
+          sign_in_route={props.sign_in_route}
+          sign_out_route={props.sign_out_route}
           user_id={currentUserId}
+          avatar={user.avatar.url}
         />
 
         <div id="main-container">
