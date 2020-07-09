@@ -50737,6 +50737,7 @@ Completed 200 OK in 73ms (Views: 6.4ms | ActiveRecord: 61.9ms | Allocations: 829
 Completed 200 OK in 53ms (Views: 11.4ms | ActiveRecord: 31.9ms | Allocations: 8512)
 
 
+<<<<<<< HEAD
 Started POST "/favorites" for ::1 at 2020-07-09 11:12:16 -0700
 Processing by FavoritesController#create as */*
   Parameters: {"fav_trail_id"=>"7004658", "favorite"=>{"fav_trail_id"=>"7004658"}}
@@ -51254,6 +51255,21 @@ rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
 rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
 actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
 activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+=======
+Started GET "/" for ::1 at 2020-07-09 11:18:45 -0700
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.2) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.2) lib/active_record/migration.rb:564:in `call'
+>>>>>>> e64af150f2e5f5f164e61c358551bec44a916173
 actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
 activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
 actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -51289,6 +51305,7 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/trails/7016809/questionnaire" for ::1 at 2020-07-09 11:52:15 -0700
 Processing by MainController#index as HTML
   Parameters: {"path"=>"trails/7016809/questionnaire"}
@@ -51468,6 +51485,45 @@ Built at: 07/09/2020 12:07:18 PM
                                                        js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
                                                       js/server_rendering-c4ee77a346e0c122b474.js  2.84 MiB  server_rendering  [emitted] [immutable]  server_rendering
                                                   js/server_rendering-c4ee77a346e0c122b474.js.map  2.74 MiB  server_rendering  [emitted] [dev]        server_rendering
+=======
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (9986.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "happy_trails_app_development"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "happy_trails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "happy_trails_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7236519184996959060)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestionnaires (20200709173354)
+  [1m[35m (24.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "questionnaires" ("id" bigserial primary key, "user_id" integer, "trail_name" character varying, "trail_id" integer, "question1" character varying, "question2" character varying, "question3" character varying, "question4" character varying, "question5" character varying, "question6" character varying, "question7" character varying, "question8" character varying, "question9" character varying, "question10" character varying, "question11" character varying, "question12" character varying, "question13" character varying, "question14" character varying, "question15" character varying, "question16" character varying, "question17" character varying, "question18" character varying, "question19" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200709173354"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7236519184996959060)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-07-09 11:19:39 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 385)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/CapStoneProject/public/packs
+[Webpacker] Hash: 3037321ad55377a3bf55
+Version: webpack 4.43.0
+Time: 13676ms
+Built at: 07/09/2020 11:20:04 AM
+                                                                                            Asset      Size            Chunks                         Chunk Names
+                                                           js/application-5d70b73ec4558fd85e91.js  2.95 MiB       application  [emitted] [immutable]  application
+                                                       js/application-5d70b73ec4558fd85e91.js.map  2.87 MiB       application  [emitted] [dev]        application
+                                                           js/hello_react-5af56c4036b168593d8d.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+                                                       js/hello_react-5af56c4036b168593d8d.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+                                                      js/server_rendering-0ef8a5b6481faea79c12.js  2.83 MiB  server_rendering  [emitted] [immutable]  server_rendering
+                                                  js/server_rendering-0ef8a5b6481faea79c12.js.map  2.73 MiB  server_rendering  [emitted] [dev]        server_rendering
+>>>>>>> e64af150f2e5f5f164e61c358551bec44a916173
                                                                                     manifest.json  2.51 KiB                    [emitted]              
               media/components/images/hiking-generic-cropped-4192375591d6581e4b4684cbcf6ecba4.jpg   240 KiB                    [emitted]              
                       media/components/images/hiking-generic-f791e1fd30ad2d22fe4454702aab1d6b.jpg   333 KiB                    [emitted]              
@@ -51479,9 +51535,15 @@ Built at: 07/09/2020 12:07:18 PM
                      media/components/partials/images/badge5-42d4fb2414c981e2c8ad65594a2c7667.png  14.7 KiB                    [emitted]              
 media/components/partials/images/trail-image-profile-default-45e09fce3a9646d995b02a9094ec4542.jpg  10.2 KiB                    [emitted]              
  media/components/partials/images/trail-image-square-default-8c0174113b9e7175abafb81cdf5d235d.jpg  6.48 KiB                    [emitted]              
+<<<<<<< HEAD
 Entrypoint application = js/application-d3d1319d1a669503ca56.js js/application-d3d1319d1a669503ca56.js.map
 Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
 Entrypoint server_rendering = js/server_rendering-c4ee77a346e0c122b474.js js/server_rendering-c4ee77a346e0c122b474.js.map
+=======
+Entrypoint application = js/application-5d70b73ec4558fd85e91.js js/application-5d70b73ec4558fd85e91.js.map
+Entrypoint hello_react = js/hello_react-5af56c4036b168593d8d.js js/hello_react-5af56c4036b168593d8d.js.map
+Entrypoint server_rendering = js/server_rendering-0ef8a5b6481faea79c12.js js/server_rendering-0ef8a5b6481faea79c12.js.map
+>>>>>>> e64af150f2e5f5f164e61c358551bec44a916173
 [./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
 [./app/javascript/channels/index.js] 211 bytes {application} [built]
 [./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 2.4 KiB {application} {server_rendering} [built]
@@ -51493,6 +51555,7 @@ Entrypoint server_rendering = js/server_rendering-c4ee77a346e0c122b474.js js/ser
 [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
     + 268 hidden modules
 
+<<<<<<< HEAD
 Completed 200 OK in 11456ms (Views: 11373.5ms | ActiveRecord: 55.7ms | Allocations: 17499)
 
 
@@ -51702,5 +51765,38 @@ Processing by QuestionnairesController#index as HTML
   [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
   ↳ app/controllers/questionnaires_controller.rb:6:in `index'
 Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1378)
+=======
+Completed 200 OK in 24262ms (Views: 24230.7ms | ActiveRecord: 0.0ms | Allocations: 105080)
+
+
+Started GET "/comments" for ::1 at 2020-07-09 11:20:10 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (29.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 115ms (Views: 40.0ms | ActiveRecord: 67.7ms | Allocations: 7797)
+
+
+Started GET "/comments" for ::1 at 2020-07-09 11:20:26 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 1645)
+
+
+Started GET "/trails/7021815" for ::1 at 2020-07-09 11:20:28 -0700
+Processing by MainController#index as HTML
+  Parameters: {"path"=>"trails/7021815"}
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 256)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 8112)
+
+
+Started GET "/comments" for ::1 at 2020-07-09 11:20:28 -0700
+Processing by CommentsController#index as */*
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1627)
+>>>>>>> e64af150f2e5f5f164e61c358551bec44a916173
 
 
