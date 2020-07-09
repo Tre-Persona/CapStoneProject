@@ -14,9 +14,6 @@ const UserProfile = (props) => {
 
   useEffect(() =>{
     getTrails()
-    console.log(props.user_id)
-    console.log(props.match.params.id)
-    console.log("props:",props)
   },[])
 
   async function getTrails() {
@@ -70,11 +67,10 @@ const UserProfile = (props) => {
       }
       <Container className="dashboard-container">
         <h2 className="page-title">Your Dashboard</h2>
-        <img src={props.avatar}/>
 
-        <NavLink to={`/user/${props.match.params.id}/settings`}>
+        <a href={`/users/edit`}>
             <Button className="dashboard-settings-button">Settings</Button>
-        </NavLink>
+        </a>
 
         <div className="dashboard-content-wrapper">
           <h4 className="dashboard-greeting"> Hello {props.user_name}!</h4>

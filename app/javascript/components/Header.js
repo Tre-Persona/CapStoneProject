@@ -14,18 +14,18 @@ const Header = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink className="header-nav-link" to="/">Home</NavLink>
+              <NavLink onClick={toggleNavbar}  className="header-nav-link" to="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="header-nav-link" to="/trails">Search Trails</NavLink>
+              <NavLink onClick={toggleNavbar}  className="header-nav-link" to="/trails">Search Trails</NavLink>
             </NavItem>
             { props.logged_in &&
               <>
                 <NavItem>
-                  <NavLink className="header-nav-link" to={`/user/${props.user_id}`}>Dashboard</NavLink>
+                  <NavLink onClick={toggleNavbar}  className="header-nav-link" to={`/user/${props.user_id}`}>Dashboard</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="header-nav-link" to={`/user/${props.user_id}/favorites`}>Favorite Trails</NavLink>
+                  <NavLink onClick={toggleNavbar}  className="header-nav-link" to={`/user/${props.user_id}/favorites`}>Favorite Trails</NavLink>
                 </NavItem>
                 <NavItem>
                   <a className="header-nav-link" href= { props.sign_out_route }>Sign Out</a>

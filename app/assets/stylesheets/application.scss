@@ -207,7 +207,7 @@
   max-width: calc(100% - 120px);
   margin: 10px auto 0;
   cursor: auto;
-  z-index: 1000;
+  z-index: 0;
 }
 
 .leaflet-geosearch-bar form {
@@ -263,6 +263,17 @@
 
 #app-container {
   font-family: 'Manrope', sans-serif;
+  position: relative;
+  height: 100%;
+}
+
+#main-container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 120px;
 }
 
 .page-title {
@@ -274,7 +285,16 @@
 // HEADER
 
 .header-container {
-  background-color: #1ba274;
+  background: rgb(27,162,116);
+  background: linear-gradient(90deg, rgba(27,162,116,1) 0%, rgba(25,157,112,1) 100%);
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.37);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.37);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.37);
+  z-index: 100000;
 }
 
 .header-title {
@@ -426,12 +446,14 @@
 .dashboard-greeting {
   font-size: 30px;
   font-weight: 700;
+  text-align: center;
 }
 
 .dashboard-subtitle {
   font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
+  text-align: center;
 }
 
 .dashboard-favorites-wrapper {
@@ -762,5 +784,61 @@
 
 .trails-index-subtitle {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+// ABOUT
+
+.about-container {
+  
+}
+
+.about-image {
+  width: 100%;
+}
+
+// CONTACT
+
+.contact-container {
+  
+}
+
+// FOOTER
+
+#footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer {
+  background: rgb(27,162,116);
+  background: linear-gradient(90deg, rgba(27,162,116,1) 0%, rgba(25,157,112,1) 100%);
+  height: 120px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%
+}
+
+.footer-left {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5px;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.footer-message {
+  font-size: 12px;
+  margin: 10px 0 0 0;
 }
