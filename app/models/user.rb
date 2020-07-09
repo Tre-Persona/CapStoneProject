@@ -11,4 +11,5 @@ class User < ApplicationRecord
   validates_processing_of :avatar
   has_many :comments
   has_many :favorites
+  has_many :questionnaires
 end
