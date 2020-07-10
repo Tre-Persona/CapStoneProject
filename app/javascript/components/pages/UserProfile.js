@@ -73,11 +73,16 @@ const UserProfile = (props) => {
         <Redirect to="/" />
       }
       <Container className="dashboard-container">
-        <h2 className="page-title">Your Dashboard</h2>
-
-        <a href="/users/edit">
+        <div className="dashboard-title-super-wrapper">
+          <div className="dashboard-title-left-div"></div>
+          <div className="dashboard-title-wrapper">
+            <img src={props.avatar} className="dashboard-avatar" />
+            <h2 className="page-title dashboard">Your Dashboard</h2>
+          </div>
+          <a href="/users/edit">
             <Button className="dashboard-settings-button">Settings</Button>
         </a>
+        </div>
 
         <div className="dashboard-content-wrapper">
           <h4 className="dashboard-greeting"> Hello {props.user_name}!</h4>

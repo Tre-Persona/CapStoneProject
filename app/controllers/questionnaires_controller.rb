@@ -9,7 +9,7 @@ class QuestionnairesController < ApplicationController
         def user_only_index
             questions = current_user.questionnaires.all
             render json: questions
-          end
+        end
     
         def show
             question = Quesitonnaire.find(params[:id])
@@ -27,7 +27,7 @@ class QuestionnairesController < ApplicationController
         def edit
             question = current_user.questionnaires.find(params[:id])
             render json: question
-          end
+        end
     
         def update
             question = current_user.questionnaires.find(params[:id])
