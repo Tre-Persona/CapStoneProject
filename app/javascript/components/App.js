@@ -63,7 +63,7 @@ const App = (props) => {
 
             <Route exact path="/user/:id/settings" render={(props) => < UserSettings {...props} user_id={currentUserId} avatar={user.avatar.url} />} />
             
-            <Route exact path="/user/:id/activity" render={(props) => < UserActivity {...props} user_id={currentUserId} avatar={user.avatar.url} />} />
+            <Route exact path="/user/:id/activity" render={(props) => < UserActivity {...props} user_id={currentUserId} />} />
           </Switch>
         </div>
 

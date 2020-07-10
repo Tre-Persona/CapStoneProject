@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "reactstrap";
-import { NavLink } from 'react-router-dom'
+import { Container, Button } from "reactstrap";
+import { NavLink, Redirect } from 'react-router-dom'
 import QuestionnaireList from '../partials/questionnairePartials/QuestionnaireList.js'
 
 const questions = [
@@ -58,7 +58,7 @@ const Questionnaire = (props) => {
   }, [])
 
   const handleChange = (e) => {
-    console.log({[e.target.name]: e.target.value})
+    console.log({ [e.target.name]: e.target.value })
     setNewForm({
       ...newForm,
       [e.target.name]: e.target.value
@@ -66,8 +66,6 @@ const Questionnaire = (props) => {
   }
 
   const handleSubmit = () => {
-    console.log("submit")
-    console.log(newForm)
     completedQuestionnaire()
   };
 
@@ -83,7 +81,6 @@ const Questionnaire = (props) => {
     })
       .then((response) => {
         if (response.ok) {
-          console.log("OK!")
           setSuccess(true)
         }
       })
@@ -117,7 +114,7 @@ const Questionnaire = (props) => {
       <h2 className="questionnaire-title">Trail Questionnaire</h2>
 
       <NavLink to={`/trails/${props.match.params.id}`} className="questionnaire-trail-name">
-        Back to <span style={{fontWeight:"800"}}>{trailName}</span>
+        Back to <span style={{ fontWeight: "800" }}>{trailName}</span>
       </NavLink>
 
       <QuestionnaireList
@@ -127,6 +124,19 @@ const Questionnaire = (props) => {
         success={success}
         params_id={props.match.params.id}
       />
+
+      <div className="questionnaire-submit-button-wrapper">
+        <div>
+          <Button
+            className="questionnaire-submit-button"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Submit
+            </Button>
+          {success && <Redirect to={`/trails/${props.match.params.id}`} />}
+        </div>
+      </div>
 
     </Container>
   );

@@ -7,19 +7,30 @@ const ActivityList = props => {
     <>
       <h4 className="dashboard-subtitle">Your Activity</h4>
       <ListGroup className="dashboard-activity-list-group">
-        {props.activity.map((comment,index) => {
-          let date = comment.updated_at.substring(0,10)
+        {props.activities.map((activity,index) => {
+          let date = activity.updated_at.substring(0,10)
+          let editedDate = `${date.substring(5,7)}-${date.substring(8,10)}-${date.substring(0,4)}`
           if (index < 5) {
             return(
               <ListGroupItem key={index} className="dashboard-activity-list-item-wrapper">
-  
-                <ListGroupItemText className="dashboard-activity-list-item-title">
-                  You commented on <NavLink className="dashboard-activity-list-item-link" to={`/trails/${comment.trail_id}`}>{comment.trail_name}</NavLink>, <i>{ date }</i>
+                
+                {activity.post !== undefined && 
+                  <ListGroupItemText className="dashboard-activity-list-item-title">
+                    You commented on <NavLink className="dashboard-activity-list-item-link" to={`/trails/${activity.trail_id}`}>{activity.trail_name}</NavLink>, <i>{ editedDate  }</i>
+                  </ListGroupItemText>
+                }
+
+                {activity.post === undefined &&
+                  <ListGroupItemText className="dashboard-activity-list-item-title">
+                  You submitted a questionnaire for <NavLink className="dashboard-activity-list-item-link" to={`/trails/${activity.trail_id}`}>{activity.trail_name}</NavLink>, <i>{ editedDate  }</i>
                 </ListGroupItemText>
-  
-                <ListGroupItemText className="dashboard-activity-list-item-text">
-                  { comment.post }
-                </ListGroupItemText>
+                }
+
+                {activity.post !== undefined &&
+                  <ListGroupItemText className="dashboard-activity-list-item-text">
+                    { activity.post }
+                  </ListGroupItemText>
+                }
   
               </ListGroupItem>
             )

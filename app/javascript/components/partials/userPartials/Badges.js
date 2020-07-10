@@ -15,28 +15,28 @@ const Badges = props => {
     try {
       let commentResponse = await fetch('/users/comments')
       let commentData = await commentResponse.json()
+      let commentOnlyArray = []
       if (commentResponse.ok) {
-        let len = commentData.length
-        console.log("user comments", commentData)
-        if (len >=20) setBadges([Badge5, Badge10, Badge20])
-        else if (len >=10) setBadges([Badge5, Badge10])
-        else if (len >=5) setBadges([Badge5])
-        else setshowEmptyBadgesMessage(true)
+        commentOnlyArray = [...commentData]
       }
-      // let badgeResponse = await fetch('/badges')
-      // let badgeData = await badgeResponse.json()
-      // if (badgeResponse.ok) {
-      //   console.log("badges", badgeData)
-      //   setBadges(badgeData)
-      // }
+
+      let formResponse = await fetch('/users/questionnaires')
+      let formData = await formResponse.json()
+      let activityArray = []
+      if (formResponse.ok) {
+        activityArray = [...commentOnlyArray, ...formData]
+      }
+
+      let len = activityArray.length
+      if (len >=20) setBadges([Badge5, Badge10, Badge20])
+      else if (len >=10) setBadges([Badge5, Badge10])
+      else if (len >=5) setBadges([Badge5])
+      else setshowEmptyBadgesMessage(true)
+
     } catch (err) {
       console.log(err)
     }
   }
-
-  // const commentCount = () => {
-  //   if 
-  // }
   
   return(
     <>

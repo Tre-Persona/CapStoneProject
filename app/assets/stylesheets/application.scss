@@ -318,7 +318,7 @@
   color: white;
   font-weight: 800;
   font-size: 18px;
-  transition: 0.3s;
+  transition: 0.2s;
   &:hover {
     text-decoration: none;
     color: black;
@@ -414,6 +414,10 @@
   border: 1px solid #1ba274;
   font-weight: 800;
   font-size: 20px;
+  &:hover {
+    background-color: #168760;
+    border: 1px solid #168760;
+  }
 }
 
 .home-jumbotron-image {
@@ -431,6 +435,10 @@
   font-weight: 800;
   font-size: 20px;
   margin: 10px 0px 50px 0px;
+  &:hover {
+    background-color: #168760;
+    border: 1px solid #168760;
+  }
 }
 
 .home-featured-trails-wrapper {
@@ -462,6 +470,7 @@
 .home-trail-link {
   text-decoration: none;
   color: black;
+  transition: 0.2s;
   &:hover {
     text-decoration: none;
     color: #1ba274;
@@ -548,6 +557,7 @@
 .dashboard-favorite-link {
   text-decoration: none;
   color: black;
+  transition: 0.2s;
   &:hover {
     text-decoration: none;
     color: #1ba274;
@@ -608,6 +618,7 @@
   text-decoration: none;
   color: #1ba274;
   font-weight: 800;
+  transition: 0.2s;
   &:hover {
     text-decoration: none;
     color: black;
@@ -619,12 +630,18 @@
   margin-top: 10px;
 }
 
+.dashboard-activity-list-item-wrapper {
+  padding: 20px;
+}
+
 .dashboard-activity-list-item-text {
   font-weight: 600;
+  margin: 10px 0 0 0;
 }
 
 .dashboard-activity-list-item-title {
   font-size: 14px;
+  margin: 0;
 }
 
 .dashboard-activity-list-group {
@@ -639,15 +656,26 @@
 
 .user-activity-list-title {
   font-size: 14px;
+  margin:0;
 }
 
 .user-activity-list-link {
   font-weight: 800;
-  color: #1ba274
+  color: #1ba274;
+  transition: 0.2s;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .user-activity-list-text {
   font-weight: 600;
+  margin: 10px 0 0 0;
+}
+
+.user-activity-list-item {
+  padding: 20px;
 }
 
 
@@ -766,10 +794,6 @@
 
 .comment-date {
   font-style: italic;
-}
-
-.user-activity-list-link {
-  font-weight: bold;
 }
 
 .comment-index-container {
@@ -948,6 +972,7 @@
   text-decoration: none;
   color: black;
   font-size: 20px;
+  transition: 0.2s;
   &:hover {
     text-decoration: none;
     color: #1ba274;
@@ -1054,7 +1079,7 @@
   color: white;
   font-weight: 800;
   margin-bottom: 5px;
-  transition: 0.3s;
+  transition: 0.2s;
   &:hover {
     text-decoration: none;
     color: black;

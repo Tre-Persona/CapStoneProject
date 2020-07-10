@@ -125,7 +125,6 @@ const Comments = (props) => {
         })
         //populate the newTrails state array with data
         setComments(sortedData)
-        console.log("sorted comments data:", sortedData)
       }
     } catch (err) {
       console.log(err)

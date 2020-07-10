@@ -21,10 +21,8 @@ const UserFavorites = props => {
       // Declare array to hold only favorited Ids to be used in trail fetch call
       let trailsIdsArray = []
       if (favResponse.ok) {
-        console.log("favData:", favData)
         // Create array of just the ids of the trails favorited by current user
         trailsIdsArray = favData.map(value => value.fav_trail_id)
-        console.log("Fav trail Ids:", trailsIdsArray)
         if (favData.length === 0) setShowEmptyMessage(true)
       }
 
@@ -33,8 +31,6 @@ const UserFavorites = props => {
         let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${trailsIdsArray.join(",")}&key=${props.apiKey}`)
         let trailData = await trailResponse.json()
         if (trailResponse.ok) {
-          //check the console to make sure we have all the trails
-          console.log("data", trailData.trails)
           //populate the newTrails state array with data
           setTrails(trailData.trails)
         }

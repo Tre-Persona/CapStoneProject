@@ -7,8 +7,8 @@ class QuestionnairesController < ApplicationController
         end
     
         def user_only_index
-            question = current_user.questions.all
-            render json: question
+            questions = current_user.questionnaires.all
+            render json: questions
           end
     
         def show

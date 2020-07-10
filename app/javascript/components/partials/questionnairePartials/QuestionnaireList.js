@@ -1,6 +1,5 @@
 import React from 'react'
 import { CustomInput, Form, FormGroup, Button } from "reactstrap"
-import Question1Img from '../images/question1.png'
 
 const QuestionnaireList = props => {
   const { questions, handleSubmit, handleChange, success, params_id } = props
@@ -49,19 +48,6 @@ const QuestionnaireList = props => {
           </FormGroup>
         )
       })}
-
-      <div className="questionnaire-submit-button-wrapper">
-        <div>
-          <Button
-            className="questionnaire-submit-button"
-            type="submit"
-            onClick={() => handleSubmit()}
-          >
-            Submit
-            </Button>
-          {success && <Redirect to={`/trails/${params_id}`} />}
-        </div>
-      </div>
 
     </Form>
   )

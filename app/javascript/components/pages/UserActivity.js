@@ -3,7 +3,8 @@ import { Container, ListGroup, ListGroupItem, ListGroupItemText } from 'reactstr
 import { Redirect, NavLink } from 'react-router-dom'
 
 const UserActivity = props => {
-  const [activity, setActivity] = useState([])
+  const [activities, setActivities] = useState([])
+  const [showEmptyMessage, setShowEmptyMessage] = useState(false)
 
   useEffect(() =>{
     getActivity()
@@ -11,17 +12,29 @@ const UserActivity = props => {
 
   async function getActivity() {
     try {
-      let activityResponse = await fetch('/users/comments')
-      let activityData = await activityResponse.json()
-      if (activityResponse.ok) {
-        let sortedData = activityData.sort((a,b)=>{
-          if (a.updated_at === b.updated_at) return 0
-          else if (a.updated_at > b.updated_at) return -1
-          else return 1
-        })
-        setActivity(sortedData)
-        console.log("sorted Activity Data", sortedData)
+      let commentResponse = await fetch('/users/comments')
+      let commentData = await commentResponse.json()
+      let commentOnlyArray = []
+      if (commentResponse.ok) {
+        commentOnlyArray = [...commentData]
       }
+
+      let formResponse = await fetch('/users/questionnaires')
+      let formData = await formResponse.json()
+      let activityArray = []
+      if (formResponse.ok) {
+        activityArray = [...commentOnlyArray, ...formData]
+      }
+
+      let sortedActivities = activityArray.sort((a,b)=>{
+        if (a.updated_at === b.updated_at) return 0
+        else if (a.updated_at > b.updated_at) return -1
+        else return 1
+      })
+
+      if (sortedActivities.length === 0) setShowEmptyMessage(true)
+      setActivities(sortedActivities)
+
     } catch (err) {
         console.log(err)
       }
@@ -35,25 +48,38 @@ const UserActivity = props => {
       <Container className="user-activity-container">
         <h2 className="page-title">Your Activity</h2>
         <ListGroup className="user-activity-list-group">
-
-        {activity.map((comment,index) => {
-          let date = comment.updated_at.substring(0,10)
+        {activities.map((activity,index) => {
+          let date = activity.updated_at.substring(0,10)
+          let editedDate = `${date.substring(5,7)}-${date.substring(8,10)}-${date.substring(0,4)}`
           return(
-            <ListGroupItem className="user-activity-list-item" key={index}>
+            <ListGroupItem className="user-activity-list-item"
+            key={index}
+            >
+              {activity.post !== undefined &&
+                <ListGroupItemText className="user-activity-list-title">
+                  You commented on <NavLink className="user-activity-list-link" to={`/trails/${activity.trail_id}`}>{activity.trail_name}</NavLink>, <i>{ editedDate }</i>
+                </ListGroupItemText>
+              }
 
-              <ListGroupItemText className="user-activity-list-title">
-                You commented on <NavLink className="user-activity-list-link" to={`/trails/${comment.trail_id}`}>{comment.trail_name}</NavLink>, <i>{ date }</i>
+              {activity.post === undefined &&
+                <ListGroupItemText className="user-activity-list-title">
+                You submitted a questionnaire for <NavLink className="user-activity-list-link" to={`/trails/${activity.trail_id}`}>{activity.trail_name}</NavLink>, <i>{ editedDate }</i>
               </ListGroupItemText>
+              }
 
-              <ListGroupItemText className="user-activity-list-text">
-                { comment.post }
-              </ListGroupItemText>
+              {activity.post !== undefined &&
+                <ListGroupItemText className="user-activity-list-text">
+                  { activity.post }
+                </ListGroupItemText>
+              }
 
             </ListGroupItem>
           )
         })}
-
         </ListGroup>
+        {showEmptyMessage &&
+          <p className="favorites-empty-message">You haven't commented on or contributed information to any trails yet.</p>
+        }
       </Container>
     </>
   );

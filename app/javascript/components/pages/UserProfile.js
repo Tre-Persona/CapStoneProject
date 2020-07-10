@@ -8,7 +8,7 @@ import ActivityList from '../partials/userPartials/ActivityList'
 
 const UserProfile = (props) => {
   const [favTrails, setFavTrails] = useState([])
-  const [activity, setActivity] = useState([])
+  const [activities, setActivities] = useState([])
   const [showEmptyFavsMessage, setShowEmptyFavsMessage] = useState(false)
   const [showEmptyActivityMessage, setShowEmptyActivityMessage] = useState(false)
 
@@ -24,10 +24,8 @@ const UserProfile = (props) => {
       // Declare array to hold only favorited Ids to be used in trail fetch call
       let trailsIdsArray = []
       if(favResponse.ok) {
-        console.log("favData:", favData)
         // Create array of just the ids of the trails favorited by current user
         trailsIdsArray = favData.map(value=>value.fav_trail_id)
-        console.log("Fav trail Ids:", trailsIdsArray)
         if (favData.length === 0) setShowEmptyFavsMessage(true)
       }
 
@@ -36,25 +34,34 @@ const UserProfile = (props) => {
         let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${trailsIdsArray.join(",")}&key=${props.apiKey}`)
         let trailData = await trailResponse.json()
         if(trailResponse.ok) {
-          //check the console to make sure we have all the trails
-          console.log("data", trailData.trails)
           //populate the newTrails state array with data
           setFavTrails(trailData.trails)
         }
       }
 
-      let activityResponse = await fetch('/users/comments')
-      let activityData = await activityResponse.json()
-      if (activityResponse.ok) {
-        let sortedData = activityData.sort((a,b)=>{
-          if (a.updated_at === b.updated_at) return 0
-          else if (a.updated_at > b.updated_at) return -1
-          else return 1
-        })
-        if (sortedData.length === 0) setShowEmptyActivityMessage(true)
-        setActivity(sortedData)
-        console.log("sorted Activity Data", sortedData)
+      let commentResponse = await fetch('/users/comments')
+      let commentData = await commentResponse.json()
+      let commentOnlyArray = []
+      if (commentResponse.ok) {
+        commentOnlyArray = [...commentData]
       }
+
+      let formResponse = await fetch('/users/questionnaires')
+      let formData = await formResponse.json()
+      let activityArray = []
+      if (formResponse.ok) {
+        activityArray = [...commentOnlyArray, ...formData]
+      }
+
+      let sortedActivities = activityArray.sort((a,b)=>{
+        if (a.updated_at === b.updated_at) return 0
+        else if (a.updated_at > b.updated_at) return -1
+        else return 1
+      })
+
+      if (sortedActivities.length === 0) setShowEmptyActivityMessage(true)
+      setActivities(sortedActivities)
+
     } catch (err) {
         console.log(err)
       }
@@ -91,7 +98,7 @@ const UserProfile = (props) => {
 
           <ActivityList 
             user_id={props.match.params.id}
-            activity={activity}
+            activities={activities}
             showEmptyActivityMessage={showEmptyActivityMessage}
           />
         </div>

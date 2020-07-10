@@ -69,7 +69,6 @@ const TrailsProfile = (props) => {
         let favData = await favResponse.json()
         
         if(favResponse.ok) {
-          console.log("favData:", favData)
           favData.map(value=> {
             // Determine the favorite id (for use in the favorite delete call) if current trail is currently favorited
             if (value.fav_trail_id == props.match.params.id) {
@@ -78,7 +77,6 @@ const TrailsProfile = (props) => {
           })
           // Create array of just the ids of the trails favorited by current user
           trailsIdsArray = favData.map(value=>value.fav_trail_id)
-          console.log("Fav trail Ids:", trailsIdsArray)
         }
       }
 
@@ -87,8 +85,6 @@ const TrailsProfile = (props) => {
       let trailData = await trailResponse.json()
         //all good?
       if(trailResponse.ok) {
-        //check the console to make sure we have all the trails
-        console.log("trailData", trailData.trails[0])
         //populate the newTrails state array with trailData
         setCurrentTrail(trailData.trails[0])
         // Upon rednering the component, if the current trail id is one of the favorited ids of the current user, set Favorited to true
