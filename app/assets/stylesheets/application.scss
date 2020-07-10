@@ -749,7 +749,7 @@
 }
 
 .trail-profile-modal {
-  margin-top: 40%;
+  margin-top: 30vh;
 }
 
 // FAVORITES PAGE
@@ -830,19 +830,30 @@
 //QUESTIONNAIRE
 
 .question-legend {
-  margin: 40px;
-  width: 500px;
-  text-align: center;
+  font-weight: 800;
+  font-size: 16px;
 }
 
-.question-fieldset {
-  border: 3px solid;
-  padding: 2px;
+.question-item-wrapper {
+  display: flex;
+  height: 200px;
+  width: 100%;
 }
 
-.radio-btn {
-  text-align: center;
+.question-text-box {
+  background-color: #ededed;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
+
+// .radio-btn {
+//   text-align: center;
+// }
 
 .questionnaire-title {
   text-align: center;
@@ -854,8 +865,9 @@
   text-decoration: none;
   color: black;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 300;
   transition: 0.2s;
+  margin-bottom: 20px;
   &:hover {
     text-decoration: none;
     color: #1ba274;
@@ -865,6 +877,7 @@
 .questionnaire-submit-button {
   text-align:center;
   font-weight: 800;
+  font-size: 20px;
 }
 
 .questionnaire-container {
@@ -887,6 +900,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.question-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px 0 0 5px;
 }
 
 // TRAILS INDEX

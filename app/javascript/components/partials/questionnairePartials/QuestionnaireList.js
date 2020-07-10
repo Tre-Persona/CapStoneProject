@@ -10,12 +10,12 @@ const QuestionnaireList = props => {
       {questions.map((question, index) => {
         let num = index + 1
         return (
-          <FormGroup key={index}>
-            <img src='https://github.com/Tre-Persona/CapStoneProject/blob/master/app/javascript/components/partials/images/question1.png' />
-            <fieldset className="question-fieldset">
-              <legend className="question-legend">
+          <FormGroup key={index} className="question-item-wrapper">
+            <img className="question-image" src={`https://github.com/Tre-Persona/CapStoneProject/blob/master/app/javascript/components/partials/images/question${num}.png?raw=true`} />
+            <div className="question-text-box">
+              <h6 className="question-legend">
                 {question}
-              </legend>
+              </h6>
               <div>
                 <CustomInput
                   onChange={(e) => handleChange(e)}
@@ -45,7 +45,7 @@ const QuestionnaireList = props => {
                   id={`question${num}notavailable`}
                 />
               </div>
-            </fieldset>
+            </div>
           </FormGroup>
         )
       })}

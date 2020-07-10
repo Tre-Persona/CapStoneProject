@@ -117,7 +117,7 @@ const Questionnaire = (props) => {
       <h2 className="questionnaire-title">Trail Questionnaire</h2>
 
       <NavLink to={`/trails/${props.match.params.id}`} className="questionnaire-trail-name">
-        {trailName}
+        Back to <span style={{fontWeight:"800"}}>{trailName}</span>
       </NavLink>
 
       <QuestionnaireList
