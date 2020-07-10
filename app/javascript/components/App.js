@@ -19,7 +19,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Header from "./Header.js"
 import Footer from "./Footer.js"
-
+import NotFound from "./NotFound.js"
 
 
 const App = (props) => {
@@ -65,6 +65,8 @@ const App = (props) => {
             <Route exact path="/user/:id/settings" render={(props) => < UserSettings {...props} user_id={currentUserId} avatar={user.avatar.url} />} />
             
             <Route exact path="/user/:id/activity" render={(props) => < UserActivity {...props} user_id={currentUserId} />} />
+            
+            <Route component={ NotFound } />
           </Switch>
         </div>
 
