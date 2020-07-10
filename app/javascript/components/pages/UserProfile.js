@@ -75,7 +75,7 @@ const UserProfile = (props) => {
       <Container className="dashboard-container">
         <h2 className="page-title">Your Dashboard</h2>
 
-        <a href={`/users/edit`}>
+        <a href="/users/edit">
             <Button className="dashboard-settings-button">Settings</Button>
         </a>
 

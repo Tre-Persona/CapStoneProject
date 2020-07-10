@@ -34,6 +34,7 @@ const App = (props) => {
 
         <Header logged_in={props.logged_in}
           sign_in_route={props.sign_in_route}
+          sign_up_route={props.sign_up_route}
           sign_out_route={props.sign_out_route}
           user_id={currentUserId}
           avatar={user.avatar.url}
@@ -45,7 +46,7 @@ const App = (props) => {
               <Route path="/user" render={() => <Redirect to="/" />} />
             }
 
-            <Route exact path="/" render={() => < Home apiKey={apiKey} logged_in={logged_in} sign_in_route={props.sign_in_route} user_id={currentUserId} />} />
+            <Route exact path="/" render={() => < Home apiKey={apiKey} logged_in={logged_in} sign_in_route={props.sign_in_route} user_id={currentUserId} sign_up_route={props.sign_up_route} />} />
 
             <Route exact path="/about" render={() => < About />} />
 
@@ -57,7 +58,7 @@ const App = (props) => {
 
             <Route exact path="/trails/:id/questionnaire" render = { (props) => < Questionnaire user_id={currentUserId} apiKey={apiKey} {...props} />}/>
 
-            <Route exact path="/user/:id" render={(props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} />} />
+            <Route exact path="/user/:id" render={(props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} edit_user_route={props.edit_user_route}/>} />
 
             <Route exact path="/user/:id/favorites" render={(props) => < UserFavorites {...props} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} />} />
 

@@ -50,7 +50,7 @@ const Header = (props) => {
               }
               {!props.logged_in &&
                 <NavItem>
-                  <a className="header-nav-link" href="users/sign_up">Sign Up</a>
+                  <a className="header-nav-link" href={props.sign_up_route}>Sign Up</a>
                 </NavItem>
               }
             </Nav>
