@@ -828,23 +828,65 @@
 }
 
 //QUESTIONNAIRE
+
 .question-legend {
   margin: 40px;
   width: 500px;
   text-align: center;
 }
+
 .question-fieldset {
   border: 3px solid;
   padding: 2px;
 }
+
 .radio-btn {
   text-align: center;
 }
+
 .questionnaire-title {
   text-align: center;
+  font-weight: 700;
 }
+
+.questionnaire-trail-name {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.2s;
+  &:hover {
+    text-decoration: none;
+    color: #1ba274;
+  }
+}
+
 .questionnaire-submit-button {
   text-align:center;
+  font-weight: 800;
+}
+
+.questionnaire-container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionnaire-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.questionnaire-submit-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // TRAILS INDEX
