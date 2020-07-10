@@ -109,12 +109,9 @@ const TrailsProfile = (props) => {
             favorited={favorited}
             handleFavorite={handleFavorite}
             logged_in={props.logged_in}
+            params_id={props.match.params.id}
           />
-
-          <NavLink to={`/trails/${props.match.params.id}/questionnaire`} render ><Button color="success">Click To Fill Out Questionnaire</Button></NavLink>
-          <br></br>
-          <a href="">Why fill out a questionnaire?</a>
-          <br></br>
+  
           <CommentIndex 
             trail_id={props.match.params.id}
             user_name={props.user_name}

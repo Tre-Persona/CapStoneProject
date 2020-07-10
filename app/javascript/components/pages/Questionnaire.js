@@ -781,7 +781,7 @@ const Questionnaire = (props) => {
           </fieldset>
         </FormGroup>
 
-        
+        <div>
           <Button
             className="questionnaire-submit-button"
             type="submit"
@@ -789,8 +789,8 @@ const Questionnaire = (props) => {
           >
             Submit
           </Button>
-          {/*success && <Redirect to={`/trails/${props.match.params.id}`} />*/}
-        
+          {success && <Redirect to={`/trails/${props.match.params.id}`} />}
+        </div>
       </Form>
     </Container>
   );

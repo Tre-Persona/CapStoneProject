@@ -41,7 +41,7 @@ const CommentList = props => {
                     {props.editArray.includes(comment.id) && "Cancel"}
                     {!props.editArray.includes(comment.id) && "Edit"}
                   </Button>
-                  <Button className="comments-list-item-delete-button" alt="delete comment" color="danger" onClick={ () => props.deleteComment(comment.id) }>Delete</Button>
+                  <Button className="comments-list-item-delete-button" alt="delete comment" onClick={ () => props.deleteComment(comment.id) }>Delete</Button>
                 </>
               }
             </div>

@@ -6,8 +6,12 @@ const Footer = props => {
     <div id="footer">
 
       <div className="footer-left">
-        <NavLink className="footer-link" to ="/about">About Us</NavLink>
-        <NavLink className="footer-link" to ="/contact">Contact Us</NavLink>
+        <div style={{display:"flex"}}>
+          <NavLink className="footer-link" to ="/about">About Us</NavLink>
+        </div>
+        <div style={{display:"flex"}}>
+          <NavLink className="footer-link" to ="/contact">Contact Us</NavLink>
+        </div>
         <p className="footer-message">Developed by Tre Persona, ©2020</p>
       </div>
 

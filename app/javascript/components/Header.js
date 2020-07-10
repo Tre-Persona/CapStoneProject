@@ -11,16 +11,19 @@ const Header = (props) => {
       <Navbar className="header-container" color="faded" dark>
         <NavLink to="/" className="header-title-link"><h1 className="header-title">happy trails</h1></NavLink>
 
-        <div>
-          <NavLink to="/trails">
-            <Button className="header-nav-search-button">
+        <div className="header-nav-search-toggler-wrapper">
+          <NavLink className="header-nav-search-link" to="/trails">
+            <div className="header-nav-search-button">
               Search Trails
-          </Button>
+            </div>
           </NavLink>
 
           <NavbarToggler onClick={toggleNavbar} className="header-nav-toggler" />
+        </div>
+
           <Collapse isOpen={!collapsed} navbar>
-            <Nav navbar className="header-nav-group">
+            <div className="header-nav-group">
+            <Nav navbar className="header-nav-all-wrapper">
 
               {props.logged_in &&
                 <>
@@ -51,8 +54,8 @@ const Header = (props) => {
                 </NavItem>
               }
             </Nav>
+            </div>
           </Collapse>
-        </div>
       </Navbar>
     </>
   );
