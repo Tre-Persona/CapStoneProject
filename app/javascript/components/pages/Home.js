@@ -15,7 +15,6 @@ const Home = props => {
       let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${`7050003,7022596,7085292,7021815`}&key=${props.apiKey}`)
       let trailData = await trailResponse.json()
       if(trailResponse.ok) {
-        console.log("data", trailData.trails)
         setFeaturedTrails(trailData.trails)
       }
     } catch (err) {

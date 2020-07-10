@@ -10,6 +10,7 @@ import Home from "./pages/Home"
 import TrailsIndex from "./pages/TrailsIndex"
 import TrailsProfile from "./pages/TrailsProfile"
 import Questionnaire from "./pages/Questionnaire"
+import QuestionnaireEdit from "./pages/QuestionnaireEdit"
 import CommentIndex from "./pages/CommentIndex"
 import UserProfile from "./pages/UserProfile"
 import UserFavorites from "./pages/UserFavorites"
@@ -56,7 +57,9 @@ const App = (props) => {
 
             <Route exact path="/trails/:id" render={(props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} avatar={user.avatar.url} />} />
 
-            <Route exact path="/trails/:id/questionnaire" render = { (props) => < Questionnaire user_id={currentUserId} apiKey={apiKey} {...props} />}/>
+            <Route exact path="/trails/:id/questionnaire" render = { (props) => < Questionnaire user_id={currentUserId} {...props} />}/>
+
+            <Route exact path="/submission/:id" render = { (props) => < QuestionnaireEdit user_id={currentUserId} {...props} />}/>
 
             <Route exact path="/user/:id" render={(props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} edit_user_route={props.edit_user_route}/>} />
 

@@ -1,29 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Button } from "reactstrap";
 import { NavLink, Redirect } from 'react-router-dom'
-import QuestionnaireList from '../partials/questionnairePartials/QuestionnaireList.js'
-
-const questions = [
-  "Is there a designated trailhead?",
-  "Are there clearly marked handicap spaces?",
-  "Are audio devices with information about the trail available?",
-  "Is Braille present on any trailhead signage?",
-  "Are there bathrooms at the trailhead?",
-  "If yes, are the bathrooms handicap accessible with at least one stall with handicap assistance bars?",
-  "Are mile markers and trail markers present?",
-  "Is the trail clearly marked?",
-  "Are there physical barriers like bushes, rocks, or trees etc., helping mark the trail?",
-  "Is there Braille on any trail signage or markers?",
-  "Does the trail fork off unexpectedly into other paths without saying where the new paths lead?",
-  "Are there steep inclines or ascents?",
-  "Are there steep declines or descents?",
-  "Are there sections of the trail where you will need to lift yourself up onto another area or support yourself in any manner where your feet would be suspended in the air?",
-  "Are there stairs anywhere on the trail?",
-  "Is the trail made up of mostly solid, compact ground?",
-  "Is the trail near any busy roads or streets?",
-  "Did you need to jump over or duck under any obstacles?",
-  "Is the trail dog friendly?"
-]
+import QuestionnaireList from '../partials/questionnairePartials/QuestionnaireList'
+import questions from '../partials/questionnairePartials/questions.js'
 
 const Questionnaire = (props) => {
   //State for a new questionnaire form
@@ -100,6 +79,7 @@ const Questionnaire = (props) => {
           ...newForm,
           trail_name: trailData.trails[0].name
         })
+        console.log(trailData.trails[0].name)
         setTrailName(trailData.trails[0].name)
       }
     } catch (err) {
