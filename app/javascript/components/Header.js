@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, Button, Nav, NavItem } from 'reactstrap';
-import { NavLink } from 'react-router-dom'
+import { Collapse, Navbar, NavbarToggler, Button, Nav, NavItem, NavLink } from 'reactstrap';
+// import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -17,6 +17,7 @@ const Header = (props) => {
               Search Trails
             </div>
           </NavLink>
+          
 
           <NavbarToggler onClick={toggleNavbar} className="header-nav-toggler" />
         </div>
