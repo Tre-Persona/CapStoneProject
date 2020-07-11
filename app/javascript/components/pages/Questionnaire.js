@@ -79,7 +79,6 @@ const Questionnaire = (props) => {
           ...newForm,
           trail_name: trailData.trails[0].name
         })
-        console.log(trailData.trails[0].name)
         setTrailName(trailData.trails[0].name)
       }
     } catch (err) {

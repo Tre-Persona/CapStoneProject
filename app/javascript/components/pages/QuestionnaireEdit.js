@@ -28,10 +28,13 @@ const QuestionnaireEdit = props => {
     trail_id: "",
     trail_name: ""
   }])
+  const [trailName, setTrailName] = useState("")
+  const [trailID, setTrailID] = useState()
   const [success, setSuccess] = useState(false)
 
   useEffect(() => {
     getForm()
+    // getTrailName()
   }, []);
 
   async function getForm() {
@@ -40,6 +43,8 @@ const QuestionnaireEdit = props => {
       let formData = await formResponse.json()
       if (formResponse.ok) {
         setCurrentForm([formData])
+        setTrailName(formData.trail_name)
+        setTrailID(formData.trail_id)
         console.log("form edit data", formData)
       }
     } catch (err) {
@@ -85,8 +90,8 @@ const QuestionnaireEdit = props => {
 
       <h2 className="questionnaire-title">Edit Trail Questionnaire</h2>
 
-      <NavLink to={`/trails/${props.match.params.id}`} className="questionnaire-trail-name">
-        Back to <span style={{ fontWeight: "800" }}>{currentForm.trail_name}</span>
+      <NavLink to={`/trails/${trailID}`} className="questionnaire-trail-name">
+        Back to <span style={{ fontWeight: "800" }}>{trailName}</span>
       </NavLink>
 
       <QuestionnaireList

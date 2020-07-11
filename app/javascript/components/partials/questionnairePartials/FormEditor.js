@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 const FormEditor = props => {
 
   return (
-    <ListGroup>
+    <ListGroup className="trails-profile-submission-list-wrapper">
       {props.formSubs.map((form, index) => {
         let date = form.updated_at.substring(0, 10)
         let editedDate = `${date.substring(5, 7)}-${date.substring(8, 10)}-${date.substring(0, 4)}`

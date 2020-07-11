@@ -22,7 +22,7 @@ const ActivityList = props => {
 
                 {activity.post === undefined &&
                   <ListGroupItemText className="dashboard-activity-list-item-title">
-                  You submitted a questionnaire for <NavLink className="dashboard-activity-list-item-link" to={`/trails/${activity.trail_id}`}>{activity.trail_name}</NavLink>, <i>{ editedDate  }</i>
+                  You contributed trail information for <NavLink className="dashboard-activity-list-item-link" to={`/trails/${activity.trail_id}`}>{activity.trail_name}</NavLink> on <i>{ editedDate  }</i>
                 </ListGroupItemText>
                 }
 

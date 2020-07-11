@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
   Redirect
 } from 'react-router-dom'
 import Home from "./pages/Home"
@@ -57,9 +56,9 @@ const App = (props) => {
 
             <Route exact path="/trails/:id" render={(props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} avatar={user.avatar.url} />} />
 
-            <Route exact path="/trails/:id/questionnaire" render = { (props) => < Questionnaire user_id={currentUserId} {...props} />}/>
+            <Route exact path="/trails/:id/questionnaire" render = { (props) => < Questionnaire user_id={currentUserId} {...props} apiKey={apiKey}/>}/>
 
-            <Route exact path="/submission/:id" render = { (props) => < QuestionnaireEdit user_id={currentUserId} {...props} />}/>
+            <Route exact path="/submission/:id" render = { (props) => < QuestionnaireEdit user_id={currentUserId} {...props} apiKey={apiKey} />}/>
 
             <Route exact path="/user/:id" render={(props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} edit_user_route={props.edit_user_route}/>} />
 

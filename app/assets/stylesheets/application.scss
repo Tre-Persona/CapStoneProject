@@ -818,6 +818,10 @@
   margin-top: 30vh;
 }
 
+.trails-profile-submission-list-wrapper {
+  margin-bottom: 10px;
+}
+
 // FAVORITES PAGE
 
 .favorites-empty-message {
@@ -1170,8 +1174,8 @@
   border-radius: 5px;
   transition: 0.3s;
   &:hover {
-    background-color: gray;
-    border: 1px solid gray;
+    background-color: #168760;
+    border: 1px solid #168760;
   }
 }
 
@@ -1181,6 +1185,28 @@
 
 .devise_error_message {
   font-size: 18px;
+}
+
+.devise_avatar_label {
+  margin:0;
+}
+
+.devise_avatar_preview {
+  width: 200px;
+}
+
+.devise_cancel_button {
+  font-weight: 800;
+  color: white;
+  background-color: #D73939;
+  border: 1px solid #D73939;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #BA1F1F;
+    border: 1px solid #BA1F1F;
+  }
 }
 
 @media only screen and (max-width: 800px) {
