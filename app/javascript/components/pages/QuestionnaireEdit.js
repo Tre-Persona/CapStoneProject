@@ -34,8 +34,7 @@ const QuestionnaireEdit = props => {
 
   useEffect(() => {
     getForm()
-    // getTrailName()
-  }, []);
+  }, [])
 
   async function getForm() {
     try {
@@ -55,35 +54,32 @@ const QuestionnaireEdit = props => {
   const handleChange = (e) => {
     console.log({ [e.target.name]: e.target.value })
     setCurrentForm({
-      ...newForm,
+      ...currentForm,
       [e.target.name]: e.target.value
     })
   }
 
   const handleSubmit = () => {
-    completedQuestionnaire()
-  };
+    updateForm()
+  }
 
-  // const updateForm = (id, trailId) => {
-  //   fetch(`/comments/${id}`, {
-  //     body: JSON.stringify({post: commentEditEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name, avatar: props.avatar}),
-  //     headers:{
-  //       "Content-Type": "application/json"
-  //     },
-  //     method: "PATCH"
-  //   })
-  //   .then(response => {
-  //     if (response.ok) {
-  //       let temp = editArray.filter(num=> num !== id)
-  //       setEditArray(temp)
-  //       setEditorOn(false)
-  //       getComments()
-  //     }
-  //   })
-  //   .catch(error => {
-  //     console.log("error:",error)
-  //   })
-  // }
+  const updateForm = () => {
+    fetch(`/questionnaires/${props.match.params.id}`, {
+      body: JSON.stringify(currentForm[0]),
+      headers:{
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => {
+      if (response.ok) {
+        setSuccess(true)
+      }
+    })
+    .catch(error => {
+      console.log("error:",error)
+    })
+  }
   
   return (
     <Container className="questionnaire-container">
@@ -104,12 +100,11 @@ const QuestionnaireEdit = props => {
         <div>
           <Button
             className="questionnaire-submit-button"
-            type="submit"
             onClick={handleSubmit}
           >
             Submit
             </Button>
-          {success && <Redirect to={`/trails/${props.match.params.id}`} />}
+          {success && <Redirect to={`/trails/${trailID}`} />}
         </div>
       </div>
 

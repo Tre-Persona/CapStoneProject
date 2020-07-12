@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, Button, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
+import HappyTrailsLogo from './images/happy-trails-logo.png'
 
 const Header = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -9,7 +10,12 @@ const Header = (props) => {
   return (
     <>
       <Navbar className="header-container" color="faded" dark>
-        <NavLink to="/" className="header-title-link"><h1 className="header-title">happy trails</h1></NavLink>
+        <NavLink to="/" className="header-title-link">
+          <div className="header-title-wrapper">
+            <img className="header-logo" src={HappyTrailsLogo} />
+            <h1 className="header-title">happy trails</h1>
+          </div>
+        </NavLink>
 
         <div className="header-nav-search-toggler-wrapper">
           <NavLink className="header-nav-search-link" to="/trails">

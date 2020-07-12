@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import Badge1 from '../images/badge1.png'
 import Badge5 from '../images/badge5.png'
 import Badge10 from '../images/badge10.png'
 import Badge20 from '../images/badge20.png'
+import Badge30 from '../images/badge30.png'
+import Badge40 from '../images/badge40.png'
+import Badge50 from '../images/badge50.png'
 
 const Badges = props => {
   const [badges, setBadges] = useState([])
   const [showEmptyBadgesMessage, setshowEmptyBadgesMessage] = useState(false)
+  const [showBadgeLabel, setShowBadgeLabel] = useState(false)
   
   useEffect(() => {
     getBadges()
@@ -28,19 +33,31 @@ const Badges = props => {
       }
 
       let len = activityArray.length
-      if (len >=20) setBadges([Badge5, Badge10, Badge20])
-      else if (len >=10) setBadges([Badge5, Badge10])
-      else if (len >=5) setBadges([Badge5])
+
+      len > 0 ? setShowBadgeLabel(true) : setShowBadgeLabel(false)
+
+      if (len >=50) setBadges ([Badge1, Badge5, Badge10, Badge20, Badge30, Badge40, Badge50])
+      if (len >=40) setBadges([Badge1, Badge5, Badge10, Badge20, Badge30, Badge40])
+      else if (len >=30) setBadges([Badge1, Badge5, Badge10, Badge20, Badge30])
+      else if (len >=20) setBadges([Badge1, Badge5, Badge10, Badge20])
+      else if (len >=10) setBadges([Badge1, Badge5, Badge10])
+      else if (len >=5) setBadges([Badge1, Badge5])
+      else if (len >=1) setBadges([Badge1])
       else setshowEmptyBadgesMessage(true)
 
     } catch (err) {
       console.log(err)
     }
   }
-  
+
   return(
     <>
       <h4 className="dashboard-subtitle">Your Badges</h4>
+
+      {showBadgeLabel &&
+        <label className="dashboard-badges-label">Keep on contributing to get more badges!</label>
+      }
+
       <div className="dashboard-badges-wrapper">
         {badges.map((badge,index) => {
           return(
@@ -49,7 +66,7 @@ const Badges = props => {
         })}
       </div>
       {showEmptyBadgesMessage &&
-        <p className="dashboard-empty-message">Contribute or comment on at least 5 trails to get your first badge.</p>
+        <p className="dashboard-empty-message">Contribute or comment on your first trail to get your first badge.</p>
       }
     </>
   )

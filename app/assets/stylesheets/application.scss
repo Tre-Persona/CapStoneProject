@@ -310,7 +310,6 @@
   color:white;
   margin: 0px;
   font-weight: 800;
-  margin-top: 3px;
 }
 
 .header-title-link {
@@ -372,6 +371,7 @@
   transition: 0.3s;
   border-radius: 5px;
   user-select: none;
+  cursor: pointer;
   &:hover {
     background-color: #e3e3e3;
     border: 1px solid #e3e3e3;
@@ -386,6 +386,17 @@
 
 .header-nav-search-wrapper {
   margin-bottom: 5px;
+}
+
+.header-title-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.header-logo {
+  width: 30px;
+  margin-right: 5px;
 }
 
 // HOME
@@ -578,6 +589,7 @@
 
 .dashboard-badge-image {
   width: 120px;
+  margin: 10px;
 }
 
 .dashboard-badges-wrapper {
@@ -585,6 +597,14 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+}
+
+.dashboard-badges-label {
+  text-align: center;
+  margin: 0;
+  font-size: 12px;
+  color: #808080;
+  font-style: italic;
 }
 
 .dashboard-favorite-card {
