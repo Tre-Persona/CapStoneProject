@@ -3,6 +3,10 @@ import CommentIndex from './CommentIndex'
 import TrailDisplay from '../partials/trailPartials/TrailDisplay.js'
 import FormEditor from '../partials/questionnairePartials/FormEditor.js'
 import { Container, Spinner } from 'reactstrap'
+import BadgeHandicap from '../images/trail-badge-handicap-friendly.png'
+import BadgeSignage from '../images/trail-badge-signage.png'
+import BadgeDog from '../images/trail-badge-dog-friendly.png'
+import BadgeBraille from '../images/trail-badge-braille-friendly.png'
 
 
 const TrailsProfile = (props) => {
@@ -13,10 +17,17 @@ const TrailsProfile = (props) => {
   const [favId, setFavId] = useState()
   const [formSubs, setFormSubs] = useState([])
   const [loading, setLoading] = useState(true)
+  const [trailBadges, setTrailBadges] = useState([])
+  //   {badge: BadgeHandicap, label: "Handicap Accessible"},
+  //   {badge: BadgeDog, label: "Dog Friendly"},
+  //   {badge: BadgeSignage, label: "Trail Signage"},
+  //   {badge: BadgeBraille, label: "Braille Signage"}
+  // ])
 
   useEffect(() => {
     getTrail()
     getFormSubs()
+    getTrailStats()
   }, [])
 
   const handleFavorite = () => {
@@ -116,6 +127,75 @@ const TrailsProfile = (props) => {
     }
   }
 
+  async function getTrailStats() {
+    try {
+      let statsResponse = await fetch(`/questionnaires/trail/${props.match.params.id}`)
+      let statsData = await statsResponse.json()
+      let handicapRating = 0
+      let handicapTotal = 0
+      let dogRating = 0
+      let dogTotal = 0
+      let signageRating = 0
+      let signageTotal = 0
+      let brailleRating = 0
+      let brailleTotal = 0
+      let badgeArray = []
+
+      if (statsResponse.ok) {
+        console.log("stats data:", statsData)
+
+        statsData.map(form => {
+          if (form.question19 === "yes") {
+            dogRating++
+            dogTotal++
+          } else if (form.question19 === "no") {
+            dogRating--
+            dogTotal++
+          }
+
+          let signageQuestions = ["question1", "question7"]
+          signageQuestions.map(question => {
+            if (form[question] === "yes") {
+              signageRating++
+              signageTotal++
+            } else if (form[question] === "no") {
+              signageRating--
+              signageTotal++
+            }
+          })
+
+          let brailleQuestions = ["question4", "question10"]
+          brailleQuestions.map(question => {
+            if (form[question] === "yes") {
+              brailleRating++
+              brailleTotal++
+            } else if (form[question] === "no") {
+              brailleRating--
+              brailleTotal++
+            }
+          })
+        })
+
+        if (dogRating / dogTotal > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeDog, label: "Dog Friendly"}]
+        }
+
+        if (signageRating / signageTotal > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeSignage, label: "Trail Signage"}]
+        }
+
+        if (brailleRating / brailleTotal > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeBraille, label: "Braille Signage"}]
+        }
+
+        setTrailBadges(badgeArray)
+
+      }
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   const deleteFormSub = (id) => {
     fetch(`/questionnaires/${id}`, {
       headers: {
@@ -146,6 +226,7 @@ const TrailsProfile = (props) => {
               handleFavorite={handleFavorite}
               logged_in={props.logged_in}
               params_id={props.match.params.id}
+              trailBadges={trailBadges}
             />
 
             <FormEditor

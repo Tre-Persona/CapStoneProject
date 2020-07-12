@@ -42,6 +42,18 @@ const TrailDisplay = props => {
                   <p className="trail-profile-length">{currentTrail.length} mi long</p>
                 }
               </div>
+              
+              <div className="trail-profile-badges-wrapper">
+                {props.trailBadges.map((badge,index) => {
+                  return(
+                    <div className="trail-profile-badge-box" key={index}>
+                      <img src={badge.badge} className="trail-profile-badge-image" />
+                      <label className="trail-profile-badge-label">{badge.label}</label>
+                    </div>
+                  )
+                })}
+              </div>
+
 
               <p className="trail-profile-text">{currentTrail.summary}</p>
 

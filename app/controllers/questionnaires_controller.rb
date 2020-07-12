@@ -10,15 +10,15 @@ class QuestionnairesController < ApplicationController
             questions = current_user.questionnaires.all
             render json: questions
         end
+
+        def index_by_trail_id
+          questions = Questionnaire.where(trail_id: params[:id])
+          render json: questions
+        end
     
         def show
             question = Quesitonnaire.find(params[:id])
             render json: question
-        end
-    
-        def by_id
-            questions = Questionnaire.where(params[:trail_id])
-            render json: questions
         end
         
         def new

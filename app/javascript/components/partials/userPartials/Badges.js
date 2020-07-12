@@ -55,7 +55,7 @@ const Badges = props => {
       <h4 className="dashboard-subtitle">Your Badges</h4>
 
       {showBadgeLabel &&
-        <label className="dashboard-badges-label">Keep on contributing to get more badges!</label>
+        <label className="dashboard-badges-label">Keep on contributing to collect more badges!</label>
       }
 
       <div className="dashboard-badges-wrapper">
