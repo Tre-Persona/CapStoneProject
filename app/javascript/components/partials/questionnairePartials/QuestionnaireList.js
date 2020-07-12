@@ -3,7 +3,6 @@ import { CustomInput, Form, FormGroup } from "reactstrap"
 
 const QuestionnaireList = props => {
   const { questions, handleChange } = props
-
   return (
     <Form className="questionnaire-form">
       {questions.map((question, index) => {

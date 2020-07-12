@@ -26,7 +26,7 @@ const questions = [
   },
   {
     id: 2,
-    question: "Are there clearly marked handicap spaces?",
+    question: "Are there clearly marked accessible parking spaces?",
     image: Question2Img
   },
   {

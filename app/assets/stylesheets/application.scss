@@ -865,6 +865,18 @@
   text-align: center;
 }
 
+.trail-profile-counts-wrapper {
+  display: flex;
+  margin: 5px 0;
+}
+
+.trail-profile-count {
+  margin: 0 10px 0 0;
+  color: gray;
+  font-style: italic;
+  font-size: 14px;
+}
+
 // FAVORITES PAGE
 
 .favorites-empty-message {

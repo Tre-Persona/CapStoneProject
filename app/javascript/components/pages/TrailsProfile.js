@@ -3,10 +3,20 @@ import CommentIndex from './CommentIndex'
 import TrailDisplay from '../partials/trailPartials/TrailDisplay.js'
 import FormEditor from '../partials/questionnairePartials/FormEditor.js'
 import { Container, Spinner } from 'reactstrap'
-import BadgeHandicap from '../images/trail-badge-handicap-friendly.png'
+import BadgeAccParking from '../images/trail-badge-accessible-parking.png'
 import BadgeSignage from '../images/trail-badge-signage.png'
 import BadgeDog from '../images/trail-badge-dog-friendly.png'
 import BadgeBraille from '../images/trail-badge-braille-friendly.png'
+import BadgeAccBathroom from '../images/trail-badge-accessible-bathroom.png'
+import BadgeAuditory from '../images/trail-badge-auditory-description.png'
+import BadgeMarkedPath from '../images/trail-badge-marked-path.png'
+import BadgeIncline from '../images/trail-badge-steep-incline.png'
+import BadgeDecline from '../images/trail-badge-steep-decline.png'
+import BadgeFork from '../images/trail-badge-fork.png'
+import BadgeLift from '../images/trail-badge-lift.png'
+import BadgeObstacles from '../images/trail-badge-obstacles.png'
+import BadgeStairs from '../images/trail-badge-stairs.png'
+import BadgeBusyRds from '../images/trail-badge-busy-roads.png'
 
 
 const TrailsProfile = (props) => {
@@ -18,11 +28,8 @@ const TrailsProfile = (props) => {
   const [formSubs, setFormSubs] = useState([])
   const [loading, setLoading] = useState(true)
   const [trailBadges, setTrailBadges] = useState([])
-  //   {badge: BadgeHandicap, label: "Handicap Accessible"},
-  //   {badge: BadgeDog, label: "Dog Friendly"},
-  //   {badge: BadgeSignage, label: "Trail Signage"},
-  //   {badge: BadgeBraille, label: "Braille Signage"}
-  // ])
+  const [commentCount, setCommentCount] = useState(0)
+  const [formCount, setFormCount] = useState(0)
 
   useEffect(() => {
     getTrail()
@@ -131,61 +138,150 @@ const TrailsProfile = (props) => {
     try {
       let statsResponse = await fetch(`/questionnaires/trail/${props.match.params.id}`)
       let statsData = await statsResponse.json()
-      let handicapRating = 0
-      let handicapTotal = 0
+
+      let accParkingRating = 0
       let dogRating = 0
-      let dogTotal = 0
       let signageRating = 0
-      let signageTotal = 0
       let brailleRating = 0
-      let brailleTotal = 0
+      let markedRating = 0
+      let inclineRating = 0
+      let declineRating = 0
+      let forkRating = 0
+      let liftRating = 0
+      let obstaclesRating = 0
+      let stairsRating = 0
+      let busyRdsRating = 0
+      let auditoryRating = 0
+      let accBathRating = 0
       let badgeArray = []
 
       if (statsResponse.ok) {
+        setFormCount(statsData.length)
+
         console.log("stats data:", statsData)
 
         statsData.map(form => {
-          if (form.question19 === "yes") {
-            dogRating++
-            dogTotal++
-          } else if (form.question19 === "no") {
-            dogRating--
-            dogTotal++
-          }
+          // Marked Trail
+          if (form.question8 === "yes") markedRating++
+          else if (form.question8 === "no") markedRating--
 
+          // Dog friendly
+          if (form.question19 === "yes") dogRating++
+          else if (form.question19 === "no") dogRating--
+
+          // Accessible Parking
+          if (form.question2 === "yes") accParkingRating++
+          else if (form.question2 === "no") accParkingRating--
+
+          // Trail signage
           let signageQuestions = ["question1", "question7"]
           signageQuestions.map(question => {
-            if (form[question] === "yes") {
-              signageRating++
-              signageTotal++
-            } else if (form[question] === "no") {
-              signageRating--
-              signageTotal++
-            }
+            if (form[question] === "yes") signageRating++
+            else if (form[question] === "no") signageRating--
           })
 
+          // Braille signage
           let brailleQuestions = ["question4", "question10"]
           brailleQuestions.map(question => {
-            if (form[question] === "yes") {
-              brailleRating++
-              brailleTotal++
-            } else if (form[question] === "no") {
-              brailleRating--
-              brailleTotal++
-            }
+            if (form[question] === "yes") brailleRating++
+            else if (form[question] === "no") brailleRating--
           })
+
+          // Accessible Bathroom
+          if (form.question6 === "yes") accBathRating++
+          else if (form.question6 === "no") accBathRating--
+
+          // Auditory Description
+          if (form.question3 === "yes") auditoryRating++
+          else if (form.question3 === "no") auditoryRating--
+          
+          // Steep Inclines
+          if (form.question12 === "yes") inclineRating++
+          else if (form.question12 === "no") inclineRating--
+
+          // Steep Declines
+          if (form.question13 === "yes") declineRating++
+          else if (form.question13 === "no") declineRating--
+
+          // Forks
+          if (form.question11 === "yes") forkRating++
+          else if (form.question11 === "no") forkRating--
+
+          // Obstacles
+          if (form.question18 === "yes") obstaclesRating++
+          else if (form.question18 === "no") obstaclesRating--
+
+          // Lifting
+          if (form.question14 === "yes") liftRating++
+          else if (form.question14 === "no") liftRating--
+
+          // Stairs
+          if (form.question15 === "yes") stairsRating++
+          else if (form.question15 === "no") stairsRating--
+
+          // Busy Roads
+          if (form.question17 === "yes") busyRdsRating++
+          else if (form.question17 === "no") busyRdsRating--
         })
 
-        if (dogRating / dogTotal > 0) {
-          badgeArray = [...badgeArray, {badge: BadgeDog, label: "Dog Friendly"}]
-        }
+        // Positive Badges
 
-        if (signageRating / signageTotal > 0) {
+        if (markedRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeMarkedPath, label: "Marked Path"}]
+        }
+        
+        if (signageRating > 0) {
           badgeArray = [...badgeArray, {badge: BadgeSignage, label: "Trail Signage"}]
         }
 
-        if (brailleRating / brailleTotal > 0) {
+        if (dogRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeDog, label: "Dog Friendly"}]
+        }
+
+        if (accParkingRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeAccParking, label: "Accessible Parking"}]
+        }
+
+        if (accBathRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeAccBathroom, label: "Accessible Bathroom"}]
+        }
+
+        if (brailleRating > 0) {
           badgeArray = [...badgeArray, {badge: BadgeBraille, label: "Braille Signage"}]
+        }
+
+        if (auditoryRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeAuditory, label: "Auditory Description"}]
+        }
+
+        // Caution Badges
+
+        if (inclineRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeIncline, label: "Steep Inclines"}]
+        }
+
+        if (declineRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeDecline, label: "Steep Declines"}]
+        }
+
+        if (forkRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeFork, label: "Unmarked Forks"}]
+        }
+
+        if (obstaclesRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeObstacles, label: "Physical Obstacles"}]
+        }
+
+        if (liftRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeLift, label: "Body Lifting"}]
+        }
+
+        if (stairsRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeStairs, label: "Stairs"}]
+        }
+
+        if (busyRdsRating > 0) {
+          badgeArray = [...badgeArray, {badge: BadgeBusyRds, label: "Busy Roads"}]
         }
 
         setTrailBadges(badgeArray)
@@ -206,8 +302,13 @@ const TrailsProfile = (props) => {
       .then(response => {
         if (response.ok) {
           getFormSubs()
+          getTrailStats()
         }
       })
+  }
+
+  const handleCommentCount = (count) => {
+    setCommentCount(count)
   }
 
   return (
@@ -227,6 +328,8 @@ const TrailsProfile = (props) => {
               logged_in={props.logged_in}
               params_id={props.match.params.id}
               trailBadges={trailBadges}
+              commentCount={commentCount}
+              formCount={formCount}
             />
 
             <FormEditor
@@ -241,6 +344,7 @@ const TrailsProfile = (props) => {
               trail_name={currentTrail.name}
               logged_in={props.logged_in}
               avatar={props.avatar}
+              handleCommentCount={handleCommentCount}
             />
           </>
         }

@@ -42,6 +42,17 @@ const TrailDisplay = props => {
                   <p className="trail-profile-length">{currentTrail.length} mi long</p>
                 }
               </div>
+
+              <div className="trail-profile-counts-wrapper">
+                <p className="trail-profile-count">
+                  Comments({props.commentCount}),
+                </p>
+                <p className="trail-profile-count">
+                  Contributions({props.formCount})
+                </p>
+
+              </div>
+
               
               <div className="trail-profile-badges-wrapper">
                 {props.trailBadges.map((badge,index) => {

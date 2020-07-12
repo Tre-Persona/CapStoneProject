@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Button } from 'reactstrap'
 import { NavLink, Redirect } from 'react-router-dom'
-import QuestionnaireList from '../partials/questionnairePartials/QuestionnaireList.js'
+import QuestionnaireEditList from '../partials/questionnairePartials/QuestionnaireEditList.js'
 import questions from '../partials/questionnairePartials/questions.js'
 
 const QuestionnaireEdit = props => {
-  const [currentForm, setCurrentForm] = useState([{
+  const [currentForm, setCurrentForm] = useState({
     question1: undefined,
     question2: undefined,
     question3: undefined,
@@ -27,7 +27,7 @@ const QuestionnaireEdit = props => {
     question19: undefined,
     trail_id: "",
     trail_name: ""
-  }])
+  })
   const [trailName, setTrailName] = useState("")
   const [trailID, setTrailID] = useState()
   const [success, setSuccess] = useState(false)
@@ -41,10 +41,9 @@ const QuestionnaireEdit = props => {
       let formResponse = await fetch(`/questionnaires/${props.match.params.id}/edit`)
       let formData = await formResponse.json()
       if (formResponse.ok) {
-        setCurrentForm([formData])
+        setCurrentForm(formData)
         setTrailName(formData.trail_name)
         setTrailID(formData.trail_id)
-        console.log("form edit data", formData)
       }
     } catch (err) {
       console.log(err)
@@ -52,7 +51,6 @@ const QuestionnaireEdit = props => {
   }
 
   const handleChange = (e) => {
-    console.log({ [e.target.name]: e.target.value })
     setCurrentForm({
       ...currentForm,
       [e.target.name]: e.target.value
@@ -65,7 +63,7 @@ const QuestionnaireEdit = props => {
 
   const updateForm = () => {
     fetch(`/questionnaires/${props.match.params.id}`, {
-      body: JSON.stringify(currentForm[0]),
+      body: JSON.stringify(currentForm),
       headers:{
         "Content-Type": "application/json"
       },
@@ -90,7 +88,7 @@ const QuestionnaireEdit = props => {
         Back to <span style={{ fontWeight: "800" }}>{trailName}</span>
       </NavLink>
 
-      <QuestionnaireList
+      <QuestionnaireEditList
         currentForm={currentForm}
         questions={questions}
         handleChange={handleChange}
