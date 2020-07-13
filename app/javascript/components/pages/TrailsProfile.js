@@ -315,7 +315,7 @@ const TrailsProfile = (props) => {
     <>
       <Container className="trail-profile-container">
         {loading &&
-          <div className="spinner-wrapper">
+          <div className="spinner-wrapper home">
             <Spinner animation="border" style={{color:"#1ba274"}} />
           </div>
         }

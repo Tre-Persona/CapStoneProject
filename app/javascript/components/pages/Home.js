@@ -12,7 +12,37 @@ const Home = props => {
 
   async function getFeaturedTrails() {
     try {
-      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${`7050003,7022596,7085292,7021815`}&key=${props.apiKey}`)
+      let commentResponse = await fetch('/comments')
+      let commentData = await commentResponse.json()
+      let commentOnlyArray = []
+      if (commentResponse.ok) {
+        commentOnlyArray = [...commentData]
+      }
+
+      let formResponse = await fetch('/questionnaires')
+      let formData = await formResponse.json()
+      let actArray = []
+      if (formResponse.ok) {
+        actArray = [...commentOnlyArray, ...formData]
+      }
+
+      let actObject = {}
+      actArray.map(value=>{
+        if (actObject[value.trail_id] === undefined && value.trail_id !== null) {
+          actObject[value.trail_id] = 1
+        } else if (actObject[value.trail_id] !== undefined && value.trail_id !== null){
+          actObject[value.trail_id] += 1
+        }
+      })
+      
+      let actKeys = Object.keys(actObject)
+      let sortedActKeys = actKeys.sort((a,b) => {
+        if (actObject[a] === actObject[b]) return 0
+        else if (actObject[a] > actObject[b]) return -1
+        else return 1
+      })
+
+      let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${`${sortedActKeys[0]},${sortedActKeys[1]},${sortedActKeys[2]},${sortedActKeys[3]},`}&key=${props.apiKey}`)
       let trailData = await trailResponse.json()
       if(trailResponse.ok) {
         setFeaturedTrails(trailData.trails)
