@@ -72,6 +72,7 @@ const Home = props => {
         </div>
 
         <h3 className="home-subtitle">Trending Trails</h3>
+        <label className="home-label">Current trails with most active contributions.</label>
 
         <div className="home-featured-trails-wrapper">
           {featuredTrails.map((trail,index) => {
