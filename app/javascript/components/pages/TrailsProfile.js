@@ -168,6 +168,7 @@ const TrailsProfile = (props) => {
       let statsResponse = await fetch(`/questionnaires/trail/${props.match.params.id}`)
       let statsData = await statsResponse.json()
 
+      // Set all badge counters to zero
       let accParkingRating = 0
       let dogRating = 0
       let signageRating = 0
@@ -182,6 +183,8 @@ const TrailsProfile = (props) => {
       let busyRdsRating = 0
       let auditoryRating = 0
       let accBathRating = 0
+
+      // Set empty array to hold all badges
       let badgeArray = []
 
       if (statsResponse.ok) {
@@ -189,6 +192,7 @@ const TrailsProfile = (props) => {
 
         console.log("stats data:", statsData)
 
+        // If respective answer is yes, increment counter, if no, decrement counter
         statsData.map(form => {
           // Marked Trail
           if (form.question8 === "yes") markedRating++

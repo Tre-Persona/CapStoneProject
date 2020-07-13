@@ -36,12 +36,14 @@ const FavoritesList = props => {
 
       </div>
 
+      {/* Only show see more button if user has actually favorited trails */}
       {!props.showEmptyFavsMessage && 
       <NavLink to={`/user/${props.user_id}/favorites`}>
         <Button className="dashboard-favorites-button">See All Favorites</Button>
       </NavLink>
       }
 
+      {/* Otherwise show empty message */}
       {props.showEmptyFavsMessage && 
         <p className="dashboard-empty-message">You haven't favorited any trails yet.</p>
       }

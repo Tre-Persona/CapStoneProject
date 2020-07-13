@@ -25,7 +25,7 @@ const Header = (props) => {
           </NavLink>
           
 
-          <NavbarToggler onClick={toggleNavbar} className="header-nav-toggler" />
+          <NavbarToggler onClick={toggleNavbar} className="header-nav-toggler" aria-label="Navbar button to show or hide more links." />
         </div>
 
           <Collapse isOpen={!collapsed} navbar>

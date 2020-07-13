@@ -18,6 +18,7 @@ const Badges = props => {
   
   async function getBadges() {
     try {
+      // Fetch all comments from the current user
       let commentResponse = await fetch('/users/comments')
       let commentData = await commentResponse.json()
       let commentOnlyArray = []
@@ -25,10 +26,12 @@ const Badges = props => {
         commentOnlyArray = [...commentData]
       }
 
+      // Fetch all form submission from the current user
       let formResponse = await fetch('/users/questionnaires')
       let formData = await formResponse.json()
       let activityArray = []
       if (formResponse.ok) {
+        // Combine both data into one array
         activityArray = [...commentOnlyArray, ...formData]
       }
 
@@ -36,6 +39,7 @@ const Badges = props => {
 
       len > 0 ? setShowBadgeLabel(true) : setShowBadgeLabel(false)
 
+      // Set array of badges based on the length of the activity array
       if (len >=50) setBadges ([Badge1, Badge5, Badge10, Badge20, Badge30, Badge40, Badge50])
       if (len >=40) setBadges([Badge1, Badge5, Badge10, Badge20, Badge30, Badge40])
       else if (len >=30) setBadges([Badge1, Badge5, Badge10, Badge20, Badge30])

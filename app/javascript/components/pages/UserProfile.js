@@ -5,17 +5,21 @@ import Badges from '../partials/userPartials/Badges'
 import FavoritesList from '../partials/userPartials/FavoritesList'
 import ActivityList from '../partials/userPartials/ActivityList'
 
-
 const UserProfile = (props) => {
+  // Arra of all user's favorited trail objects
   const [favTrails, setFavTrails] = useState([])
+  // Array of all user's activity objects
   const [activities, setActivities] = useState([])
+  // Conditional for showing empty favorites message
   const [showEmptyFavsMessage, setShowEmptyFavsMessage] = useState(false)
+  // Conditional for showing empty activity message
   const [showEmptyActivityMessage, setShowEmptyActivityMessage] = useState(false)
 
   useEffect(() =>{
     getTrails()
   },[])
 
+  // ---------- CODE TO GRAB FAVORITED TRAILS BY USER ----------
   async function getTrails() {
     try {
       // Fetch JSON of favorites specific to current user
@@ -39,6 +43,7 @@ const UserProfile = (props) => {
         }
       }
 
+      // Fetch all user's comment data
       let commentResponse = await fetch('/users/comments')
       let commentData = await commentResponse.json()
       let commentOnlyArray = []
@@ -46,6 +51,7 @@ const UserProfile = (props) => {
         commentOnlyArray = [...commentData]
       }
 
+      // Fetch all user's form submission data
       let formResponse = await fetch('/users/questionnaires')
       let formData = await formResponse.json()
       let activityArray = []
@@ -53,12 +59,14 @@ const UserProfile = (props) => {
         activityArray = [...commentOnlyArray, ...formData]
       }
 
+      // Sort all activity from most recently updated
       let sortedActivities = activityArray.sort((a,b)=>{
         if (a.updated_at === b.updated_at) return 0
         else if (a.updated_at > b.updated_at) return -1
         else return 1
       })
 
+      // If array of activities is zero, show empty message
       if (sortedActivities.length === 0) setShowEmptyActivityMessage(true)
       setActivities(sortedActivities)
 

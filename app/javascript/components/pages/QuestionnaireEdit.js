@@ -5,6 +5,7 @@ import QuestionnaireEditList from '../partials/questionnairePartials/Questionnai
 import questions from '../partials/questionnairePartials/questions.js'
 
 const QuestionnaireEdit = props => {
+  // Upon mount, state of current form is empty
   const [currentForm, setCurrentForm] = useState({
     question1: undefined,
     question2: undefined,
@@ -36,6 +37,7 @@ const QuestionnaireEdit = props => {
     getForm()
   }, [])
 
+  // Fetch form submission data using the params id (questionnaire ID)
   async function getForm() {
     try {
       let formResponse = await fetch(`/questionnaires/${props.match.params.id}/edit`)
@@ -50,6 +52,7 @@ const QuestionnaireEdit = props => {
     }
   }
 
+  // Set state of form upon changing answers within the form
   const handleChange = (e) => {
     setCurrentForm({
       ...currentForm,
@@ -61,6 +64,7 @@ const QuestionnaireEdit = props => {
     updateForm()
   }
 
+  // Update the form in the database with the new state of form
   const updateForm = () => {
     fetch(`/questionnaires/${props.match.params.id}`, {
       body: JSON.stringify(currentForm),
