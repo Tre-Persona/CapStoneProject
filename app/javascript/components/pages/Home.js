@@ -8,10 +8,12 @@ const Home = props => {
   const [featuredTrails, setFeaturedTrails] = useState([])
 
   useEffect(() =>{
-    getFeaturedTrails()},[])
+    getTrendingTrails()},[])
 
-  async function getFeaturedTrails() {
+  // ---------- CODE FOR POPULATING TOP 4 MOST ACTIVE TRAILS ----------
+  async function getTrendingTrails() {
     try {
+      // Fetch all comment data
       let commentResponse = await fetch('/comments')
       let commentData = await commentResponse.json()
       let commentOnlyArray = []
@@ -19,13 +21,15 @@ const Home = props => {
         commentOnlyArray = [...commentData]
       }
 
+      // Fetch all form submission data
       let formResponse = await fetch('/questionnaires')
       let formData = await formResponse.json()
       let actArray = []
       if (formResponse.ok) {
         actArray = [...commentOnlyArray, ...formData]
       }
-
+      
+      // Create object containing tally of every trail id
       let actObject = {}
       actArray.map(value=>{
         if (actObject[value.trail_id] === undefined && value.trail_id !== null) {
@@ -35,6 +39,7 @@ const Home = props => {
         }
       })
       
+      // Sort from descending order the trail ids
       let actKeys = Object.keys(actObject)
       let sortedActKeys = actKeys.sort((a,b) => {
         if (actObject[a] === actObject[b]) return 0
@@ -42,6 +47,7 @@ const Home = props => {
         else return 1
       })
 
+      // Fetch trail data from the top 4 trail ids  
       let trailResponse = await fetch(`https://www.hikingproject.com/data/get-trails-by-id?ids=${`${sortedActKeys[0]},${sortedActKeys[1]},${sortedActKeys[2]},${sortedActKeys[3]},`}&key=${props.apiKey}`)
       let trailData = await trailResponse.json()
       if(trailResponse.ok) {
@@ -56,7 +62,7 @@ const Home = props => {
     <>
       <Container className="home-container">
         <div className="home-jumbotron-wrapper">
-          <img className="home-jumbotron-image" src={HikeHome} />
+          <img className="home-jumbotron-image" src={HikeHome} alt="Large image of hiking trail in display on home page." />
           <div className="home-jumbotron-text-box">
             <h2 className="home-jumbotron-title">Where accessibility and nature meet</h2>
             <p className="home-jumbotron-text">Here at happy trails, we set out to create a platform that empowers users from all walks of life to go outside and enjoy nature. Our platform encourages our registered users to fill out information regarding the hikes they go on. Users collaboratively discover and archive accessibility data in order to support the wider community.</p>
@@ -82,7 +88,7 @@ const Home = props => {
               className="home-trail-card">
 
                 <NavLink className="home-trail-link" to={`/trails/${trail.id}`}>
-                  <img className="home-trail-image" src={trail.imgSmallMed} />
+                  <img className="home-trail-image" src={trail.imgSmallMed} alt={`Image of ${trail.name}.`} />
                 </NavLink>
 
                 <div className="home-trail-text-box">

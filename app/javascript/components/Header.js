@@ -12,7 +12,7 @@ const Header = (props) => {
       <Navbar className="header-container" color="faded" dark>
         <NavLink to="/" className="header-title-link">
           <div className="header-title-wrapper">
-            <img className="header-logo" src={HappyTrailsLogo} />
+            <img className="header-logo" src={HappyTrailsLogo} alt="Image of Happy Trails logo." />
             <h1 className="header-title">happy trails</h1>
           </div>
         </NavLink>

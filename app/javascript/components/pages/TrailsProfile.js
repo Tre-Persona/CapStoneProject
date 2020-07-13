@@ -20,15 +20,21 @@ import BadgeBusyRds from '../images/trail-badge-busy-roads.png'
 
 
 const TrailsProfile = (props) => {
+  // JSON object of fetched trail via params id
   const [currentTrail, setCurrentTrail] = useState({})
   // Conditional rendering for the favorite button styling
   const [favorited, setFavorited] = useState(false)
   // Favorite model id of the current trail showing (if favorited)
   const [favId, setFavId] = useState()
+  // Array of objects of all user's form submissions (if they've submitted for trail)
   const [formSubs, setFormSubs] = useState([])
+  // Conditional for if spinner animation should show
   const [loading, setLoading] = useState(true)
+  // Array of trail badges to display
   const [trailBadges, setTrailBadges] = useState([])
+  // Total count of trail comments
   const [commentCount, setCommentCount] = useState(0)
+  // Total count of form submission counts
   const [formCount, setFormCount] = useState(0)
 
   useEffect(() => {
@@ -36,6 +42,8 @@ const TrailsProfile = (props) => {
     getFormSubs()
     getTrailStats()
   }, [])
+
+  // ---------- CODE FOR HANDLING FAVORITING ----------
 
   const handleFavorite = () => {
     if (favorited) {
@@ -80,6 +88,8 @@ const TrailsProfile = (props) => {
       })
   }
 
+  // ---------- CODE FOR FETCHING TRAIL DATA ----------
+
   async function getTrail() {
     try {
       // Declare array to hold only favorited Ids to be used in both if-statements below
@@ -119,6 +129,8 @@ const TrailsProfile = (props) => {
     }
   }
 
+  // ---------- CODE FOR SHOWING/DELETING USER'S FORM SUBMISSION(S) ---------
+
   async function getFormSubs() {
     try {
       let formResponse = await fetch('/users/questionnaires')
@@ -133,6 +145,23 @@ const TrailsProfile = (props) => {
       console.log(err)
     }
   }
+
+  const deleteFormSub = (id) => {
+    fetch(`/questionnaires/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then(response => {
+        if (response.ok) {
+          getFormSubs()
+          getTrailStats()
+        }
+      })
+  }
+
+  // ---------- CODE TO SHOW TRAIL BADGES BASED ON FORM SUBMISSIONS ----------
 
   async function getTrailStats() {
     try {
@@ -284,6 +313,7 @@ const TrailsProfile = (props) => {
           badgeArray = [...badgeArray, {badge: BadgeBusyRds, label: "Busy Roads"}]
         }
 
+        // Set state of trail badges
         setTrailBadges(badgeArray)
 
       }
@@ -292,20 +322,7 @@ const TrailsProfile = (props) => {
     }
   }
 
-  const deleteFormSub = (id) => {
-    fetch(`/questionnaires/${id}`, {
-      headers: {
-        "Content-Type": "application/json"
-      },
-      method: "DELETE"
-    })
-      .then(response => {
-        if (response.ok) {
-          getFormSubs()
-          getTrailStats()
-        }
-      })
-  }
+  // Reset comment count after comment deletion
 
   const handleCommentCount = (count) => {
     setCommentCount(count)
@@ -314,11 +331,15 @@ const TrailsProfile = (props) => {
   return (
     <>
       <Container className="trail-profile-container">
+
+        {/* Upon page mount, show loading animation */}
         {loading &&
           <div className="spinner-wrapper home">
             <Spinner animation="border" style={{color:"#1ba274"}} />
           </div>
         }
+
+        {/* After trail data fetches, turn off loading animation*/}
         {!loading &&
           <>
             <TrailDisplay

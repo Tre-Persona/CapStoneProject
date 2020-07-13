@@ -61,7 +61,7 @@ const Badges = props => {
       <div className="dashboard-badges-wrapper">
         {badges.map((badge,index) => {
           return(
-            <img key={index} alt="badge-icon" className="dashboard-badge-image" src={badge} />
+            <img key={index} alt="Badge icon for contributing to trails." className="dashboard-badge-image" src={badge} />
           )
         })}
       </div>

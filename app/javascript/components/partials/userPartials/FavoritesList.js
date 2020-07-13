@@ -18,7 +18,7 @@ const FavoritesList = props => {
               className="dashboard-favorite-card">
   
                 <NavLink to={`/trails/${trail.id}`}>
-                  <img className="dashboard-favorite-image" src={trail.imgSmallMed} />
+                  <img className="dashboard-favorite-image" src={trail.imgSmallMed} alt={`Image of ${trail.name}.`} />
                 </NavLink>
   
                 <div className="dashboard-favorite-text-box">

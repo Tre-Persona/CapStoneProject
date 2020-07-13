@@ -34,7 +34,7 @@ const QuestionnaireList = props => {
 
         return (
           <FormGroup key={index} className="question-item-wrapper">
-            <img className="question-image" src={question.image} />
+            <img className="question-image" src={question.image} alt={question.alt} />
             <div className="question-text-box">
               <h6 className="question-legend">
                 {question.question}

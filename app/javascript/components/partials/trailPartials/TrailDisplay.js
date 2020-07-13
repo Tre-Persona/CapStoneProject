@@ -15,10 +15,10 @@ const TrailDisplay = props => {
           <>
             <div className="trail-profile-image-wrapper">
               {currentTrail.imgMedium === "" &&
-                <img alt={`Image of ${currentTrail.name}`} className="trail-profile-image" src={TrailProfileDefault} />
+                <img alt={`Image of ${currentTrail.name}.`} className="trail-profile-image" src={TrailProfileDefault} />
               }
               {currentTrail.imgMedium !== "" &&
-                <img alt={`Image of ${currentTrail.name}`} className="trail-profile-image" src={currentTrail.imgMedium} />
+                <img alt={`Image of ${currentTrail.name}.`} className="trail-profile-image" src={currentTrail.imgMedium} />
               }
               {props.logged_in &&
                 <Button

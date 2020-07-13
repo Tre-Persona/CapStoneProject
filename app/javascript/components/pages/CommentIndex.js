@@ -84,7 +84,7 @@ const Comments = (props) => {
     setCommentEditEntry(e.target.value)
   }
 
-  //
+  // ---------- CODE FOR UPDATING TRAIL COMMENT ----------
   const updateComment = (id, trailId) => {
     fetch(`/comments/${id}`, {
       body: JSON.stringify({post: commentEditEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name, avatar: props.avatar}),
