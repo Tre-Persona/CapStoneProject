@@ -6,7 +6,7 @@ const Contact = () => {
     return (
       <Container className="contact-container">
         <h2 className="page-title">Contact Us!</h2>
-        <p className="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p className="contact-text">Have suggestions to make the app better?  Want us to create something for you?  Love what you see and want to tell us?  Feel free to email us at trepersona@gmail.com .  Funny memes and gifs are welcome as well.</p>
       </Container>
     );
 }
