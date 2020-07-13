@@ -3,21 +3,24 @@ import { Container } from "reactstrap";
 import SimpleLeaflet from "../partials/trailPartials/SimpleLeaflet.js";
 import TrailList from "../partials/trailPartials/TrailList.js";
 
+
 class TrailsIndex extends Component {
+ // Trails index handles the Fetch request to HikingProject.com and brings in the display and input components
   constructor(props) {
     super(props);
     this.state = {
+      //empty array that trailData is pushed into
       trails: [],
     };
   }
+//once the map is clicked a data type from leaflet called "mouseEvent" is returned and "latlng" is destructuered out of it 
   handleMapClick = (e) => {
     console.log(e);
     this.getTrails(e.latlng.lat, e.latlng.lng);
   };
+  //a defunct method that needs to be deleted from a couple files
   handleMoveend = (e) => {
     console.log("this is the handle move end", e);
-    
-    
   };
 
   getTrails = async (lat, lng) => {
