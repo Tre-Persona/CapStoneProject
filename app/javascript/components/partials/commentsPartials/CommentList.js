@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, FormGroup, Label, Input, ListGroup, ListGroupItem, ListGroupItemText } from 'reactstrap'
+import DefaultAvatar from '../images/happy-trails-default-avatar.jpg'
 
 
 const CommentList = props => {
@@ -14,7 +15,7 @@ const CommentList = props => {
         return(
           <ListGroupItem key={index} className="comments-list-item-wrapper">
 
-            <img className="comments-list-item-avatar" src={comment.avatar} />
+            <img className="comments-list-item-avatar" src={DefaultAvatar} />
 
             <div className="comments-list-item-text-area">
               {props.editArray.includes(comment.id) &&

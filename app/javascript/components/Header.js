@@ -38,7 +38,7 @@ const Header = (props) => {
 
                     <NavLink onClick={toggleNavbar} className="header-nav-link" to={`/user/${props.user_id}`}>Dashboard</NavLink>
 
-                    <NavLink onClick={toggleNavbar} className="header-nav-link" to={`/user/${props.user_id}`}><img src={props.avatar} className="header-nav-avatar" /></NavLink>
+                    <NavLink onClick={toggleNavbar} className="header-nav-link" to={`/user/${props.user_id}`}><img src={props.avatar} className="header-nav-avatar" alt="Image of your avatar." style={{display:"none"}} /></NavLink>
 
                   </NavItem>
 

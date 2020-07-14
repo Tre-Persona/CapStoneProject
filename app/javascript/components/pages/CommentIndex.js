@@ -39,7 +39,7 @@ const Comments = (props) => {
   const addToComments = () => {
     fetch("/comments", {
       // JSON needs to include comment string, trail id, and user name
-      body: JSON.stringify({post: commentEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name, avatar: props.avatar}),
+      body: JSON.stringify({post: commentEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name}),
       headers:{
         "Content-Type": "application/json"
       },
@@ -87,7 +87,7 @@ const Comments = (props) => {
   // ---------- CODE FOR UPDATING TRAIL COMMENT ----------
   const updateComment = (id, trailId) => {
     fetch(`/comments/${id}`, {
-      body: JSON.stringify({post: commentEditEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name, avatar: props.avatar}),
+      body: JSON.stringify({post: commentEditEntry, trail_id: trail_id, user_name: user_name, trail_name: trail_name}),
       headers:{
         "Content-Type": "application/json"
       },
