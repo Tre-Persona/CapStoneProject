@@ -84,7 +84,7 @@ const UserProfile = (props) => {
         <div className="dashboard-title-super-wrapper">
           <div className="dashboard-title-left-div"></div>
           <div className="dashboard-title-wrapper">
-            <img src={props.avatar} className="dashboard-avatar" alt="Avatar image of current user." style={{display:"none"}}/>
+            <img src="" className="dashboard-avatar" alt="Avatar image of current user." style={{display:"none"}}/>
             <h2 className="page-title dashboard">Your Dashboard</h2>
           </div>
           <a href="/users/edit">

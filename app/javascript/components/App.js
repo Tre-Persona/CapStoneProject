@@ -37,7 +37,6 @@ const App = (props) => {
           sign_up_route={props.sign_up_route}
           sign_out_route={props.sign_out_route}
           user_id={currentUserId}
-          avatar={user.avatar.url}
         />
 
         <div id="main-container">
@@ -54,17 +53,17 @@ const App = (props) => {
 
             <Route exact path="/trails" render={() => < TrailsIndex apiKey={apiKey} />} />
 
-            <Route exact path="/trails/:id" render={(props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} avatar={user.avatar.url} />} />
+            <Route exact path="/trails/:id" render={(props) => < TrailsProfile {...props} user_id={currentUserId} user_name={currentUserName} logged_in={logged_in} apiKey={apiKey} />} />
 
             <Route exact path="/trails/:id/questionnaire" render = { (props) => < Questionnaire user_id={currentUserId} {...props} apiKey={apiKey}/>}/>
 
             <Route exact path="/submission/:id" render = { (props) => < QuestionnaireEdit user_id={currentUserId} {...props} apiKey={apiKey} />}/>
 
-            <Route exact path="/user/:id" render={(props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} edit_user_route={props.edit_user_route}/>} />
+            <Route exact path="/user/:id" render={(props) => < UserProfile {...props} user_name={currentUserName} user_id={currentUserId} apiKey={apiKey} edit_user_route={props.edit_user_route}/>} />
 
-            <Route exact path="/user/:id/favorites" render={(props) => < UserFavorites {...props} user_id={currentUserId} apiKey={apiKey} avatar={user.avatar.url} />} />
+            <Route exact path="/user/:id/favorites" render={(props) => < UserFavorites {...props} user_id={currentUserId} apiKey={apiKey} />} />
 
-            <Route exact path="/user/:id/settings" render={(props) => < UserSettings {...props} user_id={currentUserId} avatar={user.avatar.url} />} />
+            <Route exact path="/user/:id/settings" render={(props) => < UserSettings {...props} user_id={currentUserId} />} />
             
             <Route exact path="/user/:id/activity" render={(props) => < UserActivity {...props} user_id={currentUserId} />} />
             
