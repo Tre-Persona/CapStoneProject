@@ -51,4 +51,4 @@ gem "react-rails", "~> 2.6"
 
 gem "bootstrap", "~> 4.5"
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
